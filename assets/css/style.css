@@ -18,3 +18,11 @@ body {
     color: black;
     align-items: center;
 }
+
+/* Fixed footer */
+footer {
+    bottom: 0px;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+}
