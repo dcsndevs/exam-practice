@@ -1,0 +1,11 @@
+/* Import font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto&display=swap');
+
+/* Remove all padding and margin unless state */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
