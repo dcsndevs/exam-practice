@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (this.getAttribute("data-type") === "english"){
                 alert(" The button is working!");            
             } else if (this.getAttribute("data-type") === "government"){
-                    alert(" The button is working!");            
+                    let subject = this.getAttribute("data-type");
+                    startPractice(subject);            
             } else if (this.getAttribute("data-type") === "end2"){
                         alert(" The button is working!");            
             } else {
@@ -22,9 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+    //Add Intoduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
+    
 });
 
-const bb = [    
+const questionBank = [    
     {question: "who are you?",
     optionA: "A man",
     optionB: "A woman",
@@ -43,25 +46,39 @@ const optionD = document.getElementById('optionD');
 
 // /* Question 1 */
 
-// questionText.textContent = bb[0].question;
-// optionA.textContent = bb[0].optionA;
-// optionB.textContent = bb[0].optionB;
-// optionC.textContent = bb[0].optionC;
-// optionD.textContent = bb[0].optionD;
-// this.questionAnswer = bb[0].answer;
+
 
 // /* Question 2 */
-// questionText.textContent = bb[1][0];
-// optionA.textContent = bb[1][1];
-// optionB.textContent = bb[1][2];
-// optionC.textContent = bb[1][3];
-// optionD.textContent = bb[1][5];
+// questionText.textContent = questionBank[1][0];
+// optionA.textContent = questionBank[1][1];
+// optionB.textContent = questionBank[1][2];
+// optionC.textContent = questionBank[1][3];
+// optionD.textContent = questionBank[1][5];
 
 
 
 
-function startpractice() {
+function startPractice(subject) {
+    // let questionText = document.getElementById('question-text');
+    // let optionA = document.getElementById('optionA');
+    // let optionB = document.getElementById('optionB');
+    // let optionC = document.getElementById('optionC');
+    // let optionD = document.getElementById('optionD');
 
+    //Gets questions and options from Question Bank
+    questionText.textContent = questionBank[0].question;
+    optionA.textContent = questionBank[0].optionA;
+    optionB.textContent = questionBank[0].optionB;
+    optionC.textContent = questionBank[0].optionC;
+    optionD.textContent = questionBank[0].optionD;
+    // this.questionAnswer = questionBank[0].answer;
+
+    if (subject === "government") {
+        displayGovernmentQuestion(questionText, OptionA, OptionB, optionC, optionD);
+    } else {
+        alert(`Invalid Subject Selection!: ${subject}`);
+        throw `Invalid Subject Selection!: ${subject}. Aborting!`;
+    }
 };
 
 function checkAnswer () {
@@ -112,7 +129,7 @@ function displayEnglishQuestion() {
     
 };
 
-function displayGovernmentQuestion(questionText, OptionA, OptionB, optionC, optionD) {
+function displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD) {
     document.getElementById('question-text').textContent = questionText;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
