@@ -92,15 +92,25 @@ function questionNumber() {
 
 };
 
-function optionSelected() {
+// function optionASelected() {
 
-let select = document.getElementsByClassName('options')[0];
-if (this.select.style.textColor === "black") {
-    this.select.style.textColor = "red";
-} else (this.select.style.textColor = "black")
+// let select = document.getElementById('optionA');
+// // select.style.color = "red";
+// if (select.style.color === "black") {
+//     select.style.color = "red";
+// } else (select.style.color = "black")
 
-};
+// };
 
+let selection = document.getElementsByClassName('options');
+for (let i = 0; i < selection.length; i++) {
+    selection[i].addEventListener('click', selecChoose);
+}
+function selecChoose() {
+    if (this.style.color === "black") {
+        this.style.color = "red";
+    } else (this.style.color = "black")
+}
 
 
 
