@@ -46,17 +46,12 @@ const optionD = document.getElementById('optionD');
 
 // /* Question 1 */
 
-
-
 // /* Question 2 */
 // questionText.textContent = questionBank[1][0];
 // optionA.textContent = questionBank[1][1];
 // optionB.textContent = questionBank[1][2];
 // optionC.textContent = questionBank[1][3];
 // optionD.textContent = questionBank[1][5];
-
-
-
 
 function startPractice(subject) {
     // let questionText = document.getElementById('question-text');
@@ -99,7 +94,15 @@ function questionNumber() {
 
 function optionSelected() {
 
+let select = document.getElementsByClassName('options')[0];
+if (this.select.style.textColor === "black") {
+    this.select.style.textColor = "red";
+} else (this.select.style.textColor = "black")
+
 };
+
+
+
 
 function nextQuestion() {
 
