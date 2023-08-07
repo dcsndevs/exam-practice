@@ -92,15 +92,6 @@ function questionNumber() {
 
 };
 
-// function optionASelected() {
-
-// let select = document.getElementById('optionA');
-// // select.style.color = "red";
-// if (select.style.color === "black") {
-//     select.style.color = "red";
-// } else (select.style.color = "black")
-
-// };
 
 let selection = document.getElementsByClassName('options');
 for (let i = 0; i < selection.length; i++) {
