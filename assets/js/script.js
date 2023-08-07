@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     //Add Intoduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
-    
+    startPractice("government");
 });
 
 const questionBank = [    
@@ -43,6 +43,7 @@ const optionA = document.getElementById('optionA');
 const optionB = document.getElementById('optionB');
 const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
+const answer = document.getElementById('answer');
 
 // /* Question 1 */
 
@@ -66,7 +67,7 @@ function startPractice(subject) {
     optionB.textContent = questionBank[0].optionB;
     optionC.textContent = questionBank[0].optionC;
     optionD.textContent = questionBank[0].optionD;
-    // this.questionAnswer = questionBank[0].answer;
+    answer.textContent = questionBank[0].answer;
 
     if (subject === "government") {
         displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD);
@@ -114,7 +115,8 @@ function endPractice() {
 };
 
 function incrementScore() {
-
+failed = " "
+pass = " "
 };
 
 function result() {
@@ -133,12 +135,13 @@ function displayEnglishQuestion() {
     
 };
 
-function displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD) {
+function displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD, answer) {
     document.getElementById('question-text') = questionText;
     document.getElementById('optionA') = optionA;
     document.getElementById('optionB') = optionB;
     document.getElementById('optionC') = optionC;
     document.getElementById('optionD') = optionD;
+    document.getElementById('answer') = answer;
     
     
 };
