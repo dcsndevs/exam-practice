@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i of mainControls) {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "next") {
-                checkAnswer();
-                nextQuestion();
+                alert(" The Next button is working!");                
             } else if (this.getAttribute("data-type") === "maths"){
-                function displayMathsQuestion();
-            } else if (this.getAttribute("data-type") === "english"){
-                function displayEnglishQuestion();
+                alert(" The button is working!");
+            } 
+            else if (this.getAttribute("data-type") === "english"){
+                alert(" The button is working!");            
             } else if (this.getAttribute("data-type") === "government"){
-                function displayGovernmentQuestion();
-            } else if (this.getAttribute("data-type") === "end"){
-                function endPractice();
-            }else {
+                    alert(" The button is working!");            
+            } else if (this.getAttribute("data-type") === "end2"){
+                        alert(" The button is working!");            
+            } else {
                 alert(`Invalid Subject Selection!`);
                 throw `Invalid Subject Selection. Refresh`;
             }
