@@ -1,3 +1,29 @@
+//Allow DOM to load before starting exam practice sessions
+//Add evet listeners to subject practice
+
+document.addEventListener("DOMContentLoaded", function() {
+    let mainControls = document.getElementsByTagName("button");
+    for (let i of mainControls) {
+        i.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "next") {
+                checkAnswer();
+                nextQuestion();
+            } else if (this.getAttribute("data-type") === "maths"){
+                function displayMathsQuestion()
+            } else if (this.getAttribute("data-type") === "english"){
+                function displayEnglishQuestion()
+            } else if (this.getAttribute("data-type") === "government"){
+                function displayGovernmentQuestion()
+            } else if (this.getAttribute("data-type") === "end"){
+                function endPractice()
+            }else {
+                alert(`Invalid Subject Selection!`);
+                throw `Invalid Subject Selection. Refresh`;
+            }
+        });
+    }
+});
+
 const bb = [    
     {question: "who are you?",
     optionA: "A man",
@@ -34,8 +60,9 @@ optionD.textContent = bb[1][5];
 
 
 
+function startpractice() {
 
-
+}
 function checkAnswer () {
 
 }
