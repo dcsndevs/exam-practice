@@ -107,6 +107,9 @@ function checkAnswer () {
         incrementFailedAnswer();
     }
 };
+incrementRightAnswer();
+
+incrementFailedAnswer();
 
 function progressBar () {
 
