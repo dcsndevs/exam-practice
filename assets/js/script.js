@@ -36,29 +36,54 @@ optionD.textContent = bb[1][5];
 
 
 
+function checkAnswer () {
 
-// let sample = bb.question2.optionA;
+}
 
-// console.log(bb[2].question3);
+function progressBar () {
 
-// let pp = document.getElementById('question-text');
+}
 
-// pp.innerHTML = bb.optionA;
+function timer() {
 
+}
 
-// const cc = {
-//     quest1: "dfghgh",
-//     opA: "45678IH",
-//     opB: "GHFGFG"
-// }
-// let sample2 = cc.quest1;
+function questionNumber() {
 
+}
 
+function optionSelected() {
 
-// let pdb = document.getElementsByClassName('info')[0];
-// pdb.textContent = sample2;
+}
 
+function nextQuestion() {
 
+}
 
+function endPractice() {
 
+}
 
+function incrementScore() {
+
+}
+
+function result() {
+
+}
+
+function restartPractice () {
+
+}
+
+function displayMathsQuestion() {
+
+}
+
+function displayEnglishQuestion() {
+    
+}
+
+function displayGovernmentQuestion() {
+    
+}
