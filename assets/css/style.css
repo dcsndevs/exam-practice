@@ -19,10 +19,27 @@ body {
     align-items: center;
 }
 
+/* Main Question area */
+.main-area {
+    width: 80%;
+    padding: 20%;
+    margin-top: 20px;
+    background-color: bisque;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 /* Fixed footer */
 footer {
     bottom: 0px;
     position: absolute;
     align-items: center;
     text-align: center;
+    background-color: grey;
+    width: 100%;
+}
+
+.end {
+    align-items: right;
 }
