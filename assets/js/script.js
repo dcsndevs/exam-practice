@@ -35,27 +35,27 @@ const bb = [
     ["who killed Michael Jackson", "igufjhfjfdm", "hgdnbdsuejjh", "hjerhbnsdkjsdmnsmnkjs", "isioimenmkskjdsjn", [4]]
 ]  
 
-let questionText = document.getElementById('question-text');
-let optionA = document.getElementById('optionA');
-let optionB = document.getElementById('optionB');
-let optionC = document.getElementById('optionC');
-let optionD = document.getElementById('optionD');
+const questionText = document.getElementById('question-text');
+const optionA = document.getElementById('optionA');
+const optionB = document.getElementById('optionB');
+const optionC = document.getElementById('optionC');
+const optionD = document.getElementById('optionD');
 
-/* Question 1 */
+// /* Question 1 */
 
-questionText.textContent = bb[0].question;
-optionA.textContent = bb[0].optionA;
-optionB.textContent = bb[0].optionB;
-optionC.textContent = bb[0].optionC;
-optionD.textContent = bb[0].optionD;
-this.questionAnswer = bb[0].answer;
+// questionText.textContent = bb[0].question;
+// optionA.textContent = bb[0].optionA;
+// optionB.textContent = bb[0].optionB;
+// optionC.textContent = bb[0].optionC;
+// optionD.textContent = bb[0].optionD;
+// this.questionAnswer = bb[0].answer;
 
-/* Question 2 */
-questionText.textContent = bb[1][0];
-optionA.textContent = bb[1][1];
-optionB.textContent = bb[1][2];
-optionC.textContent = bb[1][3];
-optionD.textContent = bb[1][5];
+// /* Question 2 */
+// questionText.textContent = bb[1][0];
+// optionA.textContent = bb[1][1];
+// optionB.textContent = bb[1][2];
+// optionC.textContent = bb[1][3];
+// optionD.textContent = bb[1][5];
 
 
 
@@ -112,6 +112,12 @@ function displayEnglishQuestion() {
     
 };
 
-function displayGovernmentQuestion() {
+function displayGovernmentQuestion(questionText, OptionA, OptionB, optionC, optionD) {
+    document.getElementById('question-text').textContent = questionText;
+    document.getElementById('optionA').textContent = optionA;
+    document.getElementById('optionB').textContent = optionB;
+    document.getElementById('optionC').textContent = optionC;
+    document.getElementById('optionD').textContent = optionD;
+    
     
 };
