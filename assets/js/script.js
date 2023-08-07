@@ -27,6 +27,18 @@ document.addEventListener("DOMContentLoaded", function() {
     startPractice("government");
 });
 
+//Enable color selection for question options
+let selection = document.getElementsByClassName('options');
+for (let i = 0; i < selection.length; i++) {
+    selection[i].addEventListener('click', selecChoose);
+}
+function selecChoose() {
+    if (this.style.color === "black") {
+        this.style.color = "red";
+    } else (this.style.color = "black")
+}
+
+//Question Banks for Subjects
 const questionBank = [    
     {question: "who are you?",
     optionA: "A man",
@@ -45,21 +57,10 @@ const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
 
-// /* Question 1 */
-
-// /* Question 2 */
-// questionText.textContent = questionBank[1][0];
-// optionA.textContent = questionBank[1][1];
-// optionB.textContent = questionBank[1][2];
-// optionC.textContent = questionBank[1][3];
-// optionD.textContent = questionBank[1][5];
-
+/**
+ * This functions starts the practice as soon as it receives a subject
+ */
 function startPractice(subject) {
-    // let questionText = document.getElementById('question-text');
-    // let optionA = document.getElementById('optionA');
-    // let optionB = document.getElementById('optionB');
-    // let optionC = document.getElementById('optionC');
-    // let optionD = document.getElementById('optionD');
 
     //Gets questions and options from Question Bank
     questionText.textContent = questionBank[0].question;
@@ -77,6 +78,9 @@ function startPractice(subject) {
     }
 };
 
+/**
+ * Checks the chosen answer against the system answer
+ */
 function checkAnswer () {
     let correctAnswer = document.getElementById('answer').textContent;
     if (document.getElementById('optionA').style.color === "red") {
@@ -91,14 +95,6 @@ function checkAnswer () {
     } else if (document.getElementById('optionD').style.color === "red") {
         let userAnswer = document.getElementById('optionD').textContent;
     }
-
-
-    // let userAnswer = document.getElementsByTagName('p');
-    // for (let i = 0; i < userAnswer.length; i++) {
-    //     if (userAnswer[i].style.color === "red") {
-    //         userAnswer[i] = userAnswerChosen;
-    //     }
-    // }
     
     isCorrect = userAnswer === correctAnswer;
     if (isCorrect) {
@@ -107,9 +103,14 @@ function checkAnswer () {
         incrementFailedAnswer();
     }
 };
-incrementRightAnswer();
 
-incrementFailedAnswer();
+function incrementRightAnswer();{
+
+};
+
+function incrementFailedAnswer(); {
+
+};
 
 function progressBar () {
 
@@ -123,19 +124,6 @@ function questionNumber() {
 
 };
 
-
-let selection = document.getElementsByClassName('options');
-for (let i = 0; i < selection.length; i++) {
-    selection[i].addEventListener('click', selecChoose);
-}
-function selecChoose() {
-    if (this.style.color === "black") {
-        this.style.color = "red";
-    } else (this.style.color = "black")
-}
-
-
-
 function nextQuestion() {
 
 };
@@ -145,8 +133,7 @@ function endPractice() {
 };
 
 function incrementScore() {
-failed = " "
-pass = " "
+
 };
 
 function result() {
@@ -172,6 +159,5 @@ function displayGovernmentQuestion(questionText, optionA, optionB, optionC, opti
     document.getElementById('optionC') = optionC;
     document.getElementById('optionD') = optionD;
     document.getElementById('answer') = answer;
-    
     
 };
