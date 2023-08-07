@@ -74,7 +74,7 @@ function startPractice(subject) {
     // this.questionAnswer = questionBank[0].answer;
 
     if (subject === "government") {
-        displayGovernmentQuestion(questionText, OptionA, OptionB, optionC, optionD);
+        displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD);
     } else {
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
@@ -130,11 +130,11 @@ function displayEnglishQuestion() {
 };
 
 function displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD) {
-    document.getElementById('question-text').textContent = questionText;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
+    document.getElementById('question-text') = questionText;
+    document.getElementById('optionA') = optionA;
+    document.getElementById('optionB') = optionB;
+    document.getElementById('optionC') = optionC;
+    document.getElementById('optionD') = optionD;
     
     
 };
