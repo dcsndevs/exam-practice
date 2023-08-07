@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkAnswer();
                 nextQuestion();
             } else if (this.getAttribute("data-type") === "maths"){
-                function displayMathsQuestion()
+                function displayMathsQuestion();
             } else if (this.getAttribute("data-type") === "english"){
-                function displayEnglishQuestion()
+                function displayEnglishQuestion();
             } else if (this.getAttribute("data-type") === "government"){
-                function displayGovernmentQuestion()
+                function displayGovernmentQuestion();
             } else if (this.getAttribute("data-type") === "end"){
-                function endPractice()
+                function endPractice();
             }else {
                 alert(`Invalid Subject Selection!`);
                 throw `Invalid Subject Selection. Refresh`;
@@ -62,55 +62,56 @@ optionD.textContent = bb[1][5];
 
 function startpractice() {
 
-}
+};
+
 function checkAnswer () {
 
-}
+};
 
 function progressBar () {
 
-}
+};
 
 function timer() {
 
-}
+};
 
 function questionNumber() {
 
-}
+};
 
 function optionSelected() {
 
-}
+};
 
 function nextQuestion() {
 
-}
+};
 
 function endPractice() {
 
-}
+};
 
 function incrementScore() {
 
-}
+};
 
 function result() {
 
-}
+};
 
 function restartPractice () {
 
-}
+};
 
 function displayMathsQuestion() {
 
-}
+};
 
 function displayEnglishQuestion() {
     
-}
+};
 
 function displayGovernmentQuestion() {
     
-}
+};
