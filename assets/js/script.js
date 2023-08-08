@@ -57,7 +57,7 @@ const subjectTitle = document.getElementById('subjectTitle');
  * This functions starts the practice as soon as it receives a subject
  */
 function startPractice(subject) {
-    
+        
     if (subject === "government") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
@@ -88,6 +88,7 @@ function startPractice(subject) {
     answer.textContent = questionBank[j].answer;
 
 };
+
 function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subjectTitle) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
@@ -96,8 +97,10 @@ function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD,
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
     document.getElementById('subjectTitle').textContent = subjectTitle;
+    displayControls ();
     
 };
+
 /**
  * Checks the chosen answer against the system answer
  */
@@ -183,8 +186,13 @@ function endPractice() {
 function displayControls () {
     let displayNextEnd = document.getElementsByClassName("controls")[0];
     displayNextEnd.style.display = "block"
+    hideSubjectControls();
 }
-
+/**Function to Hide Main Subject controls when practice is loaded */
+function hideSubjectControls() {
+    let displayMainControls = document.getElementsByClassName("main-controls")[0];
+    displayMainControls.style.display = "none"
+}
 
 function result() {
 
