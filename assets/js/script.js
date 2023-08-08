@@ -50,7 +50,7 @@ const questionBank = [
     ["who killed Michael Jackson", "igufjhfjfdm", "hgdnbdsuejjh", "hjerhbnsdkjsdmnsmnkjs", "isioimenmkskjdsjn", [4]]
 ]  
 
-const questionText = document.getElementById('question-text');
+const question = document.getElementById('question');
 const optionA = document.getElementById('optionA');
 const optionB = document.getElementById('optionB');
 const optionC = document.getElementById('optionC');
@@ -63,7 +63,7 @@ const answer = document.getElementById('answer');
 function startPractice(subject) {
 
     //Gets questions and options from Question Bank
-    questionText.textContent = questionBank[0].question;
+    question.textContent = questionBank[0].question;
     optionA.textContent = questionBank[0].optionA;
     optionB.textContent = questionBank[0].optionB;
     optionC.textContent = questionBank[0].optionC;
@@ -71,7 +71,7 @@ function startPractice(subject) {
     answer.textContent = questionBank[0].answer;
 
     if (subject === "government") {
-        displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD);
+        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD);
     } else {
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
@@ -104,11 +104,11 @@ function checkAnswer () {
     }
 };
 
-function incrementRightAnswer();{
+function incrementRightAnswer() {
 
 };
 
-function incrementFailedAnswer(); {
+function incrementFailedAnswer() {
 
 };
 
@@ -152,8 +152,8 @@ function displayEnglishQuestion() {
     
 };
 
-function displayGovernmentQuestion(questionText, optionA, optionB, optionC, optionD, answer) {
-    document.getElementById('question-text') = questionText;
+function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
+    document.getElementById('question') = question;
     document.getElementById('optionA') = optionA;
     document.getElementById('optionB') = optionB;
     document.getElementById('optionC') = optionC;
