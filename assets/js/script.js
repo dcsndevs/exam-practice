@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert(" The button is working!");            
             } 
             else if (this.getAttribute("data-type") === "government"){
+                    alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
             } 
@@ -174,7 +175,7 @@ function nextQuestion() {
 function endPractice() {
     let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
     if (confirm(message) == true) {
-        //Add Displey result here, Print and then reload after
+        //Add Display result here, Print and then reload after
         location.reload();
     } else {
         return false;
