@@ -11,26 +11,35 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                 checkAnswer();                
             } 
-        }   else if (this.getAttribute("data-type") === "maths"){
+        } else if (this.getAttribute("data-type") === "maths"){
+            if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                alert('You have 10 mins to answer 10 Questions. Goodluck!')
+            
                 let subject = this.getAttribute("data-type");
                     startPractice(subject);  
-            } 
-            else if (this.getAttribute("data-type") === "english"){
-                alert(" The button is working!");            
-            } else if (this.getAttribute("data-type") === "government"){
-                    let subject = this.getAttribute("data-type");
-                    startPractice(subject);            
-            } else if (this.getAttribute("data-type") === "end"){
-                if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
-                    alert('Theres is currently no practice in session.\nSelect a practice session by choosing a subject above.')
-                } else {
-                endPractice();  
-                }   
-                    
+        } 
+        } else if (this.getAttribute("data-type") === "english"){
+            alert(" The button is working!");            
+
+        } else if (this.getAttribute("data-type") === "government"){
+            if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                alert('You have 10 mins to answer 10 Questions. Goodluck!')
+             
+                let subject = this.getAttribute("data-type");
+                startPractice(subject);
+            }            
+                
+        } else if (this.getAttribute("data-type") === "end") {
+            if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                alert('Theres is currently no practice in session.\nSelect a practice session by choosing a subject above.')
             } else {
-                alert(`Invalid Subject Selection!`);
-                throw `Invalid Subject Selection. Refresh`;
-            }
+            endPractice();  
+            }   
+                
+        } else {
+            alert(`Invalid Subject Selection!`);
+            throw `Invalid Subject Selection. Refresh`;
+        }
         });
     }
     //Add Introduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
