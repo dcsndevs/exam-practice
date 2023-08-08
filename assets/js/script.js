@@ -40,6 +40,13 @@ function selecChoose() {
 
 //Question Banks for Subjects
 const questionBank = [    
+    {question: "This is a sample question to get you acquainted?",
+    optionA: "Writes plaintext, HTML expressions or JavaScript to the document. n",
+    optionB: "Writes plaintext, HTML expressions or JavaScript to the document. ",
+    optionC: "A Writes plaintext, HTML expressions or JavaScript to the document.",
+    optionD: "A Wriddtes plaintext, HTML expressions or JavaScript to the document.",
+    answer: "A Wriddtes plaintext, HTML expressions or JavaScript to the document."},
+
     {question: "who are you?",
     optionA: "A man",
     optionB: "A woman",
@@ -47,7 +54,21 @@ const questionBank = [
     optionD: "A boy",
     answer: "A woman"},
 
-    ["who killed Michael Jackson", "igufjhfjfdm", "hgdnbdsuejjh", "hjerhbnsdkjsdmnsmnkjs", "isioimenmkskjdsjn", [4]]
+    {question: "where is kkkkk",
+    optionA: "22222",
+    optionB: "22222",
+    optionC: "fbgdf",
+    optionD: "22222",
+    answer: "fbgdf"},
+
+    {question: "Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+
 ]  
 
 const question = document.getElementById('question');
@@ -61,14 +82,17 @@ const answer = document.getElementById('answer');
  * This functions starts the practice as soon as it receives a subject
  */
 function startPractice(subject) {
-
+    let questionNumber = document.getElementById('questionNumber').textContent;
+    let i = questionNumber;
+    j = i;
+    
     //Gets questions and options from Question Bank
-    question.textContent = questionBank[0].question;
-    optionA.textContent = questionBank[0].optionA;
-    optionB.textContent = questionBank[0].optionB;
-    optionC.textContent = questionBank[0].optionC;
-    optionD.textContent = questionBank[0].optionD;
-    answer.textContent = questionBank[0].answer;
+    question.textContent = questionBank[j].question;
+    optionA.textContent = questionBank[j].optionA;
+    optionB.textContent = questionBank[j].optionB;
+    optionC.textContent = questionBank[j].optionC;
+    optionD.textContent = questionBank[j].optionD;
+    answer.textContent = questionBank[j].answer;
 
     if (subject === "government") {
         displayGovernmentQuestion(question, optionA, optionB, optionC, optionD);
@@ -102,6 +126,8 @@ function checkAnswer () {
     } else {
         incrementFailedAnswer();
     }
+
+    questionNumber();
 };
 
 function incrementRightAnswer() {
@@ -119,9 +145,13 @@ function progressBar () {
 function timer() {
 
 };
-
+/**
+ * Checks for the current question number and then adds 1 to it in other to access
+ * the next question
+ */
 function questionNumber() {
-
+    let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
+    document.getElementById("questionNumber").textContent = ++previousQuestionNumber;
 };
 
 function nextQuestion() {
