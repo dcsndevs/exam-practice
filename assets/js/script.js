@@ -16,8 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "government"){
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
-            } else if (this.getAttribute("data-type") === "end2"){
-                        alert(" The button is working!");            
+            } else if (this.getAttribute("data-type") === "end"){
+                if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                    alert('Theres is currently no practice in session')
+                } else {
+                endPractice();  
+                }   
+                    
             } else {
                 alert(`Invalid Subject Selection!`);
                 throw `Invalid Subject Selection. Refresh`;
@@ -158,7 +163,14 @@ function nextQuestion() {
 };
 
 function endPractice() {
-
+    let message = "This would terminate your current Practice!\nPress Cancel to continue or Ok to end."
+    if (confirm(message) == true) {
+        //Add Displey result here, Print and then reload after
+        location.reload();
+    } else {
+        return false;
+    }
+    
 };
 
 function result() {
