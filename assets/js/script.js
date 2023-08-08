@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "next") {
                 checkAnswer();                
             } else if (this.getAttribute("data-type") === "maths"){
-                alert(" The button is working!");
+                let subject = this.getAttribute("data-type");
+                    startPractice(subject);  
             } 
             else if (this.getAttribute("data-type") === "english"){
                 alert(" The button is working!");            
@@ -57,7 +58,12 @@ function startPractice(subject) {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
         j = i;
-    } else {
+    } else if (subject === "maths") {
+            displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
+            let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+            let i = questionNumber + 10;
+            j = i;
+    } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
     }
