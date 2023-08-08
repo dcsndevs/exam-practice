@@ -5,32 +5,57 @@ document.addEventListener("DOMContentLoaded", function() {
     let mainControls = document.getElementsByTagName("button");
     for (let i of mainControls) {
         i.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "next") {
-                checkAnswer();                
-            } 
-            else if (this.getAttribute("data-type") === "maths"){
-                let subject = this.getAttribute("data-type");
-                    startPractice(subject);  
-            } 
-            else if (this.getAttribute("data-type") === "english"){
-                alert(" The button is working!");            
-            } 
-            else if (this.getAttribute("data-type") === "government"){
-                    let subject = this.getAttribute("data-type");
-                    startPractice(subject);            
-            } 
-            else if (this.getAttribute("data-type") === "end"){
-                        alert(" The button is working!");            
-            } 
-            else {
-                alert(`Invalid Subject Selection!`);
-                throw `Invalid Subject Selection. Refresh`;
-            }
-        });
-    }
+        if (this.getAttribute("data-type") === "next") {
+            if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                alert('Theres is currently no practice in session.\nSelect a practice session by choosing a subject above.')
+            } else {
+            checkAnswer();                
+        } 
+    } 
+    else if (this.getAttribute("data-type") === "maths"){
+        if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+            alert('You have 10 mins to answer 10 Questions. Goodluck!');
+            
+            let subject = this.getAttribute("data-type");
+                startPractice(subject);  
+        } 
+    } 
+    else if (this.getAttribute("data-type") === "english"){
+        if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+            alert('You have 10 mins to answer 10 Questions. Goodluck!');
+            
+            let subject = this.getAttribute("data-type");
+                startPractice(subject);  
+
+        } 
+    } 
+    else if (this.getAttribute("data-type") === "government"){
+        if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+            alert('You have 10 mins to answer 10 Questions. Goodluck!')
+            
+            let subject = this.getAttribute("data-type");
+            startPractice(subject);
+        }            
+                
+    } 
+    else if (this.getAttribute("data-type") === "end") {
+        if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+            alert('Theres is currently no practice in session.\nSelect a practice session by choosing a subject above.')
+        } else {
+        endPractice();  
+        }   
+                
+    } 
+    else {
+        alert(`Invalid Subject Selection!`);
+        throw `Invalid Subject Selection. Refresh`;
+        }
+        }
+    );
+    
     //Add Introduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
     // startPractice("government");
-});
+}});
 
 //Enable color selection for question options
 let selection = document.getElementsByClassName('options');
@@ -59,19 +84,17 @@ const subjectTitle = document.getElementById('subjectTitle');
 function startPractice(subject) {
     
     if (subject === "government") {
-        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 1;
-        j = i;
-        
         displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subjectTitle);
         // let subjectTitle = document.getElementById("subjectTitle").textContent;
         // subjectTitle.textContent = "government";
-        
-    } else if (subject === "maths") {
-        displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 10;
+        let i = questionNumber + 1;
         j = i;
+    } else if (subject === "maths") {
+            displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
+            let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+            let i = questionNumber + 10;
+            j = i;
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;

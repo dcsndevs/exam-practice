@@ -7,22 +7,18 @@ document.addEventListener("DOMContentLoaded", function() {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "next") {
                 checkAnswer();                
-            } 
-            else if (this.getAttribute("data-type") === "maths"){
+            } else if (this.getAttribute("data-type") === "maths"){
                 let subject = this.getAttribute("data-type");
                     startPractice(subject);  
             } 
             else if (this.getAttribute("data-type") === "english"){
                 alert(" The button is working!");            
-            } 
-            else if (this.getAttribute("data-type") === "government"){
+            } else if (this.getAttribute("data-type") === "government"){
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
-            } 
-            else if (this.getAttribute("data-type") === "end"){
+            } else if (this.getAttribute("data-type") === "end"){
                         alert(" The button is working!");            
-            } 
-            else {
+            } else {
                 alert(`Invalid Subject Selection!`);
                 throw `Invalid Subject Selection. Refresh`;
             }
@@ -51,7 +47,6 @@ const optionB = document.getElementById('optionB');
 const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
-const subjectTitle = document.getElementById('subjectTitle');
 
 /**
  * This functions starts the practice as soon as it receives a subject
@@ -59,19 +54,15 @@ const subjectTitle = document.getElementById('subjectTitle');
 function startPractice(subject) {
     
     if (subject === "government") {
+        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer);
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
         j = i;
-        
-        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subjectTitle);
-        // let subjectTitle = document.getElementById("subjectTitle").textContent;
-        // subjectTitle.textContent = "government";
-        
     } else if (subject === "maths") {
-        displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
-        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 10;
-        j = i;
+            displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
+            let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+            let i = questionNumber + 10;
+            j = i;
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
@@ -86,16 +77,14 @@ function startPractice(subject) {
     optionC.textContent = questionBank[j].optionC;
     optionD.textContent = questionBank[j].optionD;
     answer.textContent = questionBank[j].answer;
-
 };
-function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subjectTitle) {
+function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-    document.getElementById('subjectTitle').textContent = subjectTitle;
     
 };
 /**
@@ -169,14 +158,7 @@ function nextQuestion() {
 };
 
 function endPractice() {
-    let message = "This would terminate your current Practice!\nPress Cancel to continue or Ok to end."
-    if (confirm(message) == true) {
-        //Add Displey result here, Print and then reload after
-        location.reload();
-    } else {
-        return false;
-    }
-    
+    location.reload();
 };
 
 function result() {
