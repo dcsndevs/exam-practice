@@ -216,19 +216,27 @@ function displayEnglishQuestion() {
 
 //Question Banks for Subjects
 const questionBank = [    
-    {question: "0This is a sample question to get you acquainted?",
-    optionA: "Writes plaintext,  expressions or jmvgh to the document. n",
-    optionB: "Writes plaintext,  expressions or JavaScript to the document. ",
-    optionC: "A Writes plaintext,  expressions or JavaScript to the document.",
-    optionD: "A Wriddtes plaintext,  expressions or JavaScript to the document.",
-    answer: "A Wriddtes plaintext,  expressions or JavaScript to the document."},
-
+    
     {question: "1who are you?",
     optionA: "A man",
     optionB: "A woman",
     optionC: "A girl",
     optionD: "A boy",
     answer: "A woman"},
+
+    {question: "This is a sample question. You can select upto as many answers as possible",
+    optionA: "lorem ipsum text wont load Writes plaintext,  expressions or jmvgh to the document. n",
+    optionB: "Writes plaintext,  expressions or JavaScript to the document. ",
+    optionC: "A Writes plaintext,  expressions or JavaScript to the document.",
+    optionD: "A Wriddtes plaintext,  expressions or JavaScript to the document.",
+    answer: "A Wriddtes plaintext,  expressions or JavaScript to the document."},    
+
+    {question: "This acquainted is a sample question to get you ?",
+    optionA: "Writes plaintext,  expressions or jmvgh to the document. n",
+    optionB: "Writes plaintext,  expressions or JavaScript to the document. ",
+    optionC: "A Writes plaintext,  expressions or JavaScript to the document.",
+    optionD: "A Wriddtes plaintext,  expressions or JavaScript to the document.",
+    answer: "A Wriddtes plaintext,  expressions or JavaScript to the document."},
 
     {question: "2where is kkkkk",
     optionA: "22222",
