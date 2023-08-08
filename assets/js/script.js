@@ -238,7 +238,7 @@ const questionBank = [
     optionB: "Writes plaintext,  expressions or JavaScript to the document. ",
     optionC: "A Writes plaintext,  expressions or JavaScript to the document.",
     optionD: "A Wriddtes plaintext,  expressions or JavaScript to the document.",
-    answer: "A Wriddtes plaintext,  expressions or JavaScript to the document."},    
+    answer: "No right answer here"},    
 
     {question: "This acquainted is a sample question to get you ?",
     optionA: "Writes plaintext,  expressions or jmvgh to the document. n",
