@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     startPractice(subject);            
             } 
             else if (this.getAttribute("data-type") === "end"){
-                        alert(" The button is working!");            
+                        endPractice();            
             } 
             else {
                 alert(`Invalid Subject Selection!`);
@@ -169,7 +169,7 @@ function nextQuestion() {
 };
 
 function endPractice() {
-    let message = "This would terminate your current Practice!\nPress Cancel to continue or Ok to end."
+    let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
     if (confirm(message) == true) {
         //Add Displey result here, Print and then reload after
         location.reload();
