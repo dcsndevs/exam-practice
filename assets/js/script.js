@@ -179,6 +179,13 @@ function endPractice() {
     
 };
 
+/**Function to Display controls when practice is loaded */
+function displayControls () {
+    let displayNextEnd = document.getElementsByClassName("controls")[0];
+    displayNextEnd.style.display = "block"
+}
+
+
 function result() {
 
 };

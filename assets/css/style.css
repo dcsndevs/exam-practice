@@ -43,3 +43,8 @@ footer {
 .end {
     align-items: right;
 }
+
+/* Hide Controls from inception (before practice button is chosen) */
+.controls {
+    display: none;
+}
