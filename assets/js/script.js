@@ -121,7 +121,8 @@ function checkAnswer () {
 };
 
 function incrementRightAnswer() {
-
+    let rightAnswer = parseInt(document.getElementById('rightAnswer').textContent);
+    document.getElementById("rightAnswer").textContent = ++rightAnswer;
 };
 
 function incrementFailedAnswer() {
