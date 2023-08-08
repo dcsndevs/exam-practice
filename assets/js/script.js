@@ -145,6 +145,12 @@ function timer() {
 function questionNumber() {
     let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
     document.getElementById("questionNumber").textContent = ++previousQuestionNumber;
+
+    if (parseInt(document.getElementById("questionNumber").textContent) < 5) {
+        startPractice("government");
+    } else {
+        endPractice();
+    }
 };
 
 function nextQuestion() {
@@ -152,10 +158,6 @@ function nextQuestion() {
 };
 
 function endPractice() {
-
-};
-
-function incrementScore() {
 
 };
 
