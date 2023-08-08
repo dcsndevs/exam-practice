@@ -110,7 +110,7 @@ function checkAnswer () {
     console.log(userAnswer);
     
 
-    isCorrect = userAnswer.textContent === correctAnswer.textContent;
+    let isCorrect = userAnswer === correctAnswer;
     if (isCorrect) {
         incrementRightAnswer();
     } else {
@@ -126,6 +126,8 @@ function incrementRightAnswer() {
 };
 
 function incrementFailedAnswer() {
+    let failedAnswer = parseInt(document.getElementById('failedAnswer').textContent);
+    document.getElementById("failedAnswer").textContent = ++failedAnswer;
 
 };
 
