@@ -91,21 +91,26 @@ function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD,
  * Checks the chosen answer against the system answer
  */
 function checkAnswer () {
+    
     let correctAnswer = document.getElementById('answer').textContent;
+    let userAnswer;
     if (document.getElementById('optionA').style.color === "red") {
-        let userAnswer = document.getElementById('optionA').textContent;
+        userAnswer = document.getElementById('optionA').textContent;
 
     } else if (document.getElementById('optionB').style.color === "red") {
-        let userAnswer = document.getElementById('optionB').textContent;
+        userAnswer = document.getElementById('optionB').textContent;
 
     } else if (document.getElementById('optionC').style.color === "red") {
-        let userAnswer = document.getElementById('optionC').textContent;
+        userAnswer = document.getElementById('optionC').textContent;
 
     } else if (document.getElementById('optionD').style.color === "red") {
-        let userAnswer = document.getElementById('optionD').textContent;
-    }
+        userAnswer = document.getElementById('optionD').textContent;
+    } else userAnswer = "black";
+    console.log(correctAnswer);
+    console.log(userAnswer);
     
-    isCorrect = userAnswer === correctAnswer;
+
+    isCorrect = userAnswer.textContent === correctAnswer.textContent;
     if (isCorrect) {
         incrementRightAnswer();
     } else {
