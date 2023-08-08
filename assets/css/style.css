@@ -32,14 +32,14 @@ body {
 
 /* Fixed footer */
 footer {
-    /* bottom: 20%; */
-    /* position: relative; */
+    bottom: 0;
+    position: absolute;
     align-items: center;
     text-align: center;
     background-color: grey;
     width: 100%;
-    height: 20%
-    /* display: none; */
+    height: 100%;
+    display: none;
 }
 
 .end {

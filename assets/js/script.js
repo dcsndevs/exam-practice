@@ -170,10 +170,10 @@ function questionNumber() {
     colorResetD.style.color = "black";
 
 
-    if (parseInt(document.getElementById("questionNumber").textContent) < 5) {
+    if (parseInt(document.getElementById("questionNumber").textContent) < 6) {
         startPractice("government");
-    } else {
-        endPractice();
+    } else {        
+        result();
     }
 };
 
@@ -185,7 +185,7 @@ function endPractice() {
     let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
     if (confirm(message) == true) {
         //Add Display result here, Print and then reload after
-        location.reload();
+        result();
     } else {
         return false;
     }
@@ -205,7 +205,9 @@ function hideSubjectControls() {
 }
 
 function result() {
-
+    alert("You have come to the end of this practice session!\nClick OK to view your result!")
+    let displayResult= document.getElementById("result");
+    displayResult.style.display = "block"
 };
 
 function restartPractice () {
