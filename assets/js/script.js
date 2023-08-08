@@ -160,6 +160,15 @@ function timer() {
 function questionNumber() {
     let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
     document.getElementById("questionNumber").textContent = ++previousQuestionNumber;
+    let colorResetA = document.getElementById("optionA");
+    let colorResetB = document.getElementById("optionB");
+    let colorResetC = document.getElementById("optionC");
+    let colorResetD = document.getElementById("optionD");
+    colorResetA.style.color = "black";
+    colorResetB.style.color = "black";
+    colorResetC.style.color = "black";
+    colorResetD.style.color = "black";
+
 
     if (parseInt(document.getElementById("questionNumber").textContent) < 5) {
         startPractice("government");
