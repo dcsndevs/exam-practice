@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i of mainControls) {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "next") {
-                alert(" The Next button is working!");                
+                checkAnswer();                
             } else if (this.getAttribute("data-type") === "maths"){
                 alert(" The button is working!");
             } 
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    //Add Intoduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
-    startPractice("government");
+    //Add Introduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
+    // startPractice("government");
 });
 
 //Enable color selection for question options
@@ -38,39 +38,8 @@ function selecChoose() {
     } else (this.style.color = "black")
 }
 
-//Question Banks for Subjects
-const questionBank = [    
-    {question: "This is a sample question to get you acquainted?",
-    optionA: "Writes plaintext, HTML expressions or JavaScript to the document. n",
-    optionB: "Writes plaintext, HTML expressions or JavaScript to the document. ",
-    optionC: "A Writes plaintext, HTML expressions or JavaScript to the document.",
-    optionD: "A Wriddtes plaintext, HTML expressions or JavaScript to the document.",
-    answer: "A Wriddtes plaintext, HTML expressions or JavaScript to the document."},
 
-    {question: "who are you?",
-    optionA: "A man",
-    optionB: "A woman",
-    optionC: "A girl",
-    optionD: "A boy",
-    answer: "A woman"},
-
-    {question: "where is kkkkk",
-    optionA: "22222",
-    optionB: "22222",
-    optionC: "fbgdf",
-    optionD: "22222",
-    answer: "fbgdf"},
-
-    {question: "Is jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
-
-
-]  
-
+/* Global Variables */
 const question = document.getElementById('question');
 const optionA = document.getElementById('optionA');
 const optionB = document.getElementById('optionB');
@@ -82,9 +51,18 @@ const answer = document.getElementById('answer');
  * This functions starts the practice as soon as it receives a subject
  */
 function startPractice(subject) {
-    let questionNumber = document.getElementById('questionNumber').textContent;
-    let i = questionNumber;
-    j = i;
+    
+    if (subject === "government") {
+        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer);
+        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+        let i = questionNumber + 1;
+        j = i;
+    } else {
+        alert(`Invalid Subject Selection!: ${subject}`);
+        throw `Invalid Subject Selection!: ${subject}. Aborting!`;
+    }
+
+    
     
     //Gets questions and options from Question Bank
     question.textContent = questionBank[j].question;
@@ -93,15 +71,16 @@ function startPractice(subject) {
     optionC.textContent = questionBank[j].optionC;
     optionD.textContent = questionBank[j].optionD;
     answer.textContent = questionBank[j].answer;
-
-    if (subject === "government") {
-        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD);
-    } else {
-        alert(`Invalid Subject Selection!: ${subject}`);
-        throw `Invalid Subject Selection!: ${subject}. Aborting!`;
-    }
 };
-
+function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
+    document.getElementById('question').textContent = question;
+    document.getElementById('optionA').textContent = optionA;
+    document.getElementById('optionB').textContent = optionB;
+    document.getElementById('optionC').textContent = optionC;
+    document.getElementById('optionD').textContent = optionD;
+    document.getElementById('answer').textContent = answer;
+    
+};
 /**
  * Checks the chosen answer against the system answer
  */
@@ -182,12 +161,38 @@ function displayEnglishQuestion() {
     
 };
 
-function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
-    document.getElementById('question') = question;
-    document.getElementById('optionA') = optionA;
-    document.getElementById('optionB') = optionB;
-    document.getElementById('optionC') = optionC;
-    document.getElementById('optionD') = optionD;
-    document.getElementById('answer') = answer;
-    
-};
+
+
+
+//Question Banks for Subjects
+const questionBank = [    
+    {question: "This is a sample question to get you acquainted?",
+    optionA: "Writes plaintext,  expressions or jmvgh to the document. n",
+    optionB: "Writes plaintext,  expressions or JavaScript to the document. ",
+    optionC: "A Writes plaintext,  expressions or JavaScript to the document.",
+    optionD: "A Wriddtes plaintext,  expressions or JavaScript to the document.",
+    answer: "A Wriddtes plaintext,  expressions or JavaScript to the document."},
+
+    {question: "who are you?",
+    optionA: "A man",
+    optionB: "A woman",
+    optionC: "A girl",
+    optionD: "A boy",
+    answer: "A woman"},
+
+    {question: "where is kkkkk",
+    optionA: "22222",
+    optionB: "22222",
+    optionC: "fbgdf",
+    optionD: "22222",
+    answer: "fbgdf"},
+
+    {question: "Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+
+]  
