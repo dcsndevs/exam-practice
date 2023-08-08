@@ -13,13 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
             } 
         } else if (this.getAttribute("data-type") === "maths"){
             if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
-                alert('You have 10 mins to answer 10 Questions. Goodluck!')
-            
+                alert('You have 10 mins to answer 10 Questions. Goodluck!');
+                
                 let subject = this.getAttribute("data-type");
                     startPractice(subject);  
         } 
         } else if (this.getAttribute("data-type") === "english"){
-            alert(" The button is working!");            
+            if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                alert('You have 10 mins to answer 10 Questions. Goodluck!');
+                
+                let subject = this.getAttribute("data-type");
+                    startPractice(subject);  
 
         } else if (this.getAttribute("data-type") === "government"){
             if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
@@ -40,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
             alert(`Invalid Subject Selection!`);
             throw `Invalid Subject Selection. Refresh`;
         }
-        });
+        }
+    });
     }
     //Add Introduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
     // startPractice("government");
