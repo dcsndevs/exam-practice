@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i of mainControls) {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "next") {
+                if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
+                    alert('Theres is currently no practice in session.\nSelect a practice session by choosing a subject above.')
+                } else {
                 checkAnswer();                
-            } else if (this.getAttribute("data-type") === "maths"){
+            } 
+        }   else if (this.getAttribute("data-type") === "maths"){
                 let subject = this.getAttribute("data-type");
                     startPractice(subject);  
             } 
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     startPractice(subject);            
             } else if (this.getAttribute("data-type") === "end"){
                 if (parseInt(document.getElementById("questionNumber").textContent) === 0) {
-                    alert('Theres is currently no practice in session')
+                    alert('Theres is currently no practice in session.\nSelect a practice session by choosing a subject above.')
                 } else {
                 endPractice();  
                 }   
