@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 usernamed();                
             } 
             else if (this.getAttribute("data-type") === "next") {
-                let subject = subjectTitle.textContent.toLowerCase();
-                console.log(subject);
-                checkAnswer(subject);                
+                checkAnswer();                
             } 
             else if (this.getAttribute("data-type") === "maths"){
                 alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Government";
                     let subject = this.getAttribute("data-type");
-                    console.log(subject)
                     startPractice(subject);            
             } 
             else if (this.getAttribute("data-type") === "end"){
@@ -47,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-   
+    //Add Introduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
+    // startPractice("government");
 });
 
 
@@ -99,25 +97,17 @@ function usernamed() {
 function startPractice(subject) {
         
     if (subject === "government") {
-        console.log(subject)
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
         j = i;
         
-        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
+        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer);
         
     } else if (subject === "maths") {
-        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 11;
-        j = i;
         displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
-
-    } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 21;
+        let i = questionNumber + 10;
         j = i;
-        displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer);
-
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
@@ -135,33 +125,39 @@ function startPractice(subject) {
 
 };
 
-
-
+function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
+    document.getElementById('question').textContent = question;
+    document.getElementById('optionA').textContent = optionA;
+    document.getElementById('optionB').textContent = optionB;
+    document.getElementById('optionC').textContent = optionC;
+    document.getElementById('optionD').textContent = optionD;
+    document.getElementById('answer').textContent = answer;
+    
+    displayControls ();
+    
+};
 
 /**
  * Checks the chosen answer against the system answer
  */
-function checkAnswer (subject) {
+function checkAnswer () {
     
     let correctAnswer = document.getElementById('answer').textContent;
     let userAnswer;
     if (document.getElementById('optionA').style.color === "red") {
         userAnswer = document.getElementById('optionA').textContent;
 
-    } 
-    else if (document.getElementById('optionB').style.color === "red") {
+    } else if (document.getElementById('optionB').style.color === "red") {
         userAnswer = document.getElementById('optionB').textContent;
 
-    } 
-    else if (document.getElementById('optionC').style.color === "red") {
+    } else if (document.getElementById('optionC').style.color === "red") {
         userAnswer = document.getElementById('optionC').textContent;
 
-    } 
-    else if (document.getElementById('optionD').style.color === "red") {
+    } else if (document.getElementById('optionD').style.color === "red") {
         userAnswer = document.getElementById('optionD').textContent;
-    } 
-    else userAnswer = "black";
-  
+    } else userAnswer = "black";
+    console.log(correctAnswer);
+    console.log(userAnswer);
     
 
     let isCorrect = userAnswer === correctAnswer;
@@ -171,7 +167,7 @@ function checkAnswer (subject) {
         incrementFailedAnswer();
     }
 
-    questionNumber(subject);
+    questionNumber();
 };
 
 function incrementRightAnswer() {
@@ -194,7 +190,7 @@ function progressBar () {
  * Checks for the current question number and then adds 1 to it in other to access
  * the next question
  */
-function questionNumber(subject) {
+function questionNumber() {
     let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
     document.getElementById("questionNumber").textContent = ++previousQuestionNumber;
     let colorResetA = document.getElementById("optionA");
@@ -205,35 +201,18 @@ function questionNumber(subject) {
     colorResetB.style.color = "black";
     colorResetC.style.color = "black";
     colorResetD.style.color = "black";
-    console.log(++previousQuestionNumber);
-    console.log(parseInt(document.getElementById("questionNumber").textContent))
-    
-    
-    if ((subject === "government") || (previousQuestionNumber < 5)) {
-        console.log("ezi");
-        console.log(subject);
+
+
+    if (parseInt(document.getElementById("questionNumber").textContent) < 6) {
         startPractice("government");
-        console.log(subject);
-    } else {
-       result();
+    } else {        
+        result();
     }
-    
-    // else if (subject === "english") {
-    //     if (parseInt(document.getElementById("questionNumber").textContent) < 20) {        
-    //         startPractice("english");
-    //     }
-    // }
-    // else if (subject === "maths") { 
-    //     if (parseInt(document.getElementById("questionNumber").textContent) < 30) {
-    //         startPractice("maths");
-    //     } 
-    // }
-    // else {
-    //     result();
-        
-    // }
 };
 
+function nextQuestion() {
+
+};
 
 function endPractice() {
     let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
@@ -247,20 +226,20 @@ function endPractice() {
 };
 
 /**Function to Display controls when practice is loaded */
-function displayControls (subject) {    
-    console.log(subject)
+function displayControls () {
+    
     displayNextEnd.style.display = "block"
-    hideSubjectControls(subject);
+    hideSubjectControls();
 }
 /**Function to Hide Main Subject controls when practice is loaded */
-function hideSubjectControls(subject) {
+function hideSubjectControls() {
     displayMainControls.style.display = "none"
-    timer(subject);
+    timer();
 }
 
 /**Function to display timer and end exam at the end*/
-function timer(subject) {     
-    console.log(subject)
+function timer() {     
+
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
@@ -295,47 +274,22 @@ function result() {
     alert("You have come to the end of this practice session!\nClick OK to view your result!")
     
     displayResult.style.display = "block"
-    return;
 };
 
+function restartPractice () {
 
-function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
+};
 
-    document.getElementById('question').textContent = question;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
-    document.getElementById('answer').textContent = answer;
-    console.log(subject)
-    displayControls (subject);
+function displayMathsQuestion() {
+
+};
+
+function displayEnglishQuestion() {
     
 };
 
-function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer) {
-    document.getElementById('question').textContent = question;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
-    document.getElementById('answer').textContent = answer;
 
-    displayControls ();
-    
 
-};
-
-function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer) {
-    document.getElementById('question').textContent = question;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
-    document.getElementById('answer').textContent = answer;
-
-    displayControls ();
-    
-};
 
 //Question Banks for Subjects
 const questionBank = [    

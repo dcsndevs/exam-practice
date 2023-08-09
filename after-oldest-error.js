@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 usernamed();                
             } 
             else if (this.getAttribute("data-type") === "next") {
-                let subject = subjectTitle.textContent.toLowerCase();
-                console.log(subject);
                 checkAnswer(subject);                
             } 
             else if (this.getAttribute("data-type") === "maths"){
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Government";
                     let subject = this.getAttribute("data-type");
-                    console.log(subject)
                     startPractice(subject);            
             } 
             else if (this.getAttribute("data-type") === "end"){
@@ -99,12 +96,11 @@ function usernamed() {
 function startPractice(subject) {
         
     if (subject === "government") {
-        console.log(subject)
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
         j = i;
         
-        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
+        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer);
         
     } else if (subject === "maths") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
@@ -207,13 +203,11 @@ function questionNumber(subject) {
     colorResetD.style.color = "black";
     console.log(++previousQuestionNumber);
     console.log(parseInt(document.getElementById("questionNumber").textContent))
+    console.log(subject);
     
-    
-    if ((subject === "government") || (previousQuestionNumber < 5)) {
+    if ((subject === "government") && (previousQuestionNumber < 5)) {
         console.log("ezi");
-        console.log(subject);
         startPractice("government");
-        console.log(subject);
     } else {
        result();
     }
@@ -247,20 +241,19 @@ function endPractice() {
 };
 
 /**Function to Display controls when practice is loaded */
-function displayControls (subject) {    
-    console.log(subject)
+function displayControls () {    
     displayNextEnd.style.display = "block"
-    hideSubjectControls(subject);
+    hideSubjectControls();
 }
 /**Function to Hide Main Subject controls when practice is loaded */
-function hideSubjectControls(subject) {
+function hideSubjectControls() {
     displayMainControls.style.display = "none"
-    timer(subject);
+    timer();
 }
 
 /**Function to display timer and end exam at the end*/
-function timer(subject) {     
-    console.log(subject)
+function timer() {     
+
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
@@ -295,20 +288,18 @@ function result() {
     alert("You have come to the end of this practice session!\nClick OK to view your result!")
     
     displayResult.style.display = "block"
-    return;
 };
 
 
-function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
-
+function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-    console.log(subject)
-    displayControls (subject);
+    
+    displayControls ();
     
 };
 
