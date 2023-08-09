@@ -110,13 +110,17 @@ function startPractice(subject) {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 11;
         j = i;
-        displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
+        displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
 
     } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 21;
         j = i;
-        displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer);
+        ;
+        console.log(subject);
+        console.log("check na 1st")
+        displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
+        console.log("check na 2nd")
 
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
@@ -124,7 +128,7 @@ function startPractice(subject) {
     }
 
     
-    
+    console.log("check na 3rd")
     //Gets questions and options from Question Bank
     question.textContent = questionBank[j].question;
     optionA.textContent = questionBank[j].optionA;
@@ -132,6 +136,7 @@ function startPractice(subject) {
     optionC.textContent = questionBank[j].optionC;
     optionD.textContent = questionBank[j].optionD;
     answer.textContent = questionBank[j].answer;
+    console.log("check na 4th")
 
 };
 
@@ -212,10 +217,10 @@ function questionNumber(subject) {
     if ((subject === "government") && (previousQuestionNumber < 5)) {
         startPractice("government");        
     } 
-    else if ((subject === "english") && (previousQuestions < 12)) {   
+    else if ((subject === "english") && (previousQuestionNumber < 12)) {   
         startPractice("english");
     }
-    else if ((subject === "maths") && (previousQuestions < 19)) { 
+    else if ((subject === "maths") && (previousQuestionNumber < 19)) { 
         startPractice("maths");       
     }
     else {
@@ -301,28 +306,28 @@ function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD,
     
 };
 
-function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer) {
+function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-
-    displayControls ();
+    console.log(subject)
+    displayControls (subject);
     
 
 };
 
-function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer) {
+function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-
-    displayControls ();
+    console.log(subject)
+    displayControls (subject);
     
 };
 
@@ -434,5 +439,252 @@ const questionBank = [
     optionD: "3de34",
     answer: "3de34"},
 
+    {question: "11who are you?",
+    optionA: "A man",
+    optionB: "A woman",
+    optionC: "A girl",
+    optionD: "A boy",
+    answer: "A woman"},
+
+
+    {question: "12where is kkkkk",
+    optionA: "22222",
+    optionB: "22222",
+    optionC: "fbgdf",
+    optionD: "22222",
+    answer: "fbgdf"},
+
+    {question: "13Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "14Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "15Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "16Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "16b 17aIs jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "17bbIs jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "18Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "19Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "20Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "21Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "22Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "21who are you?",
+    optionA: "A man",
+    optionB: "A woman",
+    optionC: "A girl",
+    optionD: "A boy",
+    answer: "A woman"},
+
+
+    {question: "22where is kkkkk",
+    optionA: "22222",
+    optionB: "22222",
+    optionC: "fbgdf",
+    optionD: "22222",
+    answer: "fbgdf"},
+
+    {question: "23Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "24Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "25Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "26Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "26b 17aIs jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "27bbIs jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "28Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "29Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "30Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "31who are you?",
+    optionA: "A man",
+    optionB: "A woman",
+    optionC: "A girl",
+    optionD: "A boy",
+    answer: "A woman"},
+
+
+    {question: "322where is kkkkk",
+    optionA: "22222",
+    optionB: "22222",
+    optionC: "fbgdf",
+    optionD: "22222",
+    answer: "fbgdf"},
+
+    {question: "33Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "34Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "35Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "36Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "36b 17aIs jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "37bbIs jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "38Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "39Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
+
+    {question: "40Is jos in Nigeria",
+    optionA: "3333",
+    optionB: "3333",
+    optionC: "3333",
+    optionD: "3de34",
+    answer: "3de34"},
 
 ]  
