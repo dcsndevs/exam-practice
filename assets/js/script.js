@@ -1,5 +1,5 @@
 //Allow DOM to load before starting exam practice sessions
-//Add evet listeners to subject practice
+//Add event listeners to subject practice
 
 document.addEventListener("DOMContentLoaded", function() {
     let mainControls = document.getElementsByTagName("button");
@@ -12,11 +12,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkAnswer();                
             } 
             else if (this.getAttribute("data-type") === "maths"){
-                let subject = this.getAttribute("data-type");
-                    startPractice(subject);  
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
+                    
+                    displayMainArea.style.display = "block";                    
+                    subjectTitle.textContent = "Maths";
+                    let subject = this.getAttribute("data-type");
+                    startPractice(subject);    
             } 
             else if (this.getAttribute("data-type") === "english"){
-                alert(" The button is working!");            
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
+                    
+                    displayMainArea.style.display = "block";                    
+                    subjectTitle.textContent = "English";
+                    let subject = this.getAttribute("data-type");
+                    startPractice(subject);                
             } 
             else if (this.getAttribute("data-type") === "government"){
                     alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
@@ -35,8 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    //Add Introduction here as we do not intend to auto-load a default subject (this is what happens adter the above finish loading)
-    // startPractice("government");
+   
 });
 
 
@@ -98,6 +106,11 @@ function startPractice(subject) {
         displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 10;
+        j = i;
+    } else if (subject === "english") {
+        displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
+        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+        let i = questionNumber + 20;
         j = i;
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
