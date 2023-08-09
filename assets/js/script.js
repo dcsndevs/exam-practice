@@ -58,23 +58,20 @@ const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
 const subjectTitle = document.getElementById('subjectTitle');
-const usernamerr = document.getElementById('user').value;
 
-// const username = parseInt(document.getElementById("user").value);
 /**
- * Usernam Input
+ * Username Input
  */
 function usernamed() {
-    // const usernamerr = document.getElementById("user").value;
-    // let z = usernamerr.textContent;
-    // let usernameDisplay = document.getElementById('usernames').textContent;
-    // usernameDisplay = z;
-    document.getElementById('usernames').textContent = usernamerr;
+    
+    let usernamerr = document.getElementById("user").value;
 
     let displayMainArea = document.getElementById('welcome');
     displayMainArea.style.display = "none"
 
-    alert("Welcome!\n Pick a subject to continue");
+    document.getElementById('usernames').innerText = usernamerr;
+
+    alert("Welcome " + `${usernamerr}` + "!\n Pick a subject to continue");
     
     
     
