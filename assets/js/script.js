@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let mainControls = document.getElementsByTagName("button");
     for (let i of mainControls) {
         i.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "next") {
+            if (this.getAttribute("data-type") === "start") {
+                usernamed();                
+            } 
+            else if (this.getAttribute("data-type") === "next") {
                 checkAnswer();                
             } 
             else if (this.getAttribute("data-type") === "maths"){
@@ -17,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } 
             else if (this.getAttribute("data-type") === "government"){
                     alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
+                    let displayMainArea = document.getElementById('main-area');
+                    displayMainArea.style.display = "block"
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
             } 
@@ -53,6 +58,28 @@ const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
 const subjectTitle = document.getElementById('subjectTitle');
+const usernamerr = document.getElementById('user').value;
+
+// const username = parseInt(document.getElementById("user").value);
+/**
+ * Usernam Input
+ */
+function usernamed() {
+    // const usernamerr = document.getElementById("user").value;
+    // let z = usernamerr.textContent;
+    // let usernameDisplay = document.getElementById('usernames').textContent;
+    // usernameDisplay = z;
+    document.getElementById('usernames').textContent = usernamerr;
+
+    let displayMainArea = document.getElementById('welcome');
+    displayMainArea.style.display = "none"
+
+    alert("Welcome!\n Pick a subject to continue");
+    
+    
+    
+
+}
 
 /**
  * This functions starts the practice as soon as it receives a subject

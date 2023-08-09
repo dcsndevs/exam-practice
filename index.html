@@ -25,18 +25,16 @@
             <p>This website helps you practice likely exam questions. It presents in a question and \n
                 multiple choice answers. It is a time based exam that prepares your mental power by subjecting you to 
                 real exam conditions. We currently support three subjects: Maths, English, and Government. 
-                To begin, enter your username below! 
-                
+                To begin, enter your username below!                 
             </p>
-            <input type="text" id="username">
-            <button id="start">Start!</button>
-            
+            <input type="text" id="user">
+            <button id="start" data-type="start">Start!</button>            
         </div>
-        <div class="main-area">
+        <div id="main-area">
             <div class="progress">
                 <div id="timer"></div>
                 <div id="question-number"><span id=questionNumber>0</span> of 10</div>
-                <div id="Username"></div>
+                <div id="namer">Welcome <span id="usernames">User</span>!</div>
             </div>
             <p id="question"></p><hr>
             <div class="option" >                

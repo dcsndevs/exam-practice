@@ -51,6 +51,7 @@ footer {
     display: none;
 }
 
-/* .options {
-    color: black;
-} */
+/* Hide main Area from start */
+#main-area {
+    display: none;
+}
