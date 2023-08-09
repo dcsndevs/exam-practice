@@ -204,21 +204,26 @@ function hideSubjectControls() {
 }
 
 /**Function to display timer and end exam at the end*/
-function timer() { 
-    const practiceTime = 10; //10minutes for each practice session
-    let totalSeconds = practiceTime * 60;
+function timer() {     
 
-    const timer = document.getElementById("timer");
+    if ((document.getElementById("timer").textContent !=="")) {
+        return console.log("next");
+    } else {
+        const practiceTime = 1; //10minutes for each practice session
+        let totalSeconds = practiceTime * 60;
 
-    setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
-    
-    function timerCounting() {
-        const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
-        let seconds = totalSeconds % 60;
-        if ((minutes === 0) && (seconds === 0)) timeUp();
+        const timer = document.getElementById("timer");
 
-        timer.innerHTML = `${minutes}:${seconds}`; 
-        totalSeconds--;
+        setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+        
+        function timerCounting() {
+            const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
+            let seconds = totalSeconds % 60;
+            if ((minutes === 0) && (seconds === 0)) timeUp();
+
+            timer.innerHTML = `${minutes}:${seconds}`; 
+            totalSeconds--;
+        }
     }
 
 };
@@ -226,7 +231,7 @@ function timer() {
  * Ends the practice session on time up
  */
 function timeUp() {
-    alert("Your time is Up!/nYou have come to the end of this practice session!\nClick OK to view your result!");
+    alert("Your time is Up!\nYou have come to the end of this practice session!\nClick OK to view your result!");
     let displayResult= document.getElementById("result");
     displayResult.style.display = "block"
 }
