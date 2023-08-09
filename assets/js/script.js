@@ -207,7 +207,7 @@ function hideSubjectControls() {
 function timer() {     
 
     if ((document.getElementById("timer").textContent !=="")) {
-        return console.log("next");
+        return;
     } else {
         const practiceTime = 1; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
