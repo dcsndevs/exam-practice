@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
             else if (this.getAttribute("data-type") === "government"){
                     alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
                     
-                    displayMainArea.style.display = "block"
+                    displayMainArea.style.display = "block";                    
+                    subjectTitle.textContent = "Government";
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
             } 
@@ -59,7 +60,7 @@ const optionB = document.getElementById('optionB');
 const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
-const subjectTitle = document.getElementById('subjectTitle');
+let subjectTitle = document.getElementById("subjectTitle");
 
 // Global Display Variables
 let displayWelcome = document.getElementById('welcome');
@@ -90,9 +91,7 @@ function startPractice(subject) {
         let i = questionNumber + 1;
         j = i;
         
-        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subjectTitle);
-        // let subjectTitle = document.getElementById("subjectTitle").textContent;
-        // subjectTitle.textContent = "government";
+        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer);
         
     } else if (subject === "maths") {
         displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer);
@@ -116,14 +115,14 @@ function startPractice(subject) {
 
 };
 
-function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subjectTitle) {
+function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-    document.getElementById('subjectTitle').textContent = subjectTitle;
+    
     displayControls ();
     
 };
