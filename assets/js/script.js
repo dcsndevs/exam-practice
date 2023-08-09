@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } 
             else if (this.getAttribute("data-type") === "next") {
                 let subject = subjectTitle.textContent.toLowerCase();
-                console.log(subject);
                 checkAnswer(subject);                
             } 
             else if (this.getAttribute("data-type") === "maths"){
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Government";
                     let subject = this.getAttribute("data-type");
-                    console.log(subject)
                     startPractice(subject);            
             } 
             else if (this.getAttribute("data-type") === "end"){
@@ -51,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
 //Enable color selection for question options
 let selection = document.getElementsByClassName('options');
 for (let i = 0; i < selection.length; i++) {
@@ -62,7 +59,6 @@ function selecChoose() {
         this.style.color = "red";
     } else (this.style.color = "black")
 }
-
 
 // Global Variables
 const question = document.getElementById('question');
@@ -79,7 +75,6 @@ let displayNextEnd = document.getElementsByClassName("controls")[0];
 let displayMainControls = document.getElementsByClassName("main-controls")[0];
 let displayResult= document.getElementById("result");
 let displayMainArea = document.getElementById('main-area');
-
 
 /**
  * Username Input
@@ -99,7 +94,6 @@ function usernamed() {
 function startPractice(subject) {
         
     if (subject === "government") {
-        console.log(subject)
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
         j = i;
@@ -116,19 +110,13 @@ function startPractice(subject) {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 20;
         j = i;
-        ;
-        console.log(subject);
-        console.log("check na 1st")
         displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
-        console.log("check na 2nd")
 
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
     }
-
     
-    console.log("check na 3rd")
     //Gets questions and options from Question Bank
     question.textContent = questionBank[j].question;
     optionA.textContent = questionBank[j].optionA;
@@ -136,12 +124,7 @@ function startPractice(subject) {
     optionC.textContent = questionBank[j].optionC;
     optionD.textContent = questionBank[j].optionD;
     answer.textContent = questionBank[j].answer;
-    console.log("check na 4th")
-
 };
-
-
-
 
 /**
  * Checks the chosen answer against the system answer
@@ -167,7 +150,6 @@ function checkAnswer (subject) {
     } 
     else userAnswer = "black";
   
-    
 
     let isCorrect = userAnswer === correctAnswer;
     if (isCorrect) {
@@ -187,13 +169,7 @@ function incrementRightAnswer() {
 function incrementFailedAnswer() {
     let failedAnswer = parseInt(document.getElementById('failedAnswer').textContent);
     document.getElementById("failedAnswer").textContent = ++failedAnswer;
-
 };
-
-function progressBar () {
-
-};
-
 
 /**
  * Checks for the current question number and then adds 1 to it in other to access
@@ -210,9 +186,6 @@ function questionNumber(subject) {
     colorResetB.style.color = "black";
     colorResetC.style.color = "black";
     colorResetD.style.color = "black";
-    console.log(++previousQuestionNumber);
-    console.log(parseInt(document.getElementById("questionNumber").textContent))
-    
     
     if ((subject === "government") && (previousQuestionNumber < 12)) {
         startPractice("government");        
@@ -228,7 +201,6 @@ function questionNumber(subject) {
     }
 };
 
-
 function endPractice() {
     let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
     if (confirm(message) == true) {
@@ -242,7 +214,6 @@ function endPractice() {
 
 /**Function to Display controls when practice is loaded */
 function displayControls (subject) {    
-    console.log(subject)
     displayNextEnd.style.display = "block"
     hideSubjectControls(subject);
 }
@@ -254,7 +225,6 @@ function hideSubjectControls(subject) {
 
 /**Function to display timer and end exam at the end*/
 function timer(subject) {     
-    console.log(subject)
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
@@ -292,7 +262,6 @@ function result() {
     return;
 };
 
-
 function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
 
     document.getElementById('question').textContent = question;
@@ -301,7 +270,6 @@ function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD,
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-    console.log(subject)
     displayControls (subject);
     
 };
@@ -313,10 +281,7 @@ function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answ
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-    console.log(subject)
     displayControls (subject);
-    
-
 };
 
 function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
@@ -326,9 +291,7 @@ function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, an
     document.getElementById('optionC').textContent = optionC;
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
-    console.log(subject)
     displayControls (subject);
-    
 };
 
 //Question Banks for Subjects
@@ -615,7 +578,6 @@ const questionBank = [
     optionC: "A girl",
     optionD: "A boy",
     answer: "A woman"},
-
 
     {question: "322where is kkkkk",
     optionA: "22222",

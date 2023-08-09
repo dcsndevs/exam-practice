@@ -56,3 +56,8 @@ footer {
 #main-area {
     display: none;
 }
+
+/* Hide Answers*/
+#answer {
+    display: none;
+}
