@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } 
             else if (this.getAttribute("data-type") === "government"){
                     alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
-                    let displayMainArea = document.getElementById('main-area');
+                    
                     displayMainArea.style.display = "block"
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // startPractice("government");
 });
 
+
+
 //Enable color selection for question options
 let selection = document.getElementsByClassName('options');
 for (let i = 0; i < selection.length; i++) {
@@ -50,7 +52,7 @@ function selecChoose() {
 }
 
 
-/* Global Variables */
+// Global Variables
 const question = document.getElementById('question');
 const optionA = document.getElementById('optionA');
 const optionB = document.getElementById('optionB');
@@ -59,23 +61,23 @@ const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
 const subjectTitle = document.getElementById('subjectTitle');
 
+// Global Display Variables
+let displayWelcome = document.getElementById('welcome');
+let displayNextEnd = document.getElementsByClassName("controls")[0];
+let displayMainControls = document.getElementsByClassName("main-controls")[0];
+let displayResult= document.getElementById("result");
+let displayMainArea = document.getElementById('main-area');
+
+
 /**
  * Username Input
  */
 function usernamed() {
-    
-    let usernamerr = document.getElementById("user").value;
 
-    let displayMainArea = document.getElementById('welcome');
-    displayMainArea.style.display = "none"
-
+    displayWelcome.style.display = "none"
+    let usernamerr = document.getElementById("user").value;    
     document.getElementById('usernames').innerText = usernamerr;
-
     alert("Welcome " + `${usernamerr}` + "!\n Pick a subject to continue");
-    
-    
-    
-
 }
 
 /**
@@ -216,13 +218,12 @@ function endPractice() {
 
 /**Function to Display controls when practice is loaded */
 function displayControls () {
-    let displayNextEnd = document.getElementsByClassName("controls")[0];
+    
     displayNextEnd.style.display = "block"
     hideSubjectControls();
 }
 /**Function to Hide Main Subject controls when practice is loaded */
 function hideSubjectControls() {
-    let displayMainControls = document.getElementsByClassName("main-controls")[0];
     displayMainControls.style.display = "none"
     timer();
 }
@@ -256,13 +257,13 @@ function timer() {
  */
 function timeUp() {
     alert("Your time is Up!\nYou have come to the end of this practice session!\nClick OK to view your result!");
-    let displayResult= document.getElementById("result");
+    
     displayResult.style.display = "block"
 }
 
 function result() {
     alert("You have come to the end of this practice session!\nClick OK to view your result!")
-    let displayResult= document.getElementById("result");
+    
     displayResult.style.display = "block"
 };
 
