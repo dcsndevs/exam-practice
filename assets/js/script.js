@@ -108,13 +108,13 @@ function startPractice(subject) {
         
     } else if (subject === "maths") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 11;
+        let i = questionNumber + 10;
         j = i;
         displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
 
     } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 21;
+        let i = questionNumber + 20;
         j = i;
         ;
         console.log(subject);
@@ -214,13 +214,13 @@ function questionNumber(subject) {
     console.log(parseInt(document.getElementById("questionNumber").textContent))
     
     
-    if ((subject === "government") && (previousQuestionNumber < 5)) {
+    if ((subject === "government") && (previousQuestionNumber < 12)) {
         startPractice("government");        
     } 
     else if ((subject === "english") && (previousQuestionNumber < 12)) {   
         startPractice("english");
     }
-    else if ((subject === "maths") && (previousQuestionNumber < 19)) { 
+    else if ((subject === "maths") && (previousQuestionNumber < 12)) { 
         startPractice("maths");       
     }
     else {
