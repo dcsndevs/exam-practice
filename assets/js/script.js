@@ -76,6 +76,7 @@ let displayMainArea = document.getElementById('main-area');
 function usernamed() {
 
     displayWelcome.style.display = "none"
+    displayMainControls.style.display = "block"
     let usernamerr = document.getElementById("user").value;    
     document.getElementById('usernames').innerText = usernamerr;
     alert("Welcome " + `${usernamerr}` + "!\n Pick a subject to continue");

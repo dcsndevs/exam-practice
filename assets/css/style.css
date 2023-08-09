@@ -47,6 +47,7 @@ footer {
 }
 
 /* Hide Controls from inception (before practice button is chosen) */
+.main-controls,
 .controls {
     display: none;
 }
