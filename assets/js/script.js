@@ -150,9 +150,7 @@ function progressBar () {
 
 };
 
-function timer() {
 
-};
 /**
  * Checks for the current question number and then adds 1 to it in other to access
  * the next question
@@ -202,7 +200,27 @@ function displayControls () {
 function hideSubjectControls() {
     let displayMainControls = document.getElementsByClassName("main-controls")[0];
     displayMainControls.style.display = "none"
+    timer();
 }
+
+/**Function to display timer and end exam at the end*/
+function timer() { 
+    const practiceTime = 10; //10minutes for each practice session
+    let totalSeconds = practiceTime * 60;
+
+    const timer = document.getElementById("timer");
+
+    setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+    
+    function timerCounting() {
+        const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
+        let seconds = totalSeconds % 60;
+
+        timer.innerHTML = `${minutes}:${seconds}`; 
+        totalSeconds--;
+    }
+
+};
 
 function result() {
     alert("You have come to the end of this practice session!\nClick OK to view your result!")
