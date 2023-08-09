@@ -215,12 +215,21 @@ function timer() {
     function timerCounting() {
         const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
         let seconds = totalSeconds % 60;
+        if ((minutes === 0) && (seconds === 0)) timeUp();
 
         timer.innerHTML = `${minutes}:${seconds}`; 
         totalSeconds--;
     }
 
 };
+/**
+ * Ends the practice session on time up
+ */
+function timeUp() {
+    alert("Your time is Up!/nYou have come to the end of this practice session!\nClick OK to view your result!");
+    let displayResult= document.getElementById("result");
+    displayResult.style.display = "block"
+}
 
 function result() {
     alert("You have come to the end of this practice session!\nClick OK to view your result!")
