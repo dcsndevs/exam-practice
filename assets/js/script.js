@@ -209,29 +209,18 @@ function questionNumber(subject) {
     console.log(parseInt(document.getElementById("questionNumber").textContent))
     
     
-    if ((subject === "government") || (previousQuestionNumber < 5)) {
-        console.log("ezi");
-        console.log(subject);
-        startPractice("government");
-        console.log(subject);
-    } else {
-       result();
+    if ((subject === "government") && (previousQuestionNumber < 5)) {
+        startPractice("government");        
+    } 
+    else if ((subject === "english") && (previousQuestions < 12)) {   
+        startPractice("english");
     }
-    
-    // else if (subject === "english") {
-    //     if (parseInt(document.getElementById("questionNumber").textContent) < 20) {        
-    //         startPractice("english");
-    //     }
-    // }
-    // else if (subject === "maths") { 
-    //     if (parseInt(document.getElementById("questionNumber").textContent) < 30) {
-    //         startPractice("maths");
-    //     } 
-    // }
-    // else {
-    //     result();
-        
-    // }
+    else if ((subject === "maths") && (previousQuestions < 19)) { 
+        startPractice("maths");       
+    }
+    else {
+        result();     
+    }
 };
 
 
