@@ -103,13 +103,13 @@ function startPractice(subject) {
         
     } else if (subject === "maths") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 10;
+        let i = questionNumber + 12;
         j = i;
         displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
 
     } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 20;
+        let i = questionNumber + 22;
         j = i;
         displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
 
@@ -188,13 +188,13 @@ function questionNumber(subject) {
     colorResetC.style.color = "black";
     colorResetD.style.color = "black";
     
-    if ((subject === "government") && (previousQuestionNumber < 12)) {
+    if ((subject === "government") && (previousQuestionNumber < 11)) {
         startPractice("government");        
     } 
-    else if ((subject === "english") && (previousQuestionNumber < 12)) {   
+    else if ((subject === "english") && (previousQuestionNumber < 11)) {   
         startPractice("english");
     }
-    else if ((subject === "maths") && (previousQuestionNumber < 12)) { 
+    else if ((subject === "maths") && (previousQuestionNumber < 11)) { 
         startPractice("maths");       
     }
     else {
@@ -236,7 +236,7 @@ function timer() {
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
-        const practiceTime = 0.5; //10minutes for each practice session
+        const practiceTime = 10; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
         const timer = document.getElementById("timer");
@@ -338,14 +338,14 @@ const questionBank = [
     optionB: "Queen Elizabeth IV",
     optionC: "King Charlse",
     optionD: "Joe Biden",
-    answer: "King Charlse"},
+    answer: "No answer here"},
 
-    {question: "Nation-state is synonymous with ----",
-    optionA: "self-actualization",
-    optionB: "sovereignty ",
-    optionC: "liberation",
-    optionD: "nationalism",
-    answer: "sovereignty"},    
+    {question: "'Sample Question': Who is the current monarch of the United Kingdom?",
+    optionA: "Peter Obi",
+    optionB: "Donald Trump",
+    optionC: "King Charlse",
+    optionD: "Joe Biden",
+    answer: "King Charlse"},  
 
     {question: "A fundamental component of political culture is ---------",
     optionA: "social values",
@@ -410,12 +410,19 @@ const questionBank = [
     optionD: "Confederal",
     answer: "Confederal"},
 
-    {question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
-    optionA: "60 Degrees",
-    optionB: "30 Degrees",
-    optionC: "120 Degrees",
-    optionD: "45 Degrees",
-    answer: "120 Degrees"},
+    {question: "Nation-state is synonymous with ----",
+    optionA: "self-actualization",
+    optionB: "sovereignty ",
+    optionC: "liberation",
+    optionD: "nationalism",
+    answer: "sovereignty"},  
+
+    {question: "Maths Sample Question: 50 + 50 = ?",
+    optionA: "10",
+    optionB: "100",
+    optionC: "1000",
+    optionD: "10000",
+    answer: "No answer here"},
 
     {question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
     optionA: "60 Degrees",
@@ -424,106 +431,106 @@ const questionBank = [
     optionD: "45 Degrees",
     answer: "120 Degrees"},
 
-    {question: "11Is jos in Nigeria",
+    {question: "A group of market women sell at least one of yam, plantain and maize. 12 of them sell maize, 10 sell yam and 14 sell plantain. 5 sell plantain and maize, 4 sell yam and maize, 2 sell yam and plantain only while 3 sell all the three items. How many women are in the group?",
+    optionA: "25",
+    optionB: "19",
+    optionC: "18",
+    optionD: "17",
+    answer: "25"},
+
+    {question: "A cone has a base radius of 4 cm and a height of 3 cm. The area of its curved surface is",
+    optionA: "12 pi cm^2",
+    optionB: "20 pi cm^2",
+    optionC: "24 pi cm^2",
+    optionD: "251 pi cm^2",
+    answer: "20 pi cm^2"},
+
+    {question: "Two fair dice are rolled. What is the probability that both show up the same number of point??",
+    optionA: "1/36",
+    optionB: "7/36",
+    optionC: "1/2",
+    optionD: "1/6",
+    answer: "1/6"},
+
+
+    {question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
+    optionA: "12000",
+    optionB: "1200",
+    optionC: "120000",
+    optionD: "1200000",
+    answer: "120000"},
+
+    {question: "Express, correct to three significant figures, 0.003597",
+    optionA: "0.359",
+    optionB: "0.004",
+    optionC: "0.00360",
+    optionD: "0.00359",
+    answer: "0.00360"},
+
+    {question: "Dickson borrows £10.00 at 2% per month interest and repays £8.00 after 4 months. However much does he still owe?",
+    optionA: "£10.80",
+    optionB: "£10.67",
+    optionC: "£2.82",
+    optionD: "£2.67",
+    answer: "£2.82"},
+
+    {question: "If the binary operation * is defined by m*n = mn + m + n for any real number m and n, find the identity element under this operation.",
+    optionA: "e = 1",
+    optionB: "e = -1",
+    optionC: "e = -2",
+    optionD: "e = 0",
+    answer: "e = -1"},
+
+    {question: "Englsh Sample 16Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "12Is jos in Nigeria",
+    {question: "16b 17aIs",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "11who are you?",
-    optionA: "A man",
-    optionB: "A woman",
-    optionC: "A girl",
-    optionD: "A boy",
-    answer: "A woman"},
-
-
-    {question: "12where is kkkkk",
-    optionA: "22222",
-    optionB: "22222",
-    optionC: "fbgdf",
-    optionD: "22222",
-    answer: "fbgdf"},
-
-    {question: "13Is jos in Nigeria",
+    {question: "17bbIs",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "14Is jos in Nigeria",
+    {question: "18Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "15Is jos in Nigeria",
+    {question: "19Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "16Is jos in Nigeria",
+    {question: "20Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "16b 17aIs jos in Nigeria",
+    {question: "21Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "17bbIs jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
-
-    {question: "18Is jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
-
-    {question: "19Is jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
-
-    {question: "20Is jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
-
-    {question: "21Is jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
-
-    {question: "22Is jos in Nigeria",
+    {question: "22Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
@@ -545,63 +552,63 @@ const questionBank = [
     optionD: "22222",
     answer: "fbgdf"},
 
-    {question: "23Is jos in Nigeria",
+    {question: "23Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "24Is jos in Nigeria",
+    {question: "24Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "25Is jos in Nigeria",
+    {question: "25Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "26Is jos in Nigeria",
+    {question: "26Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "26b 17aIs jos in Nigeria",
+    {question: "26b 17aIs",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "27bbIs jos in Nigeria",
+    {question: "27bbIs",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "28Is jos in Nigeria",
+    {question: "28Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "29Is jos in Nigeria",
+    {question: "29Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "30Is jos in Nigeria",
+    {question: "30Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
@@ -622,63 +629,63 @@ const questionBank = [
     optionD: "22222",
     answer: "fbgdf"},
 
-    {question: "33Is jos in Nigeria",
+    {question: "33Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "34Is jos in Nigeria",
+    {question: "34Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "35Is jos in Nigeria",
+    {question: "35Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "36Is jos in Nigeria",
+    {question: "36Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "36b 17aIs jos in Nigeria",
+    {question: "36b 17aIs",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "37bbIs jos in Nigeria",
+    {question: "37bbIs",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "38Is jos in Nigeria",
+    {question: "38Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "39Is jos in Nigeria",
+    {question: "39Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "40Is jos in Nigeria",
+    {question: "40Is",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
