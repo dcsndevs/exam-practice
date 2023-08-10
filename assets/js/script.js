@@ -232,11 +232,11 @@ function hideSubjectControls(subject) {
 }
 
 /**Function to display timer and end exam at the end*/
-function timer() {     
+function timer(setInterval) {     
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
-        const practiceTime = 10; //10minutes for each practice session
+        const practiceTime = 0.5; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
         const timer = document.getElementById("timer");
@@ -245,6 +245,7 @@ function timer() {
         // clearInterval (xy);
         
         setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+        console.log(setInterval);
         
         function timerCounting() {
             const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
@@ -277,25 +278,29 @@ function result() {
     // const endTimeInterval = clearInterval (setInterval);
     // const endTimeInterval = 0;
     // return timer(endTimeInterval);
-    const practiceTime = 1; //10minutes for each practice session
-        let totalSeconds = practiceTime * 60;
+    let setInterval = clearInterval;
+    timer(setInterval);
 
-        const timer = document.getElementById("timer");
+
+    // const practiceTime = 1; //10minutes for each practice session
+    //     let totalSeconds = practiceTime * 60;
+
+    //     const timer = document.getElementById("timer");
 
         
-        setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+    //     setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
         
-        function timerCounting() {
-            const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
-            let seconds = totalSeconds % 60;
-            console.log("listening");
-            if ((minutes === 0) && (seconds === 0)) location.reload();
+    //     function timerCounting() {
+    //         const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
+    //         let seconds = totalSeconds % 60;
+    //         console.log("listening");
+    //         if ((minutes === 0) && (seconds === 0)) location.reload();
             
-            timer.innerHTML = `${minutes}:${seconds}`; 
-            totalSeconds--;            
-            console.log("timein TimUp" + totalSeconds--);
-        }
-    return;
+    //         timer.innerHTML = `${minutes}:${seconds}`; 
+    //         totalSeconds--;            
+    //         console.log("timein TimUp" + totalSeconds--);
+    //     }
+    // return;
 };
 
 function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
