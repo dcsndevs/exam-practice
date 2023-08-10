@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
    
 });
 
-
 //Enable color selection for question options
 let selection = document.getElementsByClassName('options');
 for (let i = 0; i < selection.length; i++) {
@@ -232,31 +231,25 @@ function hideSubjectControls(subject) {
 }
 
 /**Function to display timer and end exam at the end*/
-function timer(setInterval) {     
+function timer() {     
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
-        const practiceTime = 0.5; //10minutes for each practice session
+        const practiceTime = 10; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
         const timer = document.getElementById("timer");
 
-        // let xy = setInterval (timerCounting, 1000);
-        // clearInterval (xy);
-        
         setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
-        console.log(setInterval);
         
         function timerCounting() {
             const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
             let seconds = totalSeconds % 60;
-            console.log("listening");
             if ((minutes === 0) && (seconds === 0)) timeUp();
             
             timer.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
             // if (totalSeconds < -60) location.reload();
-            console.log("time in Timer" + totalSeconds--);
         }
     }
 
@@ -275,32 +268,24 @@ function timeUp() {
 function result() {
     alert("You have come to the end of this practice session!\nEnter OK to view your result!\nThe result page would exit in 1 minute");    
     displayResult.style.display = "block";
-    // const endTimeInterval = clearInterval (setInterval);
-    // const endTimeInterval = 0;
-    // return timer(endTimeInterval);
-    let setInterval = clearInterval;
-    timer(setInterval);
+   
+    const practiceTime = 1; //10minutes for each practice session
+        let totalSeconds = practiceTime * 60;
 
-
-    // const practiceTime = 1; //10minutes for each practice session
-    //     let totalSeconds = practiceTime * 60;
-
-    //     const timer = document.getElementById("timer");
+        const timer = document.getElementById("timer");
 
         
-    //     setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+        setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
         
-    //     function timerCounting() {
-    //         const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
-    //         let seconds = totalSeconds % 60;
-    //         console.log("listening");
-    //         if ((minutes === 0) && (seconds === 0)) location.reload();
+        function timerCounting() {
+            const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
+            let seconds = totalSeconds % 60;
+            if ((minutes === 0) && (seconds === 0)) location.reload();
             
-    //         timer.innerHTML = `${minutes}:${seconds}`; 
-    //         totalSeconds--;            
-    //         console.log("timein TimUp" + totalSeconds--);
-    //     }
-    // return;
+            timer.innerHTML = `${minutes}:${seconds}`; 
+            totalSeconds--;            
+        }
+    return;
 };
 
 function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
@@ -457,7 +442,6 @@ const questionBank = [
     optionD: "1/6",
     answer: "1/6"},
 
-
     {question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
     optionA: "12000",
     optionB: "1200",
@@ -548,7 +532,6 @@ const questionBank = [
     optionC: "carefully",
     optionD: "seriously",
     answer: "carefully"},
-
 
     {question: "choose the options opposite in meaning to the word in bracket: The President took exception to the (ignoble) role the young man played in the matter",
     optionA: "honourable",
