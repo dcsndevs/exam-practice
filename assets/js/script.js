@@ -232,24 +232,30 @@ function hideSubjectControls(subject) {
 }
 
 /**Function to display timer and end exam at the end*/
-function timer(subject) {     
+function timer() {     
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
-        const practiceTime = 1; //10minutes for each practice session
+        const practiceTime = 0.5; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
         const timer = document.getElementById("timer");
 
+        // let xy = setInterval (timerCounting, 1000);
+        // clearInterval (xy);
+        
         setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
         
         function timerCounting() {
             const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
             let seconds = totalSeconds % 60;
+            console.log("listening");
             if ((minutes === 0) && (seconds === 0)) timeUp();
-
+            
             timer.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
+            // if (totalSeconds < -60) location.reload();
+            console.log("time in Timer" + totalSeconds--);
         }
     }
 
@@ -258,15 +264,37 @@ function timer(subject) {
  * Ends the practice session on time up
  */
 function timeUp() {
-    alert("Your time is Up!\nYou have come to the end of this practice session!\nClick OK to view your result!");
-    
+    alert("Your time is Up!");
     displayResult.style.display = "block"
+
+    result ();
+    
 }
 
 function result() {
-    alert("You have come to the end of this practice session!\nClick OK to view your result!")
-    
-    displayResult.style.display = "block"
+    alert("You have come to the end of this practice session!\nEnter OK to view your result!\nThe result page would exit in 1 minute");    
+    displayResult.style.display = "block";
+    // const endTimeInterval = clearInterval (setInterval);
+    // const endTimeInterval = 0;
+    // return timer(endTimeInterval);
+    const practiceTime = 1; //10minutes for each practice session
+        let totalSeconds = practiceTime * 60;
+
+        const timer = document.getElementById("timer");
+
+        
+        setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+        
+        function timerCounting() {
+            const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
+            let seconds = totalSeconds % 60;
+            console.log("listening");
+            if ((minutes === 0) && (seconds === 0)) location.reload();
+            
+            timer.innerHTML = `${minutes}:${seconds}`; 
+            totalSeconds--;            
+            console.log("timein TimUp" + totalSeconds--);
+        }
     return;
 };
 
