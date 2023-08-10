@@ -410,12 +410,12 @@ const questionBank = [
     optionD: "3de34",
     answer: "3de34"},
 
-    {question: "9Is jos in Nigeria",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"},
+    {question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
+    optionA: "60 Degrees",
+    optionB: "30 Degrees",
+    optionC: "120 Degrees",
+    optionD: "45 Degrees",
+    answer: "120 Degrees"},
 
     {question: "10Is jos in Nigeria",
     optionA: "3333",
