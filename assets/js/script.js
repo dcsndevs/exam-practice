@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i of mainControls) {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
-                usernamed();                
+                let usernameInput = document.getElementById("user").value; 
+                if (usernameInput.length >= 1 && usernameInput.length <= 10) {
+                    username();
+                } 
+                else {return start, alert("Your username must be atleast 2 and not more than 10 characters!")}
+                                
             } 
             else if (this.getAttribute("data-type") === "next") {
                 let subject = subjectTitle.textContent.toLowerCase();
@@ -79,13 +84,13 @@ let hideScreen = document.getElementById('hide-screen');
 /**
  * Username Input
  */
-function usernamed() {
+function username() {
 
     displayWelcome.style.display = "none"
     displayMainControls.style.display = "block"
-    let usernamerr = document.getElementById("user").value;    
-    document.getElementById('usernames').innerText = usernamerr;
-    alert("Welcome " + `${usernamerr}` + "!\n Pick a subject to continue");
+    let usernameInput = document.getElementById("user").value;    
+    document.getElementById('usernames').innerText = usernameInput;
+    alert("Welcome " + `${usernameInput}` + "!\n Pick a subject to continue");
 }
 
 /**
