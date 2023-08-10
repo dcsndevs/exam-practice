@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
             } 
-            else if (this.getAttribute("data-type") === "end"){
-                        endPractice();            
+            else if (this.getAttribute("data-type") === "end"){             
+                block();            
             } 
             else {
                 alert(`Invalid Subject Selection!`);
@@ -75,6 +75,7 @@ let displayNextEnd = document.getElementsByClassName("controls")[0];
 let displayMainControls = document.getElementsByClassName("main-controls")[0];
 let displayResult= document.getElementById("result");
 let displayMainArea = document.getElementById('main-area');
+let hideScreen = document.getElementById('hide-screen');
 
 /**
  * Username Input
@@ -200,14 +201,21 @@ function questionNumber(subject) {
         result();     
     }
 };
-
+function block() {
+    hideScreen.style.display = "block";
+    
+    setTimeout (function() {
+        endPractice();
+    },2)
+}
 function endPractice() {
+    
     let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
-    if (confirm(message) == true) {
-        //Add Display result here, Print and then reload after
+    
+    if (confirm (message) == true) {        
         result();
     } else {
-        return false;
+        return hideScreen.style.display = "none";        
     }
     
 };

@@ -61,3 +61,13 @@ footer {
 #answer {
     display: none;
 }
+
+/*Hide Screen on clicking end*/
+#hide-screen {
+    z-index: 999;
+    background-color: grey;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
