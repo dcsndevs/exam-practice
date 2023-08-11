@@ -344,7 +344,7 @@ const questionBank = [
     answer: "King Charlse"
     },  
 
-    {question: "A fundamental component of political culture is ---------",
+    {question: "A fundamental component of political culture is _ _ _ __ _ _ _-",
     optionA: "social values",
     optionB: "family values",
     optionC: "economic values.",
@@ -352,7 +352,7 @@ const questionBank = [
     answer: "family values"},
 
     {
-    question: "A form of oligarchy in which gifted people are at the helm of affairs is -----",
+    question: "A form of oligarchy in which gifted people are at the helm of affairs is _ _ _ _-",
     optionA: "aristocracy",
     optionB: "theocracy",
     optionC: "plutocracy",
@@ -361,7 +361,7 @@ const questionBank = [
     },
 
     {
-    question: "A state that is ruled by an elected citizen is ---------------",
+    question: "A state that is ruled by an elected citizen is _ _ _ __ _ _ __ _ _ __ _ _ _",
     optionA: "a monarchy",
     optionB: "a plutocracy",
     optionC: "a republic",
@@ -379,7 +379,7 @@ const questionBank = [
     },
 
     {
-    question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the ---",
+    question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the _ _ _ _",
     optionA: "executive is expected to go on suspension",
     optionB: "legislature ceases to trust the executive",
     optionC: "executive is required to resign",
@@ -388,7 +388,7 @@ const questionBank = [
     },
 
     {
-    question: "The legislative body of the United States of America is the ---",
+    question: "The legislative body of the United States of America is the _ _ _ _",
     optionA: "Parliament",
     optionB: "National Assembly",
     optionC: "Congress",
@@ -397,7 +397,7 @@ const questionBank = [
     },
 
     {
-    question: "Unicameralism is a feature of the legislature in ---",
+    question: "Unicameralism is a feature of the legislature in _ _ _ _",
     optionA: "Israel",
     optionB: "the United States",
     optionC: "the United Kingdom",
@@ -406,7 +406,7 @@ const questionBank = [
     },
 
     {
-    question: "The upper house in most federalsystems is created to –--",
+    question: "The upper house in most federalsystems is created to _ _ _ _",
     optionA: "ensure equality of federating units",
     optionB: "prevent excesses of the executive",
     optionC: "oversee and check the lower house",
@@ -424,7 +424,7 @@ const questionBank = [
     },
 
     {
-    question: "Nation-state is synonymous with ----",
+    question: "Nation-state is synonymous with _ _ _ _",
     optionA: "self-actualization",
     optionB: "sovereignty ",
     optionC: "liberation",
@@ -537,7 +537,7 @@ const questionBank = [
     },
 
     {
-    question: "For the questions, choose the options that best complete the gap(s): He was ---- by the trickster",
+    question: "For the questions, choose the options that best complete the gap(s): He was _ _ _ _ by the trickster",
     optionA: "assisted",
     optionB: "duped",
     optionC: "enjoined",
@@ -546,7 +546,7 @@ const questionBank = [
     },
 
     {
-    question: "When the soldiers saw that resistance was, ---- they stopped fighting",
+    question: "When the soldiers saw that resistance was, _ _ _ _ they stopped fighting",
     optionA: "inadequate",
     optionB: "inefficient",
     optionC: "futile",
@@ -555,7 +555,7 @@ const questionBank = [
     },
 
     {
-    question: "You should read all the ---- carefully before you decide where to go on holiday.",
+    question: "You should read all the _ _ _ _ carefully before you decide where to go on holiday.",
     optionA: "brochures",
     optionB: "prospectus",
     optionC: "tickets",
@@ -564,7 +564,7 @@ const questionBank = [
     },
 
     {
-    question: "We ought to have visited the Governor, --- [A. isn't it B, oughtn't we C.  D.",
+    question: "We ought to have visited the Governor, _ _ _ _ [A. isn't it B, oughtn't we C.  D.",
     optionA: "isn't it",
     optionB: "oughtn't we",
     optionC: "shouldn't we",
