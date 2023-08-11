@@ -251,16 +251,18 @@ function timer() {
 
         const timer = document.getElementById("timer");
 
-        setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+        const clearTimerInterval = setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
+        function stop() {
+            clearInterval(clearTimerInterval);
+        }
         
         function timerCounting() {
             const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
             let seconds = totalSeconds % 60;
-            if ((minutes === 0) && (seconds === 0)) timeUp();
-            
+            if ((minutes === 0) && (seconds === 0)) (timeUp() && stop()); //Helps stop the time when secs and minutes hits zero
             timer.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
-            // if (totalSeconds < -60) location.reload();
+            if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when use uses end button to end practice
         }
     }
 
@@ -269,6 +271,7 @@ function timer() {
  * Ends the practice session on time up
  */
 function timeUp() {
+    
     alert("Your time is Up!");
     displayResult.style.display = "block"
 
@@ -281,24 +284,7 @@ function result() {
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
-   
-    const practiceTime = 1; //10minutes for each practice session
-        let totalSeconds = practiceTime * 60;
 
-        const timer = document.getElementById("timer");
-
-        
-        setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
-        
-        function timerCounting() {
-            const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
-            let seconds = totalSeconds % 60;
-            if ((minutes === 0) && (seconds === 0)) location.reload();
-            
-            timer.innerHTML = `${minutes}:${seconds}`; 
-            totalSeconds--;            
-        }
-    return;
 };
 
 function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {

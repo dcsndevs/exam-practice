@@ -80,7 +80,7 @@ footer {
     display: none;
 }
 
-.option {
+#question, .option {
     color: blue;
 }
 
