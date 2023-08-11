@@ -23,6 +23,10 @@ body {
     padding-top: 20px;
 }
 
+.body-container {
+    background-color: #F47834;
+}
+
 /* Main Question area */
 .main-area {
     width: 80%;
