@@ -257,8 +257,13 @@ function timer() {
         }
         
         function timerCounting() {
-            const minutes = Math.floor(totalSeconds / 60); //Minutes remaining displayed
+            const minutes = '0' + Math.floor(totalSeconds / 60); //Minutes remaining displayed
             let seconds = totalSeconds % 60;
+            if (seconds < 10) {
+                seconds = '0' + seconds
+            } else {
+                seconds;
+            }
             if ((minutes === 0) && (seconds === 0)) (timeUp() && stop()); //Helps stop the time when secs and minutes hits zero
             timer.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
