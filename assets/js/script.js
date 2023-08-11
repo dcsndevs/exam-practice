@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "start") {
                 let usernameInput = document.getElementById("user").value; 
                 if (usernameInput.length >= 1 && usernameInput.length <= 20) {
+                    optionsColorChange();
                     username();
+                    
                 } 
                 else {return start, alert("Your username must be atleast 2 and not more than 20 characters!")}
                                 
@@ -70,10 +72,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //Enable color selection for question options
-let selection = document.getElementsByClassName('options');
-for (let i = 0; i < selection.length; i++) {
-    selection[i].addEventListener('click', selecChoose);
+function optionsColorChange() {
+    document.getElementById('optionA').style.color = "black"
+    document.getElementById('optionB').style.color = "black"
+    document.getElementById('optionC').style.color = "black"
+    document.getElementById('optionD').style.color = "black"
+    let selection = document.getElementsByClassName('options');
+    for (let i = 0; i < selection.length; i++) {
+        selection[i].addEventListener('click', selecChoose);
+    }
 }
+
 function selecChoose() {
     if (this.style.color === "black") {
         this.style.color = "red";
@@ -182,15 +191,10 @@ function incrementFailedAnswer() {
 function questionNumber(subject) {
     let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
     document.getElementById("questionNumber").textContent = ++previousQuestionNumber;
-    let colorResetA = document.getElementById("optionA");
-    let colorResetB = document.getElementById("optionB");
-    let colorResetC = document.getElementById("optionC");
-    let colorResetD = document.getElementById("optionD");
-    colorResetA.style.color = "black";
-    colorResetB.style.color = "black";
-    colorResetC.style.color = "black";
-    colorResetD.style.color = "black";
-    
+    document.getElementById("optionA").style.color ="black"
+    document.getElementById("optionB").style.color ="black"
+    document.getElementById("optionC").style.color ="black"
+    document.getElementById("optionD").style.color ="black"
     if ((subject === "government") && (previousQuestionNumber < 11)) {
         startPractice("government");        
     } 
