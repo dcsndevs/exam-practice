@@ -26,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (usernameInput.length >= 1 && usernameInput.length <= 20) {
                     optionsColorChange();
                     username();
-                    
                 } 
-                else {return start, alert("Your username must be atleast 2 and not more than 20 characters!")}
+                else { return start, invalidLogin()}
                                 
             } 
             else if (this.getAttribute("data-type") === "next") {
@@ -70,7 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    
 });
-
+function invalidLogin () {
+    document.getElementById('invalid-login').innerHTML = '"Your username must be atleast 2 and not more than 20 characters!"'
+}
 //Enable color selection for question options
 function optionsColorChange() {
     document.getElementById('optionA').style.color = "black"
