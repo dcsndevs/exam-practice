@@ -6,6 +6,8 @@ const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
 let subjectTitle = document.getElementById("subjectTitle");
+const resultDate = new Date();
+
 
 // Global Display Variables
 let displayWelcome = document.getElementById('welcome');
@@ -70,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
 });
 function invalidLogin () {
-    document.getElementById('invalid-login').innerHTML = '"Your username must be atleast 2 and not more than 20 characters!"'
+    document.getElementsByClassName('invalid-login')[0].textContent = '"Your username must be atleast 2 and not more than 20 characters!"'
 }
 //Enable color selection for question options
 function optionsColorChange() {
@@ -277,6 +279,8 @@ function timeUp() {
 function result() {
     alert("You have come to the end of this practice session!\nEnter OK to view your result!\nThe result page would exit in 1 minute");    
     displayResult.style.display = "block";
+    document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
+    document.getElementById('date').innerHTML = resultDate;
    
     const practiceTime = 1; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;

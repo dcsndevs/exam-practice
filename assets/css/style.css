@@ -80,7 +80,7 @@ footer {
     color: blue;
 }
 
-#invalid-login {
+.invalid-login {
     color: red;
     margin-top: 10px;
 }
