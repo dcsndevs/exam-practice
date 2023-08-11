@@ -1,6 +1,22 @@
+// Global Variables
+const question = document.getElementById('question');
+const optionA = document.getElementById('optionA');
+const optionB = document.getElementById('optionB');
+const optionC = document.getElementById('optionC');
+const optionD = document.getElementById('optionD');
+const answer = document.getElementById('answer');
+let subjectTitle = document.getElementById("subjectTitle");
+
+// Global Display Variables
+let displayWelcome = document.getElementById('welcome');
+let displayNextEnd = document.getElementsByClassName("controls")[0];
+let displayMainControls = document.getElementsByClassName("main-controls")[0];
+let displayResult= document.getElementById("result");
+let displayMainArea = document.getElementById('main-area');
+let hideScreen = document.getElementById('hide-screen');
+
 //Allow DOM to load before starting exam practice sessions
 //Add event listeners to subject practice
-
 document.addEventListener("DOMContentLoaded", function() {
     let mainControls = document.getElementsByTagName("button");
     for (let i of mainControls) {
@@ -63,23 +79,6 @@ function selecChoose() {
         this.style.color = "red";
     } else (this.style.color = "black")
 }
-
-// Global Variables
-const question = document.getElementById('question');
-const optionA = document.getElementById('optionA');
-const optionB = document.getElementById('optionB');
-const optionC = document.getElementById('optionC');
-const optionD = document.getElementById('optionD');
-const answer = document.getElementById('answer');
-let subjectTitle = document.getElementById("subjectTitle");
-
-// Global Display Variables
-let displayWelcome = document.getElementById('welcome');
-let displayNextEnd = document.getElementsByClassName("controls")[0];
-let displayMainControls = document.getElementsByClassName("main-controls")[0];
-let displayResult= document.getElementById("result");
-let displayMainArea = document.getElementById('main-area');
-let hideScreen = document.getElementById('hide-screen');
 
 /**
  * Username Input
@@ -327,20 +326,23 @@ function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, an
 
 //Question Banks for Subjects
 const questionBank = [    
-    
-    {question: "Who is the current monarch of the United Kingdom?",
+    {
+    question: "Who is the current monarch of the United Kingdom?",
     optionA: "Queen Elizabeth II",
     optionB: "Queen Elizabeth IV",
     optionC: "King Charlse",
     optionD: "Joe Biden",
-    answer: "No answer here"},
+    answer: "No answer here"
+    },
 
-    {question: "'Sample Question': Who is the current monarch of the United Kingdom?",
+    {
+    question: "'Sample Question': Who is the current monarch of the United Kingdom?",
     optionA: "Peter Obi",
     optionB: "Donald Trump",
     optionC: "King Charlse",
     optionD: "Joe Biden",
-    answer: "King Charlse"},  
+    answer: "King Charlse"
+    },  
 
     {question: "A fundamental component of political culture is ---------",
     optionA: "social values",
@@ -349,75 +351,95 @@ const questionBank = [
     optionD: "community structure",
     answer: "family values"},
 
-    {question: "A form of oligarchy in which gifted people are at the helm of affairs is -----",
+    {
+    question: "A form of oligarchy in which gifted people are at the helm of affairs is -----",
     optionA: "aristocracy",
     optionB: "theocracy",
     optionC: "plutocracy",
     optionD: "gerontocracy",
-    answer: "aristocracy"},
+    answer: "aristocracy"
+    },
 
-    {question: "A state that is ruled by an elected citizen is ---------------",
+    {
+    question: "A state that is ruled by an elected citizen is ---------------",
     optionA: "a monarchy",
     optionB: "a plutocracy",
     optionC: "a republic",
     optionD: "an empire",
-    answer: "an republic"},
+    answer: "an republic"
+    },
 
-    {question: "A true democracy in the modern sense exists where the –",
+    {
+    question: "A true democracy in the modern sense exists where the –",
     optionA: "elected representatives rule",
     optionB: "majority of the people rule",
     optionC: "majority of the people vote",
     optionD: "elite rules",
-    answer: "elected representatives rule"},
+    answer: "elected representatives rule"
+    },
 
-    {question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the ---",
+    {
+    question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the ---",
     optionA: "executive is expected to go on suspension",
     optionB: "legislature ceases to trust the executive",
     optionC: "executive is required to resign",
     optionD: "legislature commences legal proceeding against the executive",
-    answer: "executive is required to resign"},
+    answer: "executive is required to resign"
+    },
 
-    {question: "The legislative body of the United States of America is the ---",
+    {
+    question: "The legislative body of the United States of America is the ---",
     optionA: "Parliament",
     optionB: "National Assembly",
     optionC: "Congress",
     optionD: "Council.",
-    answer: "Congress"},
+    answer: "Congress"
+    },
 
-    {question: "Unicameralism is a feature of the legislature in ---",
+    {
+    question: "Unicameralism is a feature of the legislature in ---",
     optionA: "Israel",
     optionB: "the United States",
     optionC: "the United Kingdom",
     optionD: "Ghana.",
-    answer: "Israel"},
+    answer: "Israel"
+    },
 
-    {question: "The upper house in most federalsystems is created to –--",
+    {
+    question: "The upper house in most federalsystems is created to –--",
     optionA: "ensure equality of federating units",
     optionB: "prevent excesses of the executive",
     optionC: "oversee and check the lower house",
     optionD: "enable experienced elders make inputs to governance.",
-    answer: "ensure equality of federating units"},
+    answer: "ensure equality of federating units"
+    },
 
-    {question: "In which of the following systems is the power of the component units more than that of the central government?",
+    {
+    question: "In which of the following systems is the power of the component units more than that of the central government?",
     optionA: "Monarchical",
     optionB: "Federal",
     optionC: "Unitary",
     optionD: "Confederal",
-    answer: "Confederal"},
+    answer: "Confederal"
+    },
 
-    {question: "Nation-state is synonymous with ----",
+    {
+    question: "Nation-state is synonymous with ----",
     optionA: "self-actualization",
     optionB: "sovereignty ",
     optionC: "liberation",
     optionD: "nationalism",
-    answer: "sovereignty"},  
+    answer: "sovereignty"
+    },  
 
-    {question: "Maths Sample Question: 50 + 50 = ?",
+    {
+    question: "Maths Sample Question: 50 + 50 = ?",
     optionA: "10",
     optionB: "100",
     optionC: "1000",
     optionD: "10000",
-    answer: "No answer here"},
+    answer: "No answer here"
+    },
 
     {question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
     optionA: "60 Degrees",
@@ -433,143 +455,183 @@ const questionBank = [
     optionD: "17",
     answer: "25"},
 
-    {question: "A cone has a base radius of 4 cm and a height of 3 cm. The area of its curved surface is",
+    {
+    question: "A cone has a base radius of 4 cm and a height of 3 cm. The area of its curved surface is",
     optionA: "12 pi cm^2",
     optionB: "20 pi cm^2",
     optionC: "24 pi cm^2",
     optionD: "251 pi cm^2",
-    answer: "20 pi cm^2"},
+    answer: "20 pi cm^2"
+    },
 
-    {question: "Two fair dice are rolled. What is the probability that both show up the same number of point??",
+    {
+    question: "Two fair dice are rolled. What is the probability that both show up the same number of point??",
     optionA: "1/36",
     optionB: "7/36",
     optionC: "1/2",
     optionD: "1/6",
-    answer: "1/6"},
+    answer: "1/6"
+    },
 
-    {question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
+    {
+    question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
     optionA: "12000",
     optionB: "1200",
     optionC: "120000",
     optionD: "1200000",
-    answer: "120000"},
+    answer: "120000"
+    },
 
-    {question: "Express, correct to three significant figures, 0.003597",
+    {
+    question: "Express, correct to three significant figures, 0.003597",
     optionA: "0.359",
     optionB: "0.004",
     optionC: "0.00360",
     optionD: "0.00359",
-    answer: "0.00360"},
+    answer: "0.00360"
+    },
 
-    {question: "Dickson borrows £10.00 at 2% per month interest and repays £8.00 after 4 months. However much does he still owe?",
+    {
+    question: "Dickson borrows £10.00 at 2% per month interest and repays £8.00 after 4 months. However much does he still owe?",
     optionA: "£10.80",
     optionB: "£10.67",
     optionC: "£2.82",
     optionD: "£2.67",
-    answer: "£2.82"},
+    answer: "£2.82"
+    },
 
-    {question: "If the binary operation * is defined by m*n = mn + m + n for any real number m and n, find the identity element under this operation.",
+    {
+    question: "If the binary operation * is defined by m*n = mn + m + n for any real number m and n, find the identity element under this operation.",
     optionA: "e = 1",
     optionB: "e = -1",
     optionC: "e = -2",
     optionD: "e = 0",
-    answer: "e = -1"},
+    answer: "e = -1"
+    },
 
-    {question: "Find the mean deviation of 1, 2, 3 and 4",
+    {
+    question: "Find the mean deviation of 1, 2, 3 and 4",
     optionA: "1.0",
     optionB: "1.5",
     optionC: "2.0",
     optionD: "2.5",
-    answer: "1.0"},
+    answer: "1.0"
+    },
 
-    {question: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
+    {
+    question: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
     optionA: "10 ways",
     optionB: "15 ways",
     optionC: "20 ways",
     optionD: "25 ways",
-    answer: "10 ways"},
+    answer: "10 ways"
+    },
 
-    {question: "English Sample Question: What is the opposite of Good'",
+    {
+    question: "English Sample Question: What is the opposite of Good'",
     optionA: "Ugly",
     optionB: "Bad",
     optionC: "Fine",
     optionD: "Poor",
-    answer: "No answer here"},
+    answer: "No answer here"
+    },
 
-    {question: "For the questions, choose the options that best complete the gap(s): He was ---- by the trickster",
+    {
+    question: "For the questions, choose the options that best complete the gap(s): He was ---- by the trickster",
     optionA: "assisted",
     optionB: "duped",
     optionC: "enjoined",
     optionD: "encouraged",
-    answer: "duped"},
+    answer: "duped"
+    },
 
-    {question: "When the soldiers saw that resistance was, ---- they stopped fighting",
+    {
+    question: "When the soldiers saw that resistance was, ---- they stopped fighting",
     optionA: "inadequate",
     optionB: "inefficient",
     optionC: "futile",
     optionD: "successful",
-    answer: "futile"},
+    answer: "futile"
+    },
 
-    {question: "You should read all the ---- carefully before you decide where to go on holiday.",
+    {
+    question: "You should read all the ---- carefully before you decide where to go on holiday.",
     optionA: "brochures",
     optionB: "prospectus",
     optionC: "tickets",
     optionD: "handouts",
-    answer: "brochures"},
+    answer: "brochures"
+    },
 
-    {question: "We ought to have visited the Governor, --- [A. isn't it B, oughtn't we C.  D.",
+    {
+    question: "We ought to have visited the Governor, --- [A. isn't it B, oughtn't we C.  D.",
     optionA: "isn't it",
     optionB: "oughtn't we",
     optionC: "shouldn't we",
     optionD: "haven't",
-    answer: "oughtn't we"},
+    answer: "oughtn't we"
+    },
 
-    {question: "choose the options opposite in meaning to the word in bracket. I am happy to inform you that your boys are (conscientious)",
+    {
+    question: "Choose the options opposite in meaning to the word in bracket. I am happy to inform you that your boys are (conscientious)",
     optionA: "corrupt",
     optionB: "industrious",
     optionC: "carefree",
     optionD: "careful",
-    answer: "carefree"},
+    answer: "carefree"
+    },
 
-    {question: "choose the options opposite in meaning to the word in bracket: My father is a very (prosperous) businessman.",
+    {
+    question: "Choose the options opposite in meaning to the word in bracket: My father is a very (prosperous) businessman.",
     optionA: "ungrateful",
     optionB: "unscrupulous",
     optionC: "unskilled",
     optionD: "unsuccessful",
-    answer: "unsuccessful"},
+    answer: "unsuccessful"
+    },
 
-    {question: "choose the options opposite in meaning to the word in bracket: My hostess greeted her guest in a very (relaxed) manner",
+    {
+    question: "Choose the options opposite in meaning to the word in bracket: My hostess greeted her guest in a very (relaxed) manner",
     optionA: "energetic",
     optionB: "athletic",
     optionC: "stiff",
     optionD: "perplexed",
-    answer: "stiff"},
+    answer: "stiff"
+    },
 
-    {question: "choose the options opposite in meaning to the word in bracket: Aoife takes his studies rather (lightly)",
+    {
+    question: "Choose the options opposite in meaning to the word in bracket: Aoife takes his studies rather (lightly)",
     optionA: "humorously",
     optionB: "tediously",
     optionC: "carefully",
     optionD: "seriously",
-    answer: "carefully"},
+    answer: "carefully"
+    },
 
-    {question: "choose the options opposite in meaning to the word in bracket: The President took exception to the (ignoble) role the young man played in the matter",
+    {
+    question: "Choose the options opposite in meaning to the word in bracket: The President took exception to the (ignoble) role the young man played in the matter",
     optionA: "honourable",
     optionB: "embarrassing",
     optionC: "dishonourable",
     optionD: "extraordinary",
-    answer: "honourable"},
+    answer: "honourable"
+    },
 
-    {question: "'...rock the boat' What figure of speech is this expression?",
+    {
+    question: "'...rock the boat' What figure of speech is this expression?",
     optionA: "Simile",
     optionB: "Metaphor",
     optionC: "Personification",
     optionD: "Hyperbole",
-    answer: "Metaphor"},
+    answer: "Metaphor"
+    },
 
-    {question: "New Subject later",
+    {
+    question: "New Subject later",
     optionA: "3333",
     optionB: "3333",
     optionC: "3333",
     optionD: "3de34",
-    answer: "3de34"},
+    answer: "3de34"
+    },
 ]  
