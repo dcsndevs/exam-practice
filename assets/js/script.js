@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
                 let usernameInput = document.getElementById("user").value; 
-                if (usernameInput.length >= 1 && usernameInput.length <= 10) {
+                if (usernameInput.length >= 1 && usernameInput.length <= 20) {
                     username();
                 } 
-                else {return start, alert("Your username must be atleast 2 and not more than 10 characters!")}
+                else {return start, alert("Your username must be atleast 2 and not more than 20 characters!")}
                                 
             } 
             else if (this.getAttribute("data-type") === "next") {
@@ -56,25 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
 //Enable color selection for question options
 let selection = document.getElementsByClassName('options');
 for (let i = 0; i < selection.length; i++) {
-    selection[i].addEventListener('click', e=>selecChoose(e));
+    selection[i].addEventListener('click', selecChoose);
 }
-function selecChoose(e) {
-    e.preventDefault();
-
-    if (this.style.color) {
-        console.log("color exists");
-        if (this.style.color === "black") {
-            console.log("color is black");
-            this.style.color = "red";
-        } else {
-            console.log("color is red");
-            this.style.color = "black"
-        }
-
-    } else {
-        console.log("color does not exist");
+function selecChoose() {
+    if (this.style.color === "black") {
         this.style.color = "red";
-    }
+    } else (this.style.color = "black")
 }
 
 // Global Variables
@@ -126,7 +113,7 @@ function startPractice(subject) {
 
     } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
-        let i = questionNumber + 21;
+        let i = questionNumber + 23;
         j = i;
         displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
 
@@ -487,6 +474,20 @@ const questionBank = [
     optionC: "e = -2",
     optionD: "e = 0",
     answer: "e = -1"},
+
+    {question: "Find the mean deviation of 1, 2, 3 and 4",
+    optionA: "1.0",
+    optionB: "1.5",
+    optionC: "2.0",
+    optionD: "2.5",
+    answer: "1.0"},
+
+    {question: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
+    optionA: "10 ways",
+    optionB: "15 ways",
+    optionC: "20 ways",
+    optionD: "25 ways",
+    answer: "10 ways"},
 
     {question: "English Sample Question: What is the opposite of Good'",
     optionA: "Ugly",
