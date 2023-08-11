@@ -56,12 +56,25 @@ document.addEventListener("DOMContentLoaded", function() {
 //Enable color selection for question options
 let selection = document.getElementsByClassName('options');
 for (let i = 0; i < selection.length; i++) {
-    selection[i].addEventListener('click', selecChoose);
+    selection[i].addEventListener('click', e=>selecChoose(e));
 }
-function selecChoose() {
-    if (this.style.color === "black") {
+function selecChoose(e) {
+    e.preventDefault();
+
+    if (this.style.color) {
+        console.log("color exists");
+        if (this.style.color === "black") {
+            console.log("color is black");
+            this.style.color = "red";
+        } else {
+            console.log("color is red");
+            this.style.color = "black"
+        }
+
+    } else {
+        console.log("color does not exist");
         this.style.color = "red";
-    } else (this.style.color = "black")
+    }
 }
 
 // Global Variables
