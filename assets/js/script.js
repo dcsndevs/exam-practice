@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
                 let usernameInput = document.getElementById("user").value; 
-                if (usernameInput.length >= 1 && usernameInput.length <= 20) {
+                if (usernameInput.length >= 1 && usernameInput.length <= 30) {
                     optionsColorChange();
                     username();
                 } 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
 });
 function invalidLogin () {
-    document.getElementsByClassName('invalid-login')[0].textContent = '"Your username must be atleast 2 and not more than 20 characters!"'
+    document.getElementsByClassName('invalid-login')[0].textContent = '"Your username must be atleast 2 and not more than 30 characters!"'
 }
 //Enable color selection for question options
 function optionsColorChange() {
@@ -220,7 +220,7 @@ function block() {
 }
 function endPractice() {
     
-    let message = "This would terminate your current practice session!\nPress Cancel to continue or Ok to end."
+    let message = "This would terminate your current practice session!\nPress Cancel to continue the practice or Ok to end."
     
     if (confirm (message) == true) {        
         result();
@@ -285,7 +285,7 @@ function timeUp() {
 }
 
 function result() {
-    alert("You have come to the end of this practice session!\nEnter OK to view your result!\nThe result page would exit in 1 minute");    
+    alert("You have come to the end of this practice session!\nEnter OK to view your result!");    
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
