@@ -1,5 +1,6 @@
 /* Import font from google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Ubuntu&display=swap');
+
 
 /* Remove all padding and margin unless state */
 *,
@@ -9,18 +10,35 @@
     margin: 0;
     padding: 0;
 }
+/* Top logo */
 
+.logo {
+    font-family: 'Caveat', cursive;
+    position: fixed;
+    /* text-align: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    /* color: teal; */
+}
+
+.logo-text-color{
+    color: orange;
+}
+
+h1, h2 {
+    color: teal
+}
 /* Body/general rules */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
-    background-color: grey;
-    color: teal;
+    background-color: red;
+    color: black;
     align-items: center;
-    padding: 4px;
     width: 100%;
     height: 100%;
-    padding-top: 20px;
 }
 
 .body-container {
@@ -63,6 +81,7 @@ footer {
 }
 
 /* Hide Controls from inception (before practice button is chosen) */
+
 .main-controls,
 .controls {
     display: none;
@@ -93,7 +112,7 @@ footer {
 }
 
 .invalid-login {
-    color: teal;
+    color: red;
     margin-top: 10px;
 }
 
