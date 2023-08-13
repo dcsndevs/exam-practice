@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <h1 class="heading">Exam <span class="logo-text-color">Practice</span></h1>
+            <h1 class="heading"><span><img src="assets/images/logo.png" width="40" height="40"></span>Exam <span class="logo-text-color">Practice</span></h1>
 
         </div>
     </header>
@@ -28,8 +28,10 @@
 
             <div id="welcome">
                 <h2>Welcome to Exam Practice!</h2>
-                <p>"This website assists you in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, we offer support for three subjects: Mathematics, English, and Government. To get started, please enter your Full Name below!"</p>
-                <input type="text" id="user">
+                <img src="assets/images/hero-image.svg" class="hero-image">
+                <p class="main-text">"This website assists you in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, we offer support for three subjects: Mathematics, English, and Government. To get started, please enter your Full Name below!"</p>
+                <input type="text" id="user" placeholder="Enter your Name here">
+                <br>
                 <button id="start" data-type="start">Start!</button>
                 <p class = "invalid-login"></p>            
             </div>
@@ -58,7 +60,7 @@
     
         </main>
     
-        <footer id="result">
+        <div id="result">
             <div class="info">
                 <h4>Name: <span id="name-result"></span></h4>
                 <h4>Subject: <span id="subjectTitle"></span></h4>
@@ -68,9 +70,12 @@
                 <p onclick="print()">Print</p>
                 <p onclick="location.reload()">exit</p>
             </div>
-        </footer>
+        </div>
     
     </div>
+    <footer>
+        <div class="footer">Created by Chinonso Olejeme. For educational purposes only.</div>
+    </footer>
     <!--Font Awesome source code-->
     <script src="https://kit.fontawesome.com/2cb5624d4b.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
