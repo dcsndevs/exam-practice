@@ -13,13 +13,15 @@
 
 .logo {
     font-family: 'Borel', cursive;
-    position: fixed;
+    /* position: fixed; */
     /* text-align: center; */
     /* display: flex;
     justify-content: center;
     align-items: center; */
     width: 100%;
     /* color: teal; */
+    height: 50px;
+    /* background-color: green; */
 }
 
 .logo-text-color{
@@ -34,24 +36,46 @@ h2 {
 body {
     font-family: 'Ruwudu', serif;
     text-align: center;
-    background-color: red;
+    background-color: white;
     color: black;
     align-items: center;
     width: 100%;
-    
-
-    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .body-container {
     background-color: white;
-    margin-top: 0;
+    margin-top: 0px;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-grow: 1;
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    /* height: 30px; */
+    width: 100%;
+    /* position: relative; */
+    bottom: 0px;
+    /* padding: auto; */
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.linkedin {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
 }
 
 /* Main Question area */
@@ -65,7 +89,7 @@ body {
 }
 
 
-/* Fixed footer */
+
 #result {
     bottom: 0;
     position: absolute;
@@ -123,15 +147,7 @@ body {
     color: black
 }
 
-.footer {
-    background-color: black;
-    color: whitesmoke;
-    height: 30px;
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    padding: auto;
-}
+
 
 /* #welcome {
 width: 50%;
@@ -143,20 +159,23 @@ flex-direction: column;
 } */
 
 .main-text {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: justify;
 }
 
 #user {
     display: inline-block;
-    width: 50%;
-    padding: 14px 130px 14px 14px;
-    border: 2px solid teal;
+    width: 90%;
+    padding: 14px 14px 14px 14px;
+    border: 2px solid orange;
     border-radius: 30px;
     box-shadow: 1px 1px 8px teal;
     margin-top: 10px;
+    outline: none;
+    
 }
+
 
 #start, button {
     background-color: orange;
@@ -174,19 +193,21 @@ flex-direction: column;
     border: 2px solid black;
     color: black;
 }
-
-#input[type='text'] {
+::placeholder {
     text-align: center;
+    color: orange;
+    overflow: visible;
 }
 
-input[type='text']::placeholder {
+/* for Microsoft Edge */
+/* ::-webkit-input-placeholder {
     text-align: center;
-}
+} */
+/* for Mozilla firefox */
+/* :-moz-placeholder {
+    text-align: center;
+}  */
+/* for Internet Explorer 10-11 */
+/* :-ms-input-placeholder {
 
-::-webkit-input-placeholder {
-    text-align: center;
-}
-
-:-moz-placeholder {
-    text-align: center;
-}
+} */
