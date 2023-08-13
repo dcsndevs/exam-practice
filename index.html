@@ -29,26 +29,33 @@
             <div id="welcome">                
                 <img src="assets/images/hero-image.svg" class="hero-image">
                 <h2>Welcome to Exam Practice!</h2>
-                <p class="main-text">"This website assists you in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, we offer support for three subjects: Mathematics, English, and Government. To get started, please enter your Full Name below!"</p>
+                <p class="main-text">"This website assists you in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, we offer support for three subjects: Mathematics, English, and Government. To get started, please enter your name below!"</p>
                 <input type="text" id="user" placeholder="Enter your Name here">
                 <br>
                 <button id="start" data-type="start">Start!</button>
                 <p class = "invalid-login"></p>            
             </div>
             <div id="main-area">
+                <div id="hide-screen"></div>
+
                 <div class="progress">
-                    <p>Time: <span id="timer"></span></p>
-                    <div id="question-number"><span id=questionNumber>0</span> of 10</div>
-                    <div id="namer">User <span id="usernames">User</span>!</div>
-                    <div id="hide-screen"></div>
+                    <p><i class="fa-solid fa-clock"></i><br><span id="timer"></span></p>
+                    
+                    <div id="namer"><i class="fa-solid fa-user"></i><br><span id="usernames">User</span></div>
                 </div>
-                
+                <br>
+                <hr>
+                <div id="question-number"><span id=questionNumber>0</span> of 10</div>
                 <div class="option" >        
-                    <p class="options">Question: <span id="question"></span></p><hr>        
-                    <h3>A.<p id="optionA" class="options"></p></h3>
-                    <h3>B.<p id="optionB" class="options"></p></h3>
-                    <h3>C.<p id="optionC" class="options"></p></h3>
-                    <h3>D.<p id="optionD" class="options"></p></h3>
+                    <p class="options" id="question"></p><hr> 
+                    <br>       
+                    <p>A. <span id="optionA" class="options"></span></p>
+                    <br>
+                    <p>B. <span id="optionB" class="options"></span></p>
+                    <br>
+                    <p>C. <span id="optionC" class="options"></span></p>
+                    <br>
+                    <p>D. <span id="optionD" class="options"></span></p>
                     <h3><p id="answer"></p></h3>
                 </div>            
             </div>

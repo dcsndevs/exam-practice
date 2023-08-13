@@ -18,17 +18,17 @@
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    width: 100%;
+    width: 100vh;
     /* color: teal; */
     height: 50px;
-    /* background-color: green; */
+    background-color: white;
 }
 
-.logo-text-color{
+.logo-text-color {
     color: orange;
 }
 
-h2 {
+h2, h3 {
     color: teal;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -36,7 +36,7 @@ h2 {
 body {
     font-family: 'Ruwudu', serif;
     text-align: center;
-    background-color: white;
+    background-color: black;
     color: black;
     align-items: center;
     width: 100%;
@@ -92,7 +92,14 @@ footer {
     margin-left: auto;
 }
 
-
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#question {
+    font-weight: bold;
+}
 
 #result {
     bottom: 0;
