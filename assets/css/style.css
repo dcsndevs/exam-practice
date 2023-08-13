@@ -190,6 +190,7 @@ flex-direction: column;
     transition: .4s;
     cursor: pointer;
     margin-top: 20px;
+    width: 10rem;
 }
 
 #start:hover, button:hover {

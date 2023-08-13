@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
                 let usernameInput = document.getElementById("user").value; 
-                if (usernameInput.length >= 1 && usernameInput.length <= 30) {
+                if (usernameInput.length >= 2 && usernameInput.length <= 30) {
                     optionsColorChange();
                     username();
                 } 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
 });
 function invalidLogin () {
-    document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be atleast 2 and not more than 30 characters."'
+    document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be at least 2 and not more than 30 characters."'
 }
 //Enable color selection for question options
 function optionsColorChange() {
