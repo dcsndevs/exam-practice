@@ -192,7 +192,9 @@ flex-direction: column;
     margin-top: 20px;
     width: 10rem;
 }
-
+.end {
+    margin-bottom: 20px;
+}
 #start:hover, button:hover {
     background-color: transparent;
     border: 2px solid black;

@@ -564,7 +564,7 @@ const questionBank = [
     },
 
     {
-    question: "We ought to have visited the Governor, _ _ _ _ [A. isn't it B, oughtn't we C.  D.",
+    question: "We ought to have visited the Governor, _ _ _ _ ",
     optionA: "isn't it",
     optionB: "oughtn't we",
     optionC: "shouldn't we",
