@@ -219,6 +219,7 @@ function block() {
     },2)
 }
 function endPractice() {
+    hideScreen.style.display = "block";
     
     let message = "This would terminate your current practice session!\nPress Cancel to continue the practice or Ok to end."
     

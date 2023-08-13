@@ -139,9 +139,9 @@ footer {
 #hide-screen {
     z-index: 999;
     background-color: grey;
-    position: fixed;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
     display: none;
 }
 
