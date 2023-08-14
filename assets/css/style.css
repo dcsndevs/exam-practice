@@ -122,9 +122,15 @@ footer {
 }
 /* Hide Controls from inception (before practice button is chosen) */
 
-.main-controls,
+.main-controls {
+    display: none;
+    
+}
+
 .controls {
     display: none;
+    bottom: 0px;
+    position: fixed;
 }
 
 /* Hide main Area from start */
@@ -139,9 +145,10 @@ footer {
 
 /*Hide Screen on clicking end*/
 #hide-screen {
+    margin-top: 50px;
     z-index: 4;
     background-color: grey;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     display: none;

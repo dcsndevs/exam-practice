@@ -13,6 +13,7 @@ const resultDate = new Date();
 let displayWelcome = document.getElementById('welcome');
 let displayNextEnd = document.getElementsByClassName("controls")[0];
 let displayMainControls = document.getElementsByClassName("main-controls")[0];
+let displayFooter = document.getElementsByTagName("footer")[0];
 let displayResult= document.getElementById("result");
 let displayMainArea = document.getElementById('main-area');
 let hideScreen = document.getElementById('hide-screen');
@@ -106,6 +107,7 @@ function selecChoose() {
 function username() {
 
     displayWelcome.style.display = "none"
+    displayFooter.style.display = "none"
     displayMainControls.style.display = "block"
     let usernameInput = document.getElementById("user").value;    
     document.getElementById('usernames').innerText = usernameInput;
@@ -371,7 +373,7 @@ const questionBank = [
     },
 
     {
-    question: "A state that is ruled by an elected citizen is _ _ _ __ _ _ __ _ _ __ _ _ _",
+    question: "A state that is ruled by an elected citizen is _ _ _ _ _ _",
     optionA: "a monarchy",
     optionB: "a plutocracy",
     optionC: "a republic",
