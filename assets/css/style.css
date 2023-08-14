@@ -26,6 +26,7 @@ h2, h3 {
     color: teal;
     font-family: 'Ubuntu', sans-serif;
 }
+
 /* Body/general rules */
 body {
     font-family: 'Ruwudu', serif;
@@ -43,33 +44,29 @@ body {
     background-color: white;
     margin-top: 0px;
     width: 100%;
-    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-grow: 1;
-
 }
 
 footer {
     background-color: black;
     color: white;
-    /* height: 30px; */
     width: 100%;
-    /* position: relative; */
     bottom: 0px;
-    /* padding: auto; */
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
+
 .footer {
     line-height: 1;
     padding-top: 10px;
 }
+
 .linkedin {
     padding-left: 5px;
     padding-right: 5px;
@@ -92,6 +89,7 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
+
 #question {
     font-weight: bold;
 }
@@ -115,23 +113,19 @@ footer {
 .hero-image {
     width: 50%;
 }
-/* Hide Controls from inception (before practice button is chosen) */
 
+/* Hide Controls from inception (before practice button is chosen) */
 .main-controls {
     display: none;
     width: 100%;
     position: absolute;
     top: 150px;
-    
 }
 
+/* Show subject seclection */
 .controls {
     display: none;
-    
 }
-
-
-
 
 /* Hide Answers*/
 #answer {
@@ -162,23 +156,14 @@ footer {
     color: black
 }
 
-
-
-/* #welcome {
-width: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-
-} */
-
+/* Text describing site on front page */
 .main-text {
     padding-left: 5%;
     padding-right: 5%;
     text-align: justify;
 }
 
+/* Input for user name */
 #user {
     display: inline-block;
     width: 90%;
@@ -188,44 +173,36 @@ flex-direction: column;
     box-shadow: 1px 1px 8px teal;
     margin-top: 10px;
     outline: none;
-    
 }
 
-
+/* Buttons */
 #start, button {
     background-color: orange;
     color: black;
     font-weight: bold;
     padding: 13px 30px;
-    /* border-radius: 30px; */
     transition: .4s;
     cursor: pointer;
     margin-top: 20px;
     width: 10rem;
 }
+
+/* End button*/
 .end {
     margin-bottom: 20px;
 }
+
 #start:hover, button:hover {
     background-color: transparent;
     border: 2px solid black;
     color: black;
 }
-::placeholder {
+/* Input style for chrome, Internet explorer, mozilla, and edge */
+::placeholder, 
+::-webkit-input-placeholder, 
+:-moz-placeholder, 
+:-ms-input-placeholder {
     text-align: center;
     color: orange;
     overflow: visible;
 }
-
-/* for Microsoft Edge */
-/* ::-webkit-input-placeholder {
-    text-align: center;
-} */
-/* for Mozilla firefox */
-/* :-moz-placeholder {
-    text-align: center;
-}  */
-/* for Internet Explorer 10-11 */
-/* :-ms-input-placeholder {
-
-} */

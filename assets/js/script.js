@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
 });
 function invalidLogin () {
-    document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be at least 2 and not more than 30 characters."'
+    document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be at least 2 and not more than 15 characters."'
 }
 //Enable color selection for question options
 function optionsColorChange() {
@@ -115,7 +115,7 @@ function username() {
     displayWelcome.style.display = "none"
     displayFooter.style.display = "none"
     displayMainControls.style.display = "block"
-    let usernameInput = document.getElementById("user").value;    
+    let usernameInput = document.getElementById("user").value.toUpperCase();    
     document.getElementById('usernames').innerText = usernameInput;
     
     
