@@ -206,3 +206,14 @@ footer {
     color: orange;
     overflow: visible;
 }
+
+/* For Tablet and large screens */
+@media screen and (min-width: 700px) {
+    #welcome {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+}
