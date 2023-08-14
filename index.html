@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +19,15 @@
         </div>
     </header>
 
-    <div class="body-container">  
+    <div class="body-container" alt="Main Section">  
 
         <div id="hide-screen">
             <br>
             <p>Are you sure?</p>
             <br>
-            <button data-type="yes">Yes</button>
+            <button data-type="yes" arial-label="yes">Yes</button>
             <br>
-            <button data-type="no">No</button>
+            <button data-type="no" arial-label="no">No</button>
         </div>  
         
         <div class="main-controls">
@@ -35,11 +36,11 @@
             <h3><span id="usernames">User</span>!</h3>
             <br>
             <h4>Pick a subject to continue</h4>
-            <button data-type="maths" class="maths-subject">Maths</button>
+            <button data-type="maths" aria-label="maths-subject">Maths</button>
             <br>
-            <button data-type="english" class="english-subject">English</button>
+            <button data-type="english" arial-label="english-subject">English</button>
             <br>
-            <button data-type="government" class="government-subject">Government</button>
+            <button data-type="government" arial-label="government-subject">Government</button>
         </div>
 
         <div id="welcome">                
@@ -57,11 +58,15 @@
             <div class="progress">
                 <p><i class="fa-solid fa-clock"></i><br><span id="timer"></span></p>
                 
-                <div id="namer"><i class="fa-solid fa-user"></i><br><span id="username-display"></span></div>
+                <div id="namer">
+                    <i class="fa-solid fa-user"></i><br><span id="username-display"></span>
+                </div>
             </div>
             <br>
             <hr>
-            <div id="question-number"><span id=questionNumber>0</span> of 10</div>
+            <div id="question-number">
+                <span id=questionNumber>0</span> of 10
+            </div>
             <div class="option" >        
                 <p class="options" id="question"></p><hr> 
                 <br>       
@@ -75,9 +80,9 @@
                 <h3><p id="answer"></p></h3>
             </div>     
             <div class="controls">
-                <button class="next" data-type="next">Next</button>
+                <button class="next" data-type="next" arial-label="next question">Next</button>
                 <br>
-                <button class="end" data-type="end">Quit</button>
+                <button class="end" data-type="end" arial-label="Quit session">Quit</button>
             </div>       
         </div>
 
@@ -88,15 +93,17 @@
                 <h4>Result: <span id="rightAnswer">0</span>0%</h4>
                 <h4>Failed: <span id="failedAnswer">-1</span></h4>
                 <h4>Date: <span id="date"></span></h4>
-                <button data-type="print">Print</button>
-                <button data-type="exit">Exit</button>
+                <button data-type="print" arial-label="print result">Print</button>
+                <button data-type="exit" arial-label="exit program and go back to front page">Exit</button>
             </div>
         </div>
     
     </div>
     <footer>
-        <div class="linkedin"><a href="https://www.linkedin.com/in/olejeme/" target="_blank" aria-label="Click to visit creator's LinkedIn profile">
-            <i class="fa-brands fa-linkedin fa-2xl" style="color: white;"></i></a></div>
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/in/olejeme/" target="_blank" aria-label="Click to visit creator's LinkedIn profile">
+            <i class="fa-brands fa-linkedin fa-2xl" style="color: white;"></i></a>
+        </div>
         <div class="footer">Created by Chinonso Olejeme</a>- For educational purposes only.</div>
     </footer>
     <!--Font Awesome source code-->
