@@ -280,7 +280,7 @@ function timer() {
             } else {
                 seconds;
             }
-            if ((minutes === 0) && (seconds === 0)) (timeUp() && stop()); //Helps stop the time when secs and minutes hits zero
+            if ((minutes === '0' + 0) && (seconds === '0' + 0)) (timeUp() && stop()); //Helps stop the time when secs and minutes hits zero
             timer.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
             if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when use uses end button to end practice
