@@ -36,6 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 let subject = subjectTitle.textContent.toLowerCase();
                 checkAnswer(subject);                
             } 
+            else if (this.getAttribute("data-type") === "print") {
+                
+                print();                
+            }
+            else if (this.getAttribute("data-type") === "exit") {
+                
+                location.reload();                
+            }
             else if (this.getAttribute("data-type") === "maths"){
                 alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
                     
