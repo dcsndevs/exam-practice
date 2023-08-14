@@ -117,6 +117,8 @@ function username() {
     displayMainControls.style.display = "block"
     let usernameInput = document.getElementById("user").value;    
     document.getElementById('usernames').innerText = usernameInput;
+    
+    
 }
 
 /**
@@ -147,7 +149,7 @@ function startPractice(subject) {
         alert(`Invalid Subject Selection!: ${subject}`);
         throw `Invalid Subject Selection!: ${subject}. Aborting!`;
     }
-    
+    document.getElementById('username-display').innerText = document.getElementById('usernames').innerText;
     //Gets questions and options from Question Bank
     question.textContent = questionBank[j].question;
     optionA.textContent = questionBank[j].optionA;

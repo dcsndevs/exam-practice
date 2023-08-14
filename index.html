@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="decription" content="An online platform tailored for Senior School Certificate Exam preparation">
+    <meta name="description" content="An online platform tailored for Senior School Certificate Exam preparation">
     <meta name="keywords" content="senior school, examinations, practive, maths, english, government">
     <meta name="author" content="Designed and developed by Chinonso Dickson Olejeme; Student at Code Institute | https://linkedin.com/in/olejeme/">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -43,12 +43,12 @@
         </div>
 
         <div id="welcome">                
-            <img src="assets/images/hero-image.svg" class="hero-image">
+            <img src="assets/images/hero-image.svg" class="hero-image" aria-label="Image of a person reading">
             <h2>Welcome to Exam Practice!</h2>
             <p class="main-text">"This website assists you in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, we offer support for three subjects: Mathematics, English, and Government. To get started, please enter your name below!"</p>
-            <input type="text" id="user" placeholder="Enter your Name here">
+            <input type="text" id="user" placeholder="Enter your Name here" aria-label="Enter a name here to start practicing exam questions">
             <br>
-            <button id="start" data-type="start">Start!</button>
+            <button id="start" data-type="start" arial-label="start practicing">Start!</button>
             <p class = "invalid-login"></p>            
         </div>
         
@@ -57,7 +57,7 @@
             <div class="progress">
                 <p><i class="fa-solid fa-clock"></i><br><span id="timer"></span></p>
                 
-                <div id="namer"><i class="fa-solid fa-user"></i><br><span id="usernames">User</span></div>
+                <div id="namer"><i class="fa-solid fa-user"></i><br><span id="username-display"></span></div>
             </div>
             <br>
             <hr>
@@ -95,7 +95,7 @@
     
     </div>
     <footer>
-        <div class="linkedin"><a href="https://www.linkedin.com/in/olejeme/">
+        <div class="linkedin"><a href="https://www.linkedin.com/in/olejeme/" target="_blank" aria-label="Click to visit creator's LinkedIn profile">
             <i class="fa-brands fa-linkedin fa-2xl" style="color: white;"></i></a></div>
         <div class="footer">Created by Chinonso Olejeme</a>- For educational purposes only.</div>
     </footer>
