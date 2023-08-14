@@ -120,19 +120,19 @@ function startPractice(subject) {
         let i = questionNumber + 1;
         j = i;
         
-        displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
+        displayGovernmentQuestion();
         
     } else if (subject === "maths") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 12;
         j = i;
-        displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
+        displayMathsQuestion();
 
     } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 23;
         j = i;
-        displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject);
+        displayEnglishQuestion();
 
     } else {    
         alert(`Invalid Subject Selection!: ${subject}`);
@@ -271,17 +271,17 @@ function unBlock() {
 /**
  * Function to Display controls when practice is loaded
  */
-function displayControls (subject) {    
+function displayControls () {    
     displayNextEnd.style.display = "block"
-    hideSubjectControls(subject);
+    hideSubjectControls();
 }
 
 /**
  * Function to Hide Main Subject controls when practice is loaded
  */
-function hideSubjectControls(subject) {
+function hideSubjectControls() {
     displayMainControls.style.display = "none"
-    timer(subject);
+    timer();
 }
 
 /**
@@ -342,40 +342,22 @@ function result() {
 /**
  * Displays Government questions
  */
-function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
-    document.getElementById('question').textContent = question;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
-    document.getElementById('answer').textContent = answer;
-    displayControls (subject);
+function displayGovernmentQuestion() {
+    displayControls ();
 };
 
 /**
  * Displays Government questions
  */
-function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
-    document.getElementById('question').textContent = question;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
-    document.getElementById('answer').textContent = answer;
-    displayControls (subject);
+function displayMathsQuestion() {
+    displayControls ();
 };
 
 /**
  * Displays Government questions
  */
-function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
-    document.getElementById('question').textContent = question;
-    document.getElementById('optionA').textContent = optionA;
-    document.getElementById('optionB').textContent = optionB;
-    document.getElementById('optionC').textContent = optionC;
-    document.getElementById('optionD').textContent = optionD;
-    document.getElementById('answer').textContent = answer;
-    displayControls (subject);
+function displayEnglishQuestion() {
+    displayControls ();
 };
 
 //Question Bank for Subjects
