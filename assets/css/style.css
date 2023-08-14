@@ -119,6 +119,9 @@ footer {
 
 .main-controls {
     display: none;
+    width: 100%;
+    position: absolute;
+    top: 150px;
     
 }
 

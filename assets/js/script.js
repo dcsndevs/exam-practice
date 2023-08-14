@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         i.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
                 let usernameInput = document.getElementById("user").value; 
-                if (usernameInput.length >= 2 && usernameInput.length <= 30) {
+                if (usernameInput.length >= 2 && usernameInput.length <= 15) {
                     optionsColorChange();
                     username();
                 } 
@@ -117,7 +117,6 @@ function username() {
     displayMainControls.style.display = "block"
     let usernameInput = document.getElementById("user").value;    
     document.getElementById('usernames').innerText = usernameInput;
-    alert("Welcome " + `${usernameInput}` + "!\n Pick a subject to continue");
 }
 
 /**
