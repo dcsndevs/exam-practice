@@ -262,7 +262,7 @@ function timer() {
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
-        const practiceTime = 0.5; //10minutes for each practice session
+        const practiceTime = 10; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
         const timer = document.getElementById("timer");
