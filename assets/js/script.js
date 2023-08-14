@@ -295,6 +295,7 @@ function timeUp() {
 
 function result() {
     alert("You have come to the end of this practice session!\nEnter OK to view your result!");    
+    hideScreen.style.display = "none"; 
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
