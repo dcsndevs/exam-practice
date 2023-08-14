@@ -136,7 +136,11 @@ footer {
 /* Hide main Area from start */
 #main-area {
     display: none;
+    position: fixed;
+    width: 100%;
+    top: 200px;
 }
+
 
 /* Hide Answers*/
 #answer {
