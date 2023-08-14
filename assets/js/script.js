@@ -7,6 +7,7 @@ const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
 let subjectTitle = document.getElementById("subjectTitle");
 const resultDate = new Date();
+document.getElementById("user").focus();
 
 
 // Global Display Variables
@@ -17,6 +18,7 @@ let displayFooter = document.getElementsByTagName("footer")[0];
 let displayResult= document.getElementById("result");
 let displayMainArea = document.getElementById('main-area');
 const hideScreen = document.getElementById('hide-screen');
+
 
 //Allow DOM to load before starting exam practice sessions
 //Add event listeners to subject practice
@@ -84,6 +86,17 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+
+    document.getElementById("user").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            let usernameInput = document.getElementById("user").value; 
+            if (usernameInput.length >= 2 && usernameInput.length <= 15) {
+                optionsColorChange();
+                username();
+            } 
+            else { return start, invalidLogin()}
+        }
+    })
    
 });
 function invalidLogin () {
