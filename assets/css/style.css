@@ -10,18 +10,12 @@
     padding: 0;
 }
 /* Top logo */
-
-.logo {
-    font-family: 'Borel', cursive;
-    /* position: fixed; */
-    /* text-align: center; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+header {
+    /* box-sizing: border-box; */
     width: 100%;
-    /* color: teal; */
-    height: 50px;
     background-color: white;
+    height: 50px;
+    font-family: 'Borel', cursive;
 }
 
 .logo-text-color {
