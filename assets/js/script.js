@@ -16,7 +16,7 @@ let displayMainControls = document.getElementsByClassName("main-controls")[0];
 let displayFooter = document.getElementsByTagName("footer")[0];
 let displayResult= document.getElementById("result");
 let displayMainArea = document.getElementById('main-area');
-let hideScreen = document.getElementById('hide-screen');
+const hideScreen = document.getElementById('hide-screen');
 
 //Allow DOM to load before starting exam practice sessions
 //Add event listeners to subject practice
@@ -70,7 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     startPractice(subject);            
             } 
             else if (this.getAttribute("data-type") === "end"){             
-                block();            
+                block();          
+
+            } else if (this.getAttribute("data-type") === "yes"){             
+                result();            
+            } 
+            else if (this.getAttribute("data-type") === "no"){             
+                unBlock();            
             } 
             else {
                 alert(`Invalid Subject Selection!`);
@@ -223,11 +229,13 @@ function questionNumber(subject) {
 };
 function block() {
     hideScreen.style.display = "block";
-    displayMainArea.style.display = "none";
     
-    setTimeout (function() {
-        endPractice();
-    },3)
+   
+}
+function unBlock() {
+    hideScreen.style.display = "none";
+       
+   
 }
 function endPractice() {
     hideScreen.style.display = "block";
@@ -301,11 +309,13 @@ function timeUp() {
 }
 
 function result() {
+    
     alert("You have come to the end of this practice session!\nEnter OK to view your result!");    
     hideScreen.style.display = "none"; 
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
+    stop()
 
 };
 
