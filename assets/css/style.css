@@ -77,13 +77,14 @@ footer {
 }
 
 /* Main Question area */
-.main-area {
-    width: 80%;
-    padding: 20%;
-    margin-top: 20px;
-    background-color: bisque;
-    margin-right: auto;
-    margin-left: auto;
+/* Hide main Area from start */
+#main-area {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .progress {
@@ -96,7 +97,7 @@ footer {
 }
 
 #result {
-    margin-top: 90px;
+    margin-top: 50px;
     position: fixed;
     align-items: center;
     text-align: center;
@@ -124,18 +125,10 @@ footer {
 .controls {
     display: none;
     bottom: 0px;
-    position: fixed;
+    position: absolute;
 }
 
-/* Hide main Area from start */
-#main-area {
-    display: none;
-    position: fixed;
-    width: 100%;
-    top: 100px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
+
 
 
 /* Hide Answers*/

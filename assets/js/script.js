@@ -223,10 +223,11 @@ function questionNumber(subject) {
 };
 function block() {
     hideScreen.style.display = "block";
+    displayMainArea.style.display = "none";
     
     setTimeout (function() {
         endPractice();
-    },2)
+    },3)
 }
 function endPractice() {
     hideScreen.style.display = "block";
@@ -236,8 +237,12 @@ function endPractice() {
     if (confirm (message) == true) {        
         result();
     } else {
-        return hideScreen.style.display = "none";        
+        displayMainArea.style.display = "block";
+        hideScreen.style.display = "none";
+        return 
+                
     }
+    
     
 };
 
@@ -257,7 +262,7 @@ function timer() {
     if ((document.getElementById("timer").textContent !=="")) {
         return;
     } else {
-        const practiceTime = 10; //10minutes for each practice session
+        const practiceTime = 0.5; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
         const timer = document.getElementById("timer");
