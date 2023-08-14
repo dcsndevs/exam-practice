@@ -9,7 +9,6 @@ let subjectTitle = document.getElementById("subjectTitle");
 const resultDate = new Date();
 document.getElementById("user").focus();
 
-
 // Global Display Variables
 let displayWelcome = document.getElementById('welcome');
 let displayNextEnd = document.getElementsByClassName("controls")[0];
@@ -19,9 +18,8 @@ let displayResult= document.getElementById("result");
 let displayMainArea = document.getElementById('main-area');
 const hideScreen = document.getElementById('hide-screen');
 
-
 //Allow DOM to load before starting exam practice sessions
-//Add event listeners to subject practice
+//Add event listeners to all the button elements
 document.addEventListener("DOMContentLoaded", function() {
     let mainControls = document.getElementsByTagName("button");
     for (let i of mainControls) {
@@ -34,44 +32,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 } 
                 else { return start, invalidLogin()}
                                 
-            } 
-            else if (this.getAttribute("data-type") === "next") {
+            } else if (this.getAttribute("data-type") === "next") {
                 let subject = subjectTitle.textContent.toLowerCase();
                 checkAnswer(subject);                
-            } 
-            else if (this.getAttribute("data-type") === "print") {
+            } else if (this.getAttribute("data-type") === "print") {
                 
                 print();                
-            }
-            else if (this.getAttribute("data-type") === "exit") {
+            } else if (this.getAttribute("data-type") === "exit") {
                 
                 location.reload();                
-            }
-            else if (this.getAttribute("data-type") === "maths"){
+            } else if (this.getAttribute("data-type") === "maths"){
                 alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
                     
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Maths";
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);    
-            } 
-            else if (this.getAttribute("data-type") === "english"){
+            } else if (this.getAttribute("data-type") === "english"){
                 alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
                     
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "English";
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);                
-            } 
-            else if (this.getAttribute("data-type") === "government"){
+            } else if (this.getAttribute("data-type") === "government"){
                     alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
                     
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Government";
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);            
-            } 
-            else if (this.getAttribute("data-type") === "end"){             
+            } else if (this.getAttribute("data-type") === "end"){             
                 block();          
 
             } else if (this.getAttribute("data-type") === "yes"){             
@@ -79,14 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
             } 
             else if (this.getAttribute("data-type") === "no"){             
                 unBlock();            
-            } 
-            else {
+            } else {
                 alert(`Invalid Subject Selection!`);
                 throw `Invalid Subject Selection. Refresh`;
             }
         });
     }
-
+    /* Set focus on input field */
     document.getElementById("user").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             let usernameInput = document.getElementById("user").value; 
@@ -97,31 +87,18 @@ document.addEventListener("DOMContentLoaded", function() {
             else { return start, invalidLogin()}
         }
     })
-   
 });
+
+/**
+ * Displays an error message when username validation fails.
+ */
 function invalidLogin () {
     document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be at least 2 and not more than 15 characters."'
 }
-//Enable color selection for question options
-function optionsColorChange() {
-    document.getElementById('optionA').style.color = "black"
-    document.getElementById('optionB').style.color = "black"
-    document.getElementById('optionC').style.color = "black"
-    document.getElementById('optionD').style.color = "black"
-    let selection = document.getElementsByClassName('options');
-    for (let i = 0; i < selection.length; i++) {
-        selection[i].addEventListener('click', selecChoose);
-    }
-}
-
-function selecChoose() {
-    if (this.style.color === "black") {
-        this.style.color = "red";
-    } else (this.style.color = "black")
-}
 
 /**
- * Username Input
+ * Receieves User input, changes it to Uppercase and then displays the 
+ * page for users to select any subject.
  */
 function username() {
 
@@ -130,12 +107,11 @@ function username() {
     displayMainControls.style.display = "block"
     let usernameInput = document.getElementById("user").value.toUpperCase();    
     document.getElementById('usernames').innerText = usernameInput;
-    
-    
 }
 
 /**
- * This functions starts the practice as soon as it receives a subject
+ * After a subject has been selected by the user, this functions starts the practice section.
+ * The selected subject is also posted to this function.
  */
 function startPractice(subject) {
         
@@ -173,53 +149,10 @@ function startPractice(subject) {
 };
 
 /**
- * Checks the chosen answer against the system answer
- */
-function checkAnswer (subject) {
-    
-    let correctAnswer = document.getElementById('answer').textContent;
-    let userAnswer;
-    if (document.getElementById('optionA').style.color === "red") {
-        userAnswer = document.getElementById('optionA').textContent;
-
-    } 
-    else if (document.getElementById('optionB').style.color === "red") {
-        userAnswer = document.getElementById('optionB').textContent;
-
-    } 
-    else if (document.getElementById('optionC').style.color === "red") {
-        userAnswer = document.getElementById('optionC').textContent;
-
-    } 
-    else if (document.getElementById('optionD').style.color === "red") {
-        userAnswer = document.getElementById('optionD').textContent;
-    } 
-    else userAnswer = "black";
-  
-
-    let isCorrect = userAnswer === correctAnswer;
-    if (isCorrect) {
-        incrementRightAnswer();
-    } else {
-        incrementFailedAnswer();
-    }
-
-    questionNumber(subject);
-};
-
-function incrementRightAnswer() {
-    let rightAnswer = parseInt(document.getElementById('rightAnswer').textContent);
-    document.getElementById("rightAnswer").textContent = ++rightAnswer;
-};
-
-function incrementFailedAnswer() {
-    let failedAnswer = parseInt(document.getElementById('failedAnswer').textContent);
-    document.getElementById("failedAnswer").textContent = ++failedAnswer;
-};
-
-/**
+ * Used to show question number on the top of the main-area (e.g 2 out of 10)
  * Checks for the current question number and then adds 1 to it in other to access
- * the next question
+ * the next question on the questionBank() Array.
+ * It also determines which index on the questionBank should be selected based on the 'subject' that was passed to it.
  */
 function questionNumber(subject) {
     let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
@@ -241,45 +174,119 @@ function questionNumber(subject) {
         result();     
     }
 };
-function block() {
-    hideScreen.style.display = "block";
-    
-   
-}
-function unBlock() {
-    hideScreen.style.display = "none";
-       
-   
-}
-function endPractice() {
-    hideScreen.style.display = "block";
-    
-    let message = "This would terminate your current practice session!\nPress Cancel to continue the practice or Ok to end."
-    
-    if (confirm (message) == true) {        
-        result();
-    } else {
-        displayMainArea.style.display = "block";
-        hideScreen.style.display = "none";
-        return 
-                
+
+/**
+ * Resets the options from red to black on load of new question.
+ * Each time a user selects an option and it becaome sred, the options would
+ * need to be rest to black again for the user to select based on the next question
+ */
+function optionsColorChange() {
+    document.getElementById('optionA').style.color = "black";
+    document.getElementById('optionB').style.color = "black";
+    document.getElementById('optionC').style.color = "black";
+    document.getElementById('optionD').style.color = "black";
+    let selection = document.getElementsByClassName('options');
+    for (let i = 0; i < selection.length; i++) {
+        selection[i].addEventListener('click', selecChoose);
     }
-    
-    
+}
+
+/**
+ * Makes option selection possible. The selected
+ * options would change to red when users click
+ * or tap the option as a seclection of answer.
+ */
+function selecChoose() {
+    if (this.style.color === "black") {
+        this.style.color = "red";
+    } else (this.style.color = "black");
 };
 
-/**Function to Display controls when practice is loaded */
+/**
+ * Checks the chosen answer against the hidden system answer.
+ * If correct, the function calls incrementRightAnswer() and 
+ * if wrong, it calls and adds one to incrementFailedAnswer()
+ */
+function checkAnswer (subject) {
+    
+    let correctAnswer = document.getElementById('answer').textContent;
+    let userAnswer;
+    if (document.getElementById('optionA').style.color === "red") {
+        userAnswer = document.getElementById('optionA').textContent;
+
+    } else if (document.getElementById('optionB').style.color === "red") {
+        userAnswer = document.getElementById('optionB').textContent;
+
+    } else if (document.getElementById('optionC').style.color === "red") {
+        userAnswer = document.getElementById('optionC').textContent;
+
+    } else if (document.getElementById('optionD').style.color === "red") {
+        userAnswer = document.getElementById('optionD').textContent;
+
+    } else userAnswer = "black";
+  
+
+    let isCorrect = userAnswer === correctAnswer;
+    if (isCorrect) {
+        incrementRightAnswer();
+    } else {
+        incrementFailedAnswer();
+    }
+    questionNumber(subject);
+};
+
+/**
+ * Adds one for each correct answer
+ */
+function incrementRightAnswer() {
+    let rightAnswer = parseInt(document.getElementById('rightAnswer').textContent);
+    document.getElementById("rightAnswer").textContent = ++rightAnswer;
+};
+
+/**
+ * Adds one for each incorrect/failed answer
+ */
+function incrementFailedAnswer() {
+    let failedAnswer = parseInt(document.getElementById('failedAnswer').textContent);
+    document.getElementById("failedAnswer").textContent = ++failedAnswer;
+};
+
+/**
+ * When users attempt to end a session during play, this function prevents 
+ * the user from stll viewing the questions by displaying a div and asking 
+ * them to confirm their choice of quiting the practice
+ */
+function block() {
+    hideScreen.style.display = "block";
+}
+
+/**
+ * It removes the div blocing the questions after user opts to go back into
+ *  the session; perhpaps the user mistakenly click quit or changed theirmind
+ */ 
+function unBlock() {
+    hideScreen.style.display = "none";
+}
+
+/**
+ * Function to Display controls when practice is loaded
+ */
 function displayControls (subject) {    
     displayNextEnd.style.display = "block"
     hideSubjectControls(subject);
 }
-/**Function to Hide Main Subject controls when practice is loaded */
+
+/**
+ * Function to Hide Main Subject controls when practice is loaded
+ */
 function hideSubjectControls(subject) {
     displayMainControls.style.display = "none"
     timer(subject);
 }
 
-/**Function to display timer and end exam at the end*/
+/**
+ * Function to display timer and end exam if timer expires
+ */
 function timer() {     
     if ((document.getElementById("timer").textContent !=="")) {
         return;
@@ -308,34 +315,34 @@ function timer() {
             if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when use uses end button to end practice
         }
     }
-
 };
+
 /**
  * Ends the practice session on time up
  */
 function timeUp() {
-    
     alert("Your time is Up!");
     displayResult.style.display = "block"
-
     result ();
-    
 }
 
+/**
+ * Computes and displays result alongside other details gathered during the session
+ */
 function result() {
-    
     alert("You have come to the end of this practice session!\nEnter OK to view your result!");    
     hideScreen.style.display = "none"; 
     displayMainArea.style.display = "none"
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
-    stop()
-
+    stop();
 };
 
+/**
+ * Displays Government questions
+ */
 function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
-
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
     document.getElementById('optionB').textContent = optionB;
@@ -343,9 +350,11 @@ function displayGovernmentQuestion(question, optionA, optionB, optionC, optionD,
     document.getElementById('optionD').textContent = optionD;
     document.getElementById('answer').textContent = answer;
     displayControls (subject);
-    
 };
 
+/**
+ * Displays Government questions
+ */
 function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
@@ -356,6 +365,9 @@ function displayMathsQuestion(question, optionA, optionB, optionC, optionD, answ
     displayControls (subject);
 };
 
+/**
+ * Displays Government questions
+ */
 function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, answer, subject) {
     document.getElementById('question').textContent = question;
     document.getElementById('optionA').textContent = optionA;
@@ -366,7 +378,7 @@ function displayEnglishQuestion(question, optionA, optionB, optionC, optionD, an
     displayControls (subject);
 };
 
-//Question Banks for Subjects
+//Question Bank for Subjects
 const questionBank = [    
     {
     question: "Who is the current monarch of the United Kingdom?",
