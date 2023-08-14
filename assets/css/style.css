@@ -102,15 +102,16 @@ footer {
 }
 
 #result {
-    
-    bottom: 0;
-    position: absolute;
+    margin-top: 90px;
+    position: fixed;
     align-items: center;
     text-align: center;
-    background-color: grey;
-    width: 100vh;
-    height: 100vh;
+    background-color: white;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
     display: none;
+    z-index: 5;
 }
 
 .end {
@@ -138,11 +139,11 @@ footer {
 
 /*Hide Screen on clicking end*/
 #hide-screen {
-    z-index: 999;
+    z-index: 4;
     background-color: grey;
     position: absolute;
-    height: 100vh;
-    width: 100vh;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
