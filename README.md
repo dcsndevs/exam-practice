@@ -19,23 +19,54 @@ As a returning visitor, the goal should be to practice more and get acquainted w
 
 ### Username:
 An input form is made available on start. The username gives the user a personalised experience by displaying their chosen name accross the pages of the site.
+![username input](documentation/user-input.png)
 
 ### Subjects:
 There are currently subjects on offering the website application, namely English, Mathematics and Government.
+![subjects](documentation/subjects.png)
+
 
 ### Timer: 
 A timer is activated when an practice sessions starts. This helps the user to simulate real exam conditions. 
+![timer](documentation/timer.png)
+
 
 ### Footer:
 The footer section displays the name of the developer and also provides a LinkedIn reference for the developer.
+![footer](documentation/footer.png)
 
 ### Result:
 The result page is active at the end of every practice session, showing the score, subject, date, time, and usermame. It also provides the user with an opportunity to print the result.
+![result](documentation/result.png)
 
 ### Testing
 Various tools have been used in testing the overall performance of the website from beginning to end. I have listed them in no particular other below:
 
 Responsive Design Tester by Media Genesis was used to view the website on different media screens. Click any title below to view the site's appearance on the screen.
+
+<details><summary>Computer - Big Screens (1440 x 697)</summary>
+<img src="documentation/front-page-big.png">
+<img src="documentation/subject-page-big.png">
+<img src="documentation/question-page-big.png">
+<img src="documentation/quit-page-big.png">
+<img src="documentation/result-page-big.png">
+</details>
+
+<details><summary>Laptop - Medium Screens (768 * 697)</summary>
+<img src="documentation/front-page-tablet.png">
+<img src="documentation/subject-page-tablet.png">
+<img src="documentation/question-page-tablet.png">
+<img src="documentation/quit-page-tablet.png">
+<img src="documentation/result-page-tablet.png">
+</details>
+
+<details><summary>Mobile Phone - Small Screens (375 x 697)</summary>
+<img src="documentation/front-page-mobile.png">
+<img src="documentation/subject-page-mobile.png">
+<img src="documentation/question-page-mobile.png">
+<img src="documentation/quit-page-mobile.png">
+<img src="documentation/result-page-mobile.png">
+</details>
 
 ### Manual Testing: 
 | Feature | Action | Expected Result | Tested | Passed | Comments |
@@ -76,6 +107,7 @@ Issues such as Arial-label not being present were raised, abscen of meta descrip
 
 ### JSHint:
 The JSHint code quality tool was used and 69 warnings were detected. There were no errors, and the warnings were not harmful with most being a result of browser compatibilty.
+![JSHint test](documentation/js-hint.png)
 
 ### HTML Validator:
 1. The W3 validator (validator.w3.org) highlighted errors on the website's links. Arial-label instead of aria-label had been used, and 15 errors were found and corrected.
@@ -110,6 +142,15 @@ Freeform was used to draw mock-ups for the initial website design to guide in th
 - GitHub was used to host the deployed website
 - Undraw opensource was used obtain svg image for the hero image
 - Canva was used to creat the site Logo
+
+## Bugs:
+| Issue|Solution |
+|-|-|
+| The timer could be paused by clicking 'Quit' button.|I introduced a 'div' that displayed above the question, allowing the user to confirm their choice while the questions remain hidden |
+| The timer kept running even when a session had ended|I used the 'clearInterval function to stop the timer |
+| The choice selection for an answer, retained the red color when the user goes to the next question|I set 'const' color for the options|
+| In Mozilla browser, the quit button was immediately taking users to result page, without alerting them to confirm their choice|I removed the alert function and instead added a confirmation button on the 'hide-screen' div |
+
 
 ## Deployment
 
