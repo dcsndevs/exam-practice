@@ -5,13 +5,14 @@
 Examp practice is a quiz website that helps users prepare for exams. It assists in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, there are three subjects: Mathematics, English, and Government. 
 
 You can find The link to the deployed site [Here](https://dcsndevs.github.io/exam-practice) 
+![Resposive views](documentation/responsive-exam-practice.png)
 
 ## User Stories
 
 ### First Time Visitor Goals: 
 As a first-time visitor, the primary goal is to be able to practice past and similar exam questions.
 
-##Returning Visitor Goals:
+## Returning Visitor Goals:
 As a returning visitor, the goal should be to practice more and get acquainted with the exam questions.
 
 ## Features 
