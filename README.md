@@ -73,13 +73,23 @@ Issues such as Arial-label not being present were raised, abscen of meta descrip
 - Desktop Page Speed Result![Desktop Page Speed Result](documentation/pagespeed-desktop.png)
 - Mobile Page Speed Result![Mobile Page Speed Result](documentation/pagespeed-mobile.png)
 
+### JSHint:
+The JSHint code quality tool was used and 69 warnings were detected. There were no errors, and the warnings were not harmful with most being a result of browser compatibilty.
+
 ### HTML Validator:
 1. The W3 validator (validator.w3.org) highlighted errors on the website's links. Arial-label instead of aria-label had been used, and 15 errors were found and corrected.
 2. An </a> was found without an opener on the footer.
+![HTML Validator](documentation/html-validator.png)
+
 
 ### CSS Validator:
 1. The W3 validator highlighted 1 error regarding the use of a wrongly written code for align-items. A value of "right " was used rather than center or start. These codes were then rewritten correctly.
 2. The validator highlighted 3 warnings regarding using codes that is a vendor extended pseudo-element.
+![CSS Validator](documentation/css-validator.png)
+![CSS-warnings](documentation/css-validator-warnings.png)
+
+### WAVE:
+WAVE is a web accessibility evaluation tool powered by [WebAIM](https://webaim.org/). WAVE helped identify an initial error were h3 was used without h2 element being in sequence. It also highligh an issue with the  te4xt alignment (Justiify) used. These errors were then corrected. At the second test, no major accessibility error was found except for a minor contrast error concerning the orange color of a part of the logo that's against a white background.
 
 ### Color Contrast:
 

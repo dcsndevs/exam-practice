@@ -72,6 +72,39 @@ footer {
     padding-right: 5px;
     padding-top: 10px;
 }
+/* The animation below was generated from http://animista.net under FreeBSD License */
+.text-focus-in {
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
 
 /* Main Question area */
 /* Hide main Area from start */
@@ -145,7 +178,7 @@ footer {
 }
 
 .options:hover {
-    font-size: larger;
+    /* font-size: larger; */
     background-color: orange;
 }
 
@@ -162,7 +195,7 @@ footer {
 .main-text {
     padding-left: 5%;
     padding-right: 5%;
-    text-align: justify;
+    text-align: left;
 }
 
 /* Input for user name */
