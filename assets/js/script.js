@@ -337,7 +337,6 @@ function result() {
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
-    stop();
 }
 
 /**
