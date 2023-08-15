@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     optionsColorChange();
                     username();
                 } 
-                else { return start, invalidLogin()}
+                else { return invalidLogin()};
                                 
             } else if (this.getAttribute("data-type") === "next") {
                 let subject = subjectTitle.textContent.toLowerCase();
@@ -42,21 +42,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 location.reload();                
             } else if (this.getAttribute("data-type") === "maths"){
-                alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
                     
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Maths";
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);    
             } else if (this.getAttribute("data-type") === "english"){
-                alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
                     
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "English";
                     let subject = this.getAttribute("data-type");
                     startPractice(subject);                
             } else if (this.getAttribute("data-type") === "government"){
-                    alert("You have 10 minutes to answer 10 questions.\nGoodluck!")
+                    alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
                     
                     displayMainArea.style.display = "block";                    
                     subjectTitle.textContent = "Government";
@@ -84,16 +84,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 optionsColorChange();
                 username();
             } 
-            else { return start, invalidLogin()}
+            else { return invalidLogin()};
         }
-    })
+    });
 });
 
 /**
  * Displays an error message when username validation fails.
  */
 function invalidLogin () {
-    document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be at least 2 and not more than 15 characters."'
+    document.getElementsByClassName('invalid-login')[0].textContent = '"Your Name must be at least 2 and not more than 15 characters."';
 }
 
 /**
@@ -102,10 +102,10 @@ function invalidLogin () {
  */
 function username() {
 
-    displayWelcome.style.display = "none"
-    displayFooter.style.display = "none"
-    displayMainControls.style.display = "block"
-    let usernameInput = document.getElementById("user").value.toUpperCase();    
+    displayWelcome.style.display = "none";
+    displayFooter.style.display = "none";
+    displayMainControls.style.display = "block";
+    let usernameInput = document.getElementById("user").value.toUpperCase();
     document.getElementById('usernames').innerText = usernameInput;
 }
 
@@ -114,7 +114,7 @@ function username() {
  * The selected subject is also posted to this function.
  */
 function startPractice(subject) {
-        
+    let j;    
     if (subject === "government") {
         let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
         let i = questionNumber + 1;
@@ -146,7 +146,7 @@ function startPractice(subject) {
     optionC.textContent = questionBank[j].optionC;
     optionD.textContent = questionBank[j].optionD;
     answer.textContent = questionBank[j].answer;
-};
+}
 
 /**
  * Used to show question number on the top of the main-area (e.g 2 out of 10)
@@ -233,7 +233,7 @@ function checkAnswer (subject) {
         incrementFailedAnswer();
     }
     questionNumber(subject);
-};
+}
 
 /**
  * Adds one for each correct answer
@@ -241,7 +241,7 @@ function checkAnswer (subject) {
 function incrementRightAnswer() {
     let rightAnswer = parseInt(document.getElementById('rightAnswer').textContent);
     document.getElementById("rightAnswer").textContent = ++rightAnswer;
-};
+}
 
 /**
  * Adds one for each incorrect/failed answer
@@ -249,7 +249,7 @@ function incrementRightAnswer() {
 function incrementFailedAnswer() {
     let failedAnswer = parseInt(document.getElementById('failedAnswer').textContent);
     document.getElementById("failedAnswer").textContent = ++failedAnswer;
-};
+}
 
 /**
  * When users attempt to end a session during play, this function prevents 
@@ -272,7 +272,7 @@ function unBlock() {
  * Function to Display controls when practice is loaded
  */
 function displayControls () {    
-    displayNextEnd.style.display = "block"
+    displayNextEnd.style.display = "block";
     hideSubjectControls();
 }
 
@@ -280,12 +280,13 @@ function displayControls () {
  * Function to Hide Main Subject controls when practice is loaded
  */
 function hideSubjectControls() {
-    displayMainControls.style.display = "none"
+    displayMainControls.style.display = "none";
     timer();
 }
 
 /**
  * Function to display timer and end exam if timer expires
+ * Credit: [Florin Pop](https://www.youtube.com/watch?v=x7WJEmxNlEs)
  */
 function timer() {     
     if ((document.getElementById("timer").textContent !=="")) {
@@ -305,7 +306,7 @@ function timer() {
             const minutes = '0' + Math.floor(totalSeconds / 60); //Minutes remaining displayed
             let seconds = totalSeconds % 60;
             if (seconds < 10) {
-                seconds = '0' + seconds
+                seconds = '0' + seconds;
             } else {
                 seconds;
             }
@@ -315,14 +316,14 @@ function timer() {
             if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when use uses end button to end practice
         }
     }
-};
+}
 
 /**
  * Ends the practice session on time up
  */
 function timeUp() {
     alert("Your time is Up!");
-    displayResult.style.display = "block"
+    displayResult.style.display = "block";
     result ();
 }
 
@@ -337,7 +338,7 @@ function result() {
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = resultDate;
     stop();
-};
+}
 
 /**
  * Displays Government questions
@@ -351,14 +352,14 @@ function displayGovernmentQuestion() {
  */
 function displayMathsQuestion() {
     displayControls ();
-};
+}
 
 /**
  * Displays Government questions
  */
 function displayEnglishQuestion() {
     displayControls ();
-};
+}
 
 //Question Bank for Subjects
 const questionBank = [    
@@ -670,4 +671,4 @@ const questionBank = [
     optionD: "3de34",
     answer: "3de34"
     },
-]  
+];
