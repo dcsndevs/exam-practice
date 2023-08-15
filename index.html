@@ -7,7 +7,7 @@
     <meta name="description" content="An online platform tailored for Senior School Certificate Exam preparation">
     <meta name="keywords" content="senior school, examinations, practive, maths, english, government">
     <meta name="author" content="Designed and developed by Chinonso Dickson Olejeme; Student at Code Institute | https://linkedin.com/in/olejeme/">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Exam Practice Online</title>
 </head>
@@ -19,15 +19,15 @@
         </div>
     </header>
 
-    <div class="body-container" alt="Main Section">  
+    <div class="body-container">  
 
         <div id="hide-screen">
             <br>
             <p>Are you sure?</p>
             <br>
-            <button data-type="yes" arial-label="yes">Yes</button>
+            <button data-type="yes" aria-label="yes">Yes</button>
             <br>
-            <button data-type="no" arial-label="no">No</button>
+            <button data-type="no" aria-label="no">No</button>
         </div>  
         
         <div class="main-controls">
@@ -38,20 +38,20 @@
             <h4>Pick a subject to continue</h4>
             <button data-type="maths" aria-label="maths-subject">Maths</button>
             <br>
-            <button data-type="english" arial-label="english-subject">English</button>
+            <button data-type="english" aria-label="english-subject">English</button>
             <br>
-            <button data-type="government" arial-label="government-subject">Government</button>
+            <button data-type="government" aria-label="government-subject">Government</button>
         </div>
 
         <div id="welcome">             
-            <img src="assets/images/hero-image.svg" class="hero-image" aria-label="Image of a person reading">
+            <img src="assets/images/hero-image.svg" class="hero-image" aria-label="Image of a person reading" alt="hero-image-person-seated-reading">
             <div>
             <h2>Welcome to Exam Practice!</h2>
             <br>
             <p class="main-text">"This website assists you in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, we offer support for three subjects: Mathematics, English, and Government. To get started, please enter your name below!"</p>
             <input type="text" id="user" placeholder="Enter your Name here" aria-label="Enter a name here to start practicing exam questions">
             <br>
-            <button id="start" data-type="start" arial-label="start practicing">Start!</button>
+            <button id="start" data-type="start" aria-label="start practicing">Start!</button>
             <p class = "invalid-login"></p>   
             </div>         
         </div>
@@ -83,9 +83,9 @@
                 <p id="answer"></p>
             </div>     
             <div class="controls">
-                <button class="next" data-type="next" arial-label="next question">Next</button>
+                <button class="next" data-type="next" aria-label="next question">Next</button>
                 <br>
-                <button class="end" data-type="end" arial-label="Quit session">Quit</button>
+                <button class="end" data-type="end" aria-label="Quit session">Quit</button>
             </div>       
         </div>
 
@@ -96,8 +96,8 @@
                 <h4>Result: <span id="rightAnswer">0</span>0%</h4>
                 <h4>Failed: <span id="failedAnswer">-1</span></h4>
                 <h4>Date: <span id="date"></span></h4>
-                <button data-type="print" arial-label="print result">Print</button>
-                <button data-type="exit" arial-label="exit program and go back to front page">Exit</button>
+                <button data-type="print" aria-label="print result">Print</button>
+                <button data-type="exit" aria-label="exit program and go back to front page">Exit</button>
             </div>
         </div>
     
@@ -107,7 +107,7 @@
             <a href="https://www.linkedin.com/in/olejeme/" target="_blank" aria-label="Click to visit creator's LinkedIn profile">
             <i class="fa-brands fa-linkedin fa-2xl" style="color: white;"></i></a>
         </div>
-        <div class="footer">Created by Chinonso Olejeme</a>- For educational purposes only.</div>
+        <div class="footer">Created by Chinonso Olejeme- For educational purposes only.</div>
     </footer>
     <!--Font Awesome source code-->
     <script src="https://kit.fontawesome.com/2cb5624d4b.js" crossorigin="anonymous"></script>
