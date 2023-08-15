@@ -141,7 +141,12 @@ footer {
 }
 
 .options {
-    color: rgb(1, 1, 16);
+    color: black;
+}
+
+.options:hover {
+    font-size: larger;
+    background-color: orange;
 }
 
 .invalid-login {
