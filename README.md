@@ -2,7 +2,7 @@
 
 ## Welcome,
 
-Examp practice is a quiz website that helps users prepare for exams. It assists in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, there are three subjects: Mathematics, English, and Government. 
+Exam practice is a quiz website that helps users prepare for exams. It assists in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, there are three subjects: Mathematics, English, and Government. 
 
 You can find The link to the deployed site [Here](https://dcsndevs.github.io/exam-practice) 
 ![Resposive views](documentation/responsive-exam-practice.png)
@@ -18,7 +18,7 @@ As a returning visitor, the goal should be to practice more and get acquainted w
 ## Features 
 
 ### Username:
-An input form is made available on start. The username gives the user a personalised experience by displaying their chosen name accross the pages of the site.
+An input form is made available on start. The username gives the user a personalised experience by displaying their chosen name across the pages of the site.
 ![username input](documentation/user-input.png)
 
 ### Subjects:
@@ -36,7 +36,7 @@ The footer section displays the name of the developer and also provides a Linked
 ![footer](documentation/footer.png)
 
 ### Result:
-The result page is active at the end of every practice session, showing the score, subject, date, time, and usermame. It also provides the user with an opportunity to print the result.
+The result page is active at the end of every practice session, showing the score, subject, date, time, and username. It also provides the user with an opportunity to print the result.
 ![result](documentation/result.png)
 
 ### Testing
@@ -76,7 +76,7 @@ Responsive Design Tester by Media Genesis was used to view the website on differ
 |Focus Input|Key event|Cursor in input field|Yes|Yes|On page load, the cursor is seen in the input field   |
 |Start Button|Click|Attempt login|Yes|Yes|     |
 |Login Validation|Attempt login|Invalid Login|Yes|Yes|At least 2 and not more than 15 characters when used would activate it|
-|LinkedIn icon|Click|Opens a new Linkedin|Yes|Yes||
+|LinkedIn icon|Click|Opens a new LinkedIn|Yes|Yes||
 |Subjects|     |     |     |     |     |
 |Government|click|Loads Government questions|Yes|Yes|     |
 |Mathematics|click|Loads Mathematics questions|Yes|Yes|     |
@@ -97,16 +97,16 @@ The final project was tested on four different browsers, namely:
 -Google Chrome
 -Brave
 -Mozilla Firefox
-The output was similar on all these browsers except on Mozila firefox, where the fonts appeared darker and were therefore better viewed in terms of clarity and contrast. In addition, the buttons on the "get-involved" section (not page) of the index page were observed to overlap the text above them. I was able to correct this error by adding more padding on top of the buttons.
+The output was similar on all these browsers except on Mozilla Firefox, where the fonts appeared darker and were therefore better viewed in terms of clarity and contrast. In addition, the buttons on the "get-involved" section (not page) of the index page were observed to overlap the text above them. I was able to correct this error by adding more padding on top of the buttons.
 
 ### Google PageSpeed Insights:
 Google page speed insights was used to test the speed of the website and various issues were highlighted which was followed by subsequent adjustments.
-Issues such as Arial-label not being present were raised, abscen of meta description which I later found out to be because of "Description" was spelt wrongly and issues surrounding image size not being stated.
+Issues such as Arial-label not being present were raised, absence of meta description which I later found out to be because of "Description" was spelt wrongly and issues surrounding image size not being stated.
 - Desktop Page Speed Result![Desktop Page Speed Result](documentation/pagespeed-desktop.png)
 - Mobile Page Speed Result![Mobile Page Speed Result](documentation/pagespeed-mobile.png)
 
 ### JSHint:
-The JSHint code quality tool was used and 69 warnings were detected. There were no errors, and the warnings were not harmful with most being a result of browser compatibilty.
+The JSHint code quality tool was used and 69 warnings were detected. There were no errors, and the warnings were not harmful with most being a result of browser compatibility.
 ![JSHint test](documentation/js-hint.png)
 
 ### HTML Validator:
@@ -116,13 +116,13 @@ The JSHint code quality tool was used and 69 warnings were detected. There were 
 
 
 ### CSS Validator:
-1. The W3 validator highlighted 1 error regarding the use of a wrongly written code for align-items. A value of "right " was used rather than center or start. These codes were then rewritten correctly.
+1. The W3 validator highlighted 1 error regarding the use of a wrongly written code for align-items. A value of "right " was used rather than centre or start. These codes were then rewritten correctly.
 2. The validator highlighted 3 warnings regarding using codes that is a vendor extended pseudo-element.
 ![CSS Validator](documentation/css-validator.png)
 ![CSS-warnings](documentation/css-validator-warnings.png)
 
 ### WAVE:
-WAVE is a web accessibility evaluation tool powered by [WebAIM](https://webaim.org/). WAVE helped identify an initial error were h3 was used without h2 element being in sequence. It also highligh an issue with the  te4xt alignment (Justiify) used. These errors were then corrected. At the second test, no major accessibility error was found except for a minor contrast error concerning the orange color of a part of the logo that's against a white background.
+WAVE is a web accessibility evaluation tool powered by [WebAIM](https://webaim.org/). WAVE helped identify an initial error were h3 was used without h2 element being in sequence. It also highlight an issue with the  te4xt alignment (Justify) used. These errors were then corrected. At the second test, no major accessibility error was found except for a minor contrast error concerning the orange color of a part of the logo that's against a white background.
 
 ### Color Contrast:
 
@@ -140,14 +140,14 @@ Freeform was used to draw mock-ups for the initial website design to guide in th
 - VScode was used to write and edit the codes and host the site my local computer
 - Git was used for the version control of the website
 - GitHub was used to host the deployed website
-- Undraw opensource was used obtain svg image for the hero image
-- Canva was used to creat the site Logo
+- Undraw opensource was used obtain SVG image for the hero image
+- Canva was used to create the site Logo
 
 ## Bugs:
 | Issue|Solution |
 |-|-|
 | The timer could be paused by clicking 'Quit' button.|I introduced a 'div' that displayed above the question, allowing the user to confirm their choice while the questions remain hidden |
-| The timer kept running even when a session had ended|I used the 'clearInterval function to stop the timer |
+| The timer kept running even when a session had ended|I used the 'clearInterval' function to stop the timer |
 | The choice selection for an answer, retained the red color when the user goes to the next question|I set 'const' color for the options|
 | In Mozilla browser, the quit button was immediately taking users to result page, without alerting them to confirm their choice|I removed the alert function and instead added a confirmation button on the 'hide-screen' div |
 
@@ -183,14 +183,13 @@ Black, Orange and Teal were the main colors used for this site.
 
 ### Images:
 - The main hero image of a character studying a book, was gotten from free open source site (Undraw.co) designed by [Aggelos Gesoulis](https://twitter.com/anges244) and created by [Katerina Limpitsouni](https://twitter.com/ninaLimpi).
-- The logo was crerated using Canva.com
+- The logo was created using Canva.com
 
  - [Image Resizer](https://imageresizer.com/) and [TinyPng](https://tinypng.com/) were used to respectively resize and compress all the images on this site.
- - [Ezgif.com](https://ezgif.com/) was used to covert videos to the animated gif images that was used to show live tests.
  - [Screenshot & Screen Recorder](https://ezgif.com/) was used to record live tests and used to create videos therefore.
  - [Am I Responsive](https://ami.responsivedesign.is/) website was used to simultaneously display how the site looks on different screen sizes.
 
 ### Acknowledgements:
-I like to thank [Juliia Konn](https://github.com/IuliiaKonovalova/), my mentor at Code Institute. She exemplifies her mentorship with a knack for high quality projects. Her desire for quality has always pushe me to do better in my work. I remain grateful to her.
+I like to thank [Juliia Konn](https://github.com/IuliiaKonovalova/), my mentor at Code Institute. She exemplifies her mentorship with a knack for high quality projects. Her desire for quality has always challenged me to do better in my work. I remain grateful to her.
 
-I also like to thank my loving wife for her continuos support. She's a source of strength as always.
+I also like to thank my loving wife for her continuous support. She's a source of strength as always.
