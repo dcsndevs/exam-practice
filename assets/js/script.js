@@ -116,20 +116,20 @@ function username() {
 function startPractice(subject) {
     let j;    
     if (subject === "government") {
-        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+        let questionNumber = parseInt(document.getElementById('question-number-display').textContent);
         let i = questionNumber + 1;
         j = i;
         
         displayGovernmentQuestion();
         
     } else if (subject === "maths") {
-        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+        let questionNumber = parseInt(document.getElementById('question-number-display').textContent);
         let i = questionNumber + 12;
         j = i;
         displayMathsQuestion();
 
     } else if (subject === "english") {
-        let questionNumber = parseInt(document.getElementById('questionNumber').textContent);
+        let questionNumber = parseInt(document.getElementById('question-number-display').textContent);
         let i = questionNumber + 23;
         j = i;
         displayEnglishQuestion();
@@ -155,8 +155,8 @@ function startPractice(subject) {
  * It also determines which index on the questionBank should be selected based on the 'subject' that was passed to it.
  */
 function questionNumber(subject) {
-    let previousQuestionNumber = parseInt(document.getElementById("questionNumber").textContent);
-    document.getElementById("questionNumber").textContent = ++previousQuestionNumber;
+    let previousQuestionNumber = parseInt(document.getElementById("question-number-display").textContent);
+    document.getElementById("question-number-display").textContent = ++previousQuestionNumber;
     document.getElementById("optionA").style.color ="black"
     document.getElementById("optionB").style.color ="black"
     document.getElementById("optionC").style.color ="black"
