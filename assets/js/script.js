@@ -262,7 +262,7 @@ function incrementRightAnswer() {
  */
 function incrementFailedAnswer() {
     let eachItem = document.getElementById("topic-failed").innerHTML;
-    let failedList = `<li>${topic.textContent}</li>`
+    let failedList = `<ol>${topic.textContent}</ol>`
     document.getElementById("topic-failed").innerHTML = eachItem + failedList;
 }
 
@@ -398,7 +398,7 @@ const questionBank = [
         optionC: "King Charlse",
         optionD: "Joe Biden",
         answer: "Sample Question",
-        topic: "<ul>List of failed topics:</ul>"
+        topic: ""
     },  
     {
         question: "A fundamental component of political culture is _ _ _ __ _ _ _",
@@ -497,7 +497,7 @@ const questionBank = [
         optionC: "1000",
         optionD: "10000",
         answer: "No answer here",
-        topic: "List of failed topics:"
+        topic: ""
     },
     {
         question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
@@ -597,7 +597,7 @@ const questionBank = [
         optionC: "Fine",
         optionD: "Poor",
         answer: "No answer here",
-        topic: "List of failed topics:"
+        topic: ""
     },
     {
         question: "For the questions, choose the options that best complete the gap(s): He was _ _ _ _ by the trickster",
