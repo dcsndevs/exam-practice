@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.key === "Enter") {
             let usernameInput = document.getElementById("user").value; 
             if (usernameInput.length >= 2 && usernameInput.length <= 15) {
-                optionsColorChange();
+                selectOptionColor();
                 username();
             } 
             else { return invalidLogin()};
@@ -116,24 +116,24 @@ function username() {
  * The selected subject is also posted to this function.
  */
 function startPractice(subject) {
-    let j;    
+    let questionBankArrayIndex;    
     if (subject === "government") {
         let questionNumber = parseInt(document.getElementById('question-number-display').textContent);
-        let i = questionNumber + 1;
-        j = i;
+        let questionNumberSequence = questionNumber + 1;
+        questionBankArrayIndex = questionNumberSequence;
         
         displayGovernmentQuestion();
         
     } else if (subject === "maths") {
         let questionNumber = parseInt(document.getElementById('question-number-display').textContent);
-        let i = questionNumber + 12;
-        j = i;
+        let questionNumberSequence = questionNumber + 12;
+        questionBankArrayIndex = questionNumberSequence;
         displayMathsQuestion();
 
     } else if (subject === "english") {
         let questionNumber = parseInt(document.getElementById('question-number-display').textContent);
-        let i = questionNumber + 23;
-        j = i;
+        let questionNumberSequence = questionNumber + 23;
+        questionBankArrayIndex = questionNumberSequence;
         displayEnglishQuestion();
 
     } else {    
@@ -178,8 +178,8 @@ function questionNumber(subject) {
 };
 
 /**
- * Resets the options from red to black on load of new question.
- * Each time a user selects an option and it becaome sred, the options would
+ * Resets the options from orange to black on load of new question.
+ * Each time a user selects an option and it becaome orange, the options would
  * need to be rest to black again for the user to select based on the next question
  */
 function optionsColorChange() {
@@ -189,16 +189,16 @@ function optionsColorChange() {
     document.getElementById('option-d').style.backgroundColor = "white";
     let selection = document.getElementsByClassName('options');
     for (let i = 0; i < selection.length; i++) {
-        selection[i].addEventListener('click', selecChoose);
+        selection[i].addEventListener('click', selectOptionColor);
     }
 }
 
 /**
  * Makes option selection possible. The selected
- * options would change to red when users click
+ * options would change to orange when users click
  * or tap the option as a seclection of answer.
  */
-function selecChoose() {
+function selectOptionColor() {
     document.getElementById('option-a').style.backgroundColor = "white";
     document.getElementById('option-b').style.backgroundColor = "white";
     document.getElementById('option-c').style.backgroundColor = "white";
@@ -237,6 +237,11 @@ function checkAnswer (subject) {
         incrementFailedAnswer();
     }
     questionNumber(subject);
+    /* Reset colors back to default */
+    document.getElementById('option-a').style.backgroundColor = "white";
+    document.getElementById('option-b').style.backgroundColor = "white";
+    document.getElementById('option-c').style.backgroundColor = "white";
+    document.getElementById('option-d').style.backgroundColor = "white";
 }
 
 /**
