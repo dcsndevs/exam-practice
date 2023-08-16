@@ -266,6 +266,7 @@ function incrementFailedAnswer() {
  */
 function block() {
     hideScreen.style.display = "block";
+
 }
 
 /**
@@ -303,7 +304,8 @@ function timer() {
         const practiceTime = 10; //10minutes for each practice session
         let totalSeconds = practiceTime * 60;
 
-        const timer = document.getElementById("timer");
+        const timer = document.getElementById("timer"); //timer on question area
+        const timer2 = document.getElementById("timer2"); //timer on when question area is blocked as a result of user attempting to quit
 
         const clearTimerInterval = setInterval (timerCounting, 1000); //Milliseconds -i.e the time it takes a second to elapse
         function stop() {
@@ -320,7 +322,8 @@ function timer() {
             }
             if ((minutes === '0' + 0) && (seconds === 59)) (timer.style.color = "red");
             if ((minutes === '0' + 0) && (seconds === '0' + 0)) (timeUp() && stop()); //Helps stop the time when secs and minutes hits zero
-            timer.innerHTML = `${minutes}:${seconds}`; 
+            timer.innerHTML = `${minutes}:${seconds}`;
+            timer2.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
             if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when user uses end button to end practice or oonce result page has been loaded.
         }

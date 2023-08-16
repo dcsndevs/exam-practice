@@ -177,11 +177,11 @@ footer {
 
 /*Hide Screen on clicking end*/
 #hide-screen {
-    margin-top: 35vh;
+    margin-top: 40px;
     z-index: 4;
     background-color: grey;
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: none;
 }
