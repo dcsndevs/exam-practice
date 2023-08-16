@@ -262,6 +262,10 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
 
+    #welcome>img {
+        width: 383.65px;
+        height: 400px;
     }
 }
