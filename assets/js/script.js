@@ -247,8 +247,8 @@ function incrementRightAnswer() {
  * Adds one for each incorrect/failed answer
  */
 function incrementFailedAnswer() {
-    let failedAnswer = parseInt(document.getElementById('failedAnswer').textContent);
-    document.getElementById("failedAnswer").textContent = ++failedAnswer;
+    let failedAnswer = parseInt(document.getElementById('failed-answer').textContent);
+    document.getElementById("failed-answer").textContent = ++failedAnswer;
 }
 
 /**
