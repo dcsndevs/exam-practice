@@ -188,11 +188,23 @@ footer {
 
 .options {
     color: black;
+    background-color: white;
+    border: 2px solid transparent;
+    font-weight: normal;
+    padding: 4px 13px;
+    border-radius: 30px;
+    transition: .2s;
+    
+
 }
 
 .options:hover {
     /* font-size: larger; */
-    background-color: orange;
+    /* background-color: orange; */
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    cursor: grab;
 }
 
 .invalid-login {

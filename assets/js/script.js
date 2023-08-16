@@ -5,18 +5,20 @@ const optionB = document.getElementById('option-b');
 const optionC = document.getElementById('option-c');
 const optionD = document.getElementById('option-d');
 const answer = document.getElementById('answer');
-let subjectTitle = document.getElementById("subject-title");
+const subjectTitle = document.getElementById("subject-title");
 const resultDate = new Date();
-document.getElementById("user").focus();
 
 // Global Display Variables
-let displayWelcome = document.getElementById('welcome');
-let displayNextEnd = document.getElementsByClassName("controls")[0];
-let displayMainControls = document.getElementsByClassName("main-controls")[0];
-let displayFooter = document.getElementsByTagName("footer")[0];
-let displayResult= document.getElementById("result");
-let displayMainArea = document.getElementById('main-area');
+const displayWelcome = document.getElementById('welcome');
+const displayNextEnd = document.getElementsByClassName("controls")[0];
+const displayMainControls = document.getElementsByClassName("main-controls")[0];
+const displayFooter = document.getElementsByTagName("footer")[0];
+const displayResult= document.getElementById("result");
+const displayMainArea = document.getElementById('main-area');
 const hideScreen = document.getElementById('hide-screen');
+
+//On page load (Predefined)
+document.getElementById("user").focus();
 
 //Allow DOM to load before starting exam practice sessions
 //Add event listeners to all the button elements
@@ -181,10 +183,10 @@ function questionNumber(subject) {
  * need to be rest to black again for the user to select based on the next question
  */
 function optionsColorChange() {
-    document.getElementById('option-a').style.color = "black";
-    document.getElementById('option-b').style.color = "black";
-    document.getElementById('option-c').style.color = "black";
-    document.getElementById('option-d').style.color = "black";
+    document.getElementById('option-a').style.backgroundColor = "white";
+    document.getElementById('option-b').style.backgroundColor = "white";
+    document.getElementById('option-c').style.backgroundColor = "white";
+    document.getElementById('option-d').style.backgroundColor = "white";
     let selection = document.getElementsByClassName('options');
     for (let i = 0; i < selection.length; i++) {
         selection[i].addEventListener('click', selecChoose);
@@ -197,9 +199,11 @@ function optionsColorChange() {
  * or tap the option as a seclection of answer.
  */
 function selecChoose() {
-    if (this.style.color === "black") {
-        this.style.color = "red";
-    } else (this.style.color = "black");
+    document.getElementById('option-a').style.backgroundColor = "white";
+    document.getElementById('option-b').style.backgroundColor = "white";
+    document.getElementById('option-c').style.backgroundColor = "white";
+    document.getElementById('option-d').style.backgroundColor = "white";
+    this.style.backgroundColor = "orange";
 };
 
 /**
@@ -211,19 +215,19 @@ function checkAnswer (subject) {
     
     let correctAnswer = document.getElementById('answer').textContent;
     let userAnswer;
-    if (document.getElementById('-a').style.color === "red") {
+    if (document.getElementById('option-a').style.backgroundColor === "orange") {
         userAnswer = document.getElementById('option-a').textContent;
 
-    } else if (document.getElementById('option-b').style.color === "red") {
+    } else if (document.getElementById('option-b').style.backgroundColor === "orange") {
         userAnswer = document.getElementById('option-b').textContent;
 
-    } else if (document.getElementById('option-c').style.color === "red") {
+    } else if (document.getElementById('option-c').style.backgroundColor === "orange") {
         userAnswer = document.getElementById('option-c').textContent;
 
-    } else if (document.getElementById('option-d').style.color === "red") {
+    } else if (document.getElementById('option-d').style.backgroundColor === "orange") {
         userAnswer = document.getElementById('option-d').textContent;
 
-    } else userAnswer = "black";
+    } else userAnswer = "none";
   
 
     let isCorrect = userAnswer === correctAnswer;
