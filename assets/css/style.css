@@ -90,7 +90,7 @@ footer {
     padding-top: 10px;
 }
 /* The animation below was generated from http://animista.net under FreeBSD License */
-.text-focus-in, .heading {
+.text-focus-in {
     -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
