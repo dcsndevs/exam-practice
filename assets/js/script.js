@@ -5,7 +5,7 @@ const optionB = document.getElementById('optionB');
 const optionC = document.getElementById('optionC');
 const optionD = document.getElementById('optionD');
 const answer = document.getElementById('answer');
-let subjectTitle = document.getElementById("subjectTitle");
+let subjectTitle = document.getElementById("subject-title");
 const resultDate = new Date();
 document.getElementById("user").focus();
 
