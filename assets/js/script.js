@@ -239,8 +239,8 @@ function checkAnswer (subject) {
  * Adds one for each correct answer
  */
 function incrementRightAnswer() {
-    let rightAnswer = parseInt(document.getElementById('rightAnswer').textContent);
-    document.getElementById("rightAnswer").textContent = ++rightAnswer;
+    let rightAnswer = parseInt(document.getElementById('right-answer').textContent);
+    document.getElementById("right-answer").textContent = ++rightAnswer;
 }
 
 /**
