@@ -5,6 +5,7 @@ const optionB = document.getElementById('option-b');
 const optionC = document.getElementById('option-c');
 const optionD = document.getElementById('option-d');
 const answer = document.getElementById('answer');
+const topic = document.getElementById('topic');
 const subjectTitle = document.getElementById("subject-title");
 
 // Global Display Variables
@@ -255,8 +256,19 @@ function incrementRightAnswer() {
  * Adds one for each incorrect/failed answer
  */
 function incrementFailedAnswer() {
-    let failedAnswer = parseInt(document.getElementById('failed-answer').textContent);
-    document.getElementById("failed-answer").textContent = --failedAnswer;
+    let eachItem = document.getElementById("topic").innerHTML;
+    let failedList = `<li>${answer.textContent}</li>`
+    document.getElementById("topic").innerHTML = eachItem + failedList;
+
+    console.log("pushing");
+    
+    
+    
+    console.log(answer.textContent);
+    console.log(document.getElementById("topic").textContent );
+
+
+
 }
 
 /**
@@ -383,7 +395,8 @@ const questionBank = [
         optionB: "Queen Elizabeth IV",
         optionC: "King Charlse",
         optionD: "Joe Biden",
-        answer: "No answer here"
+        answer: "No answer here",
+        Topic: "Introduction"
     },
     {
         question: "'Sample Question': Who is the current monarch of the United Kingdom?",
@@ -391,7 +404,8 @@ const questionBank = [
         optionB: "Donald Trump",
         optionC: "King Charlse",
         optionD: "Joe Biden",
-        answer: "Sample Question"
+        answer: "Sample Question",
+        Topic: "List of failed topics:"
     },  
     {
         question: "A fundamental component of political culture is _ _ _ __ _ _ _",
@@ -399,7 +413,8 @@ const questionBank = [
         optionB: "family values",
         optionC: "economic values.",
         optionD: "community structure",
-        answer: "family values"
+        answer: "family values",
+        Topic: "Component of political culture"
     },
     {
         question: "A form of oligarchy in which gifted people are at the helm of affairs is _ _ _ _-",
@@ -407,7 +422,8 @@ const questionBank = [
         optionB: "theocracy",
         optionC: "plutocracy",
         optionD: "gerontocracy",
-        answer: "aristocracy"
+        answer: "aristocracy",
+        Topic: "Form of Oligarchy"
     },
     {
         question: "A state that is ruled by an elected citizen is _ _ _ _ _ _",
@@ -415,7 +431,8 @@ const questionBank = [
         optionB: "a plutocracy",
         optionC: "a republic",
         optionD: "an empire",
-        answer: "a republic"
+        answer: "a republic",
+        Topic: "Republic system of governance"
     },
     {
         question: "A true democracy in the modern sense exists where the _ _ _ _ _ _",
@@ -423,7 +440,8 @@ const questionBank = [
         optionB: "majority of the people rule",
         optionC: "majority of the people vote",
         optionD: "elite rules",
-        answer: "elected representatives rule"
+        answer: "elected representatives rule",
+        Topic: "Democratic system of governance"
     },
     {
         question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the _ _ _ _",
@@ -431,7 +449,8 @@ const questionBank = [
         optionB: "legislature ceases to trust the executive",
         optionC: "executive is required to resign",
         optionD: "legislature commences legal proceeding against the executive",
-        answer: "executive is required to resign"
+        answer: "executive is required to resign",
+        Topic: "The executive arm of government"
     },
     {
         question: "The legislative body of the United States of America is the _ _ _ _",
@@ -439,7 +458,8 @@ const questionBank = [
         optionB: "National Assembly",
         optionC: "Congress",
         optionD: "Council.",
-        answer: "Congress"
+        answer: "Congress",
+        Topic: "The legislative body in the United States"
     },
     {
         question: "Unicameralism is a feature of the legislature in _ _ _ _",
@@ -447,15 +467,17 @@ const questionBank = [
         optionB: "the United States",
         optionC: "the United Kingdom",
         optionD: "Ghana.",
-        answer: "Israel"
+        answer: "Israel",
+        Topic: "The legislative body in Israel"
     },
     {
-        question: "The upper house in most federalsystems is created to _ _ _ _",
+        question: "The upper house in most federal systems is created to _ _ _ _",
         optionA: "ensure equality of federating units",
         optionB: "prevent excesses of the executive",
         optionC: "oversee and check the lower house",
         optionD: "enable experienced elders make inputs to governance.",
-        answer: "ensure equality of federating units"
+        answer: "ensure equality of federating units",
+        Topic: "The federal system"
     },
     {
         question: "In which of the following systems is the power of the component units more than that of the central government?",
@@ -463,7 +485,8 @@ const questionBank = [
         optionB: "Federal",
         optionC: "Unitary",
         optionD: "Confederal",
-        answer: "Confederal"
+        answer: "Confederal",
+        Topic: "Forms of government"
     },
     {
         question: "Nation-state is synonymous with _ _ _ _",
@@ -471,7 +494,8 @@ const questionBank = [
         optionB: "sovereignty ",
         optionC: "liberation",
         optionD: "nationalism",
-        answer: "sovereignty"
+        answer: "sovereignty",
+        Topic: "Soverignty"
     },  
     {
         question: "Maths Sample Question: 50 + 50 = ?",
@@ -479,7 +503,8 @@ const questionBank = [
         optionB: "100",
         optionC: "1000",
         optionD: "10000",
-        answer: "No answer here"
+        answer: "No answer here",
+        Topic: "List of failed topics:"
     },
     {
         question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
@@ -487,7 +512,8 @@ const questionBank = [
         optionB: "30 Degrees",
         optionC: "120 Degrees",
         optionD: "45 Degrees",
-        answer: "120 Degrees"
+        answer: "120 Degrees",
+        Topic: "Interior angles of shapes"
     },
     {
         question: "A group of market women sell at least one of yam, plantain and maize. 12 of them sell maize, 10 sell yam and 14 sell plantain. 5 sell plantain and maize, 4 sell yam and maize, 2 sell yam and plantain only while 3 sell all the three items. How many women are in the group?",
@@ -495,7 +521,8 @@ const questionBank = [
         optionB: "19",
         optionC: "18",
         optionD: "17",
-        answer: "25"
+        answer: "25",
+        Topic: "Sets theory"
     },
     {
         question: "A cone has a base radius of 4 cm and a height of 3 cm. The area of its curved surface is",
@@ -503,7 +530,8 @@ const questionBank = [
         optionB: "20 pi cm^2",
         optionC: "24 pi cm^2",
         optionD: "251 pi cm^2",
-        answer: "20 pi cm^2"
+        answer: "20 pi cm^2",
+        Topic: "Area of a curved surface"
     },
     {
         question: "Two fair dice are rolled. What is the probability that both show up the same number of point??",
@@ -511,7 +539,8 @@ const questionBank = [
         optionB: "7/36",
         optionC: "1/2",
         optionD: "1/6",
-        answer: "1/6"
+        answer: "1/6",
+        Topic: "Probability"
     },
     {
         question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
@@ -519,7 +548,8 @@ const questionBank = [
         optionB: "1200",
         optionC: "120000",
         optionD: "1200000",
-        answer: "120000"
+        answer: "120000",
+        Topic: "Ratios"
     },
     {
         question: "Express, correct to three significant figures, 0.003597",
@@ -527,7 +557,8 @@ const questionBank = [
         optionB: "0.004",
         optionC: "0.00360",
         optionD: "0.00359",
-        answer: "0.00360"
+        answer: "0.00360",
+        Topic: "Significant figures"
     },
     {
         question: "Dickson borrows £10.00 at 2% per month interest and repays £8.00 after 4 months. However much does he still owe?",
@@ -535,7 +566,8 @@ const questionBank = [
         optionB: "£10.67",
         optionC: "£2.82",
         optionD: "£2.67",
-        answer: "£2.82"
+        answer: "£2.82",
+        Topic: "Interest rates"
     },
     {
         question: "If the binary operation * is defined by m*n = mn + m + n for any real number m and n, find the identity element under this operation.",
@@ -543,7 +575,8 @@ const questionBank = [
         optionB: "e = -1",
         optionC: "e = -2",
         optionD: "e = 0",
-        answer: "e = -1"
+        answer: "e = -1",
+        Topic: "Identity elements"
     },
     {
         question: "Find the mean deviation of 1, 2, 3 and 4",
@@ -551,7 +584,8 @@ const questionBank = [
         optionB: "1.5",
         optionC: "2.0",
         optionD: "2.5",
-        answer: "1.0"
+        answer: "1.0",
+        Topic: "Mean deviation"
     },
     {
         question: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
@@ -559,7 +593,8 @@ const questionBank = [
         optionB: "15 ways",
         optionC: "20 ways",
         optionD: "25 ways",
-        answer: "10 ways"
+        answer: "10 ways",
+        Topic: "Permutation & Combination"
     },
 
     {
@@ -568,7 +603,8 @@ const questionBank = [
         optionB: "Bad",
         optionC: "Fine",
         optionD: "Poor",
-        answer: "No answer here"
+        answer: "No answer here",
+        Topic: "List of failed topics:"
     },
     {
         question: "For the questions, choose the options that best complete the gap(s): He was _ _ _ _ by the trickster",
@@ -576,7 +612,8 @@ const questionBank = [
         optionB: "duped",
         optionC: "enjoined",
         optionD: "encouraged",
-        answer: "duped"
+        answer: "duped",
+        Topic: "Fill in the blanks"
     },
     {
         question: "When the soldiers saw that resistance was, _ _ _ _ they stopped fighting",
@@ -584,7 +621,8 @@ const questionBank = [
         optionB: "inefficient",
         optionC: "futile",
         optionD: "successful",
-        answer: "futile"
+        answer: "futile",
+        Topic: "Logic and grammar"
     },
     {
         question: "You should read all the _ _ _ _ carefully before you decide where to go on holiday.",
@@ -592,7 +630,8 @@ const questionBank = [
         optionB: "prospectus",
         optionC: "tickets",
         optionD: "handouts",
-        answer: "brochures"
+        answer: "brochures",
+        Topic: "Sentence formation"
     },
     {
         question: "We ought to have visited the Governor, _ _ _ _ ",
@@ -600,7 +639,8 @@ const questionBank = [
         optionB: "oughtn't we",
         optionC: "shouldn't we",
         optionD: "haven't",
-        answer: "oughtn't we"
+        answer: "oughtn't we",
+        Topic: "Modal verbs"
     },
     {
         question: "Choose the options opposite in meaning to the word in bracket. I am happy to inform you that your boys are (conscientious)",
@@ -608,7 +648,8 @@ const questionBank = [
         optionB: "industrious",
         optionC: "carefree",
         optionD: "careful",
-        answer: "carefree"
+        answer: "carefree",
+        Topic: "Antonyms"
     },
     {
         question: "Choose the options opposite in meaning to the word in bracket: My father is a very (prosperous) businessman.",
@@ -616,7 +657,8 @@ const questionBank = [
         optionB: "unscrupulous",
         optionC: "unskilled",
         optionD: "unsuccessful",
-        answer: "unsuccessful"
+        answer: "unsuccessful",
+        Topic: "Opposite in meaning"
     },
     {
         question: "Choose the options opposite in meaning to the word in bracket: My hostess greeted her guest in a very (relaxed) manner",
@@ -624,7 +666,8 @@ const questionBank = [
         optionB: "athletic",
         optionC: "stiff",
         optionD: "perplexed",
-        answer: "stiff"
+        answer: "stiff",
+        Topic: "Opposite in meaning"
     },
     {
         question: "Choose the options opposite in meaning to the word in bracket: Aoife takes his studies rather (lightly)",
@@ -632,7 +675,8 @@ const questionBank = [
         optionB: "tediously",
         optionC: "carefully",
         optionD: "seriously",
-        answer: "carefully"
+        answer: "carefully",
+        Topic: "Definition of words (Antonyms)"
     },
     {
         question: "Choose the options opposite in meaning to the word in bracket: The President took exception to the (ignoble) role the young man played in the matter",
@@ -640,7 +684,8 @@ const questionBank = [
         optionB: "embarrassing",
         optionC: "dishonourable",
         optionD: "extraordinary",
-        answer: "honourable"
+        answer: "honourable",
+        Topic: "Words and meaning"
         },
     {
         question: "'...rock the boat' What figure of speech is this expression?",
@@ -648,6 +693,7 @@ const questionBank = [
         optionB: "Metaphor",
         optionC: "Personification",
         optionD: "Hyperbole",
-        answer: "Metaphor"
+        answer: "Metaphor",
+        Topic: "Figure of speech"
     },
 ];
