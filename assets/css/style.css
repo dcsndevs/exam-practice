@@ -171,7 +171,7 @@ footer {
 }
 
 /* Hide Answers*/
-#answer {
+#answer, #topic{
     display: none;
 }
 
