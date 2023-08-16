@@ -16,6 +16,10 @@ header {
     background-color: white;
     height: 50px;
     font-family: 'Borel', cursive;
+    
+}
+.logo>img, .logo>h1 {
+    display: inline-block;
 }
 
 .logo-text-color {
