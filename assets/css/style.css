@@ -74,10 +74,10 @@ footer {
 
 .footer > a {
     text-decoration: none;
-    color: orange;
+    color: white;
 }
 .footer > a:hover {
-    color: teal;
+    color: orange;
 }
 
 .linkedin {
@@ -153,8 +153,9 @@ footer {
     z-index: 5;
 }
 
-.hero-image {
-    width: 50%;
+#welcome>img {
+    width: 283.65px;
+    height: 200px;
 }
 
 /* Hide Controls from inception (before practice button is chosen) */
