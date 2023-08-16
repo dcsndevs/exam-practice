@@ -363,311 +363,276 @@ function displayEnglishQuestion() {
 //Question Bank for Subjects
 const questionBank = [    
     {
-    question: "Who is the current monarch of the United Kingdom?",
-    optionA: "Queen Elizabeth II",
-    optionB: "Queen Elizabeth IV",
-    optionC: "King Charlse",
-    optionD: "Joe Biden",
-    answer: "No answer here"
+        question: "Who is the current monarch of the United Kingdom?",
+        optionA: "Queen Elizabeth II",
+        optionB: "Queen Elizabeth IV",
+        optionC: "King Charlse",
+        optionD: "Joe Biden",
+        answer: "No answer here"
     },
-
     {
-    question: "'Sample Question': Who is the current monarch of the United Kingdom?",
-    optionA: "Peter Obi",
-    optionB: "Donald Trump",
-    optionC: "King Charlse",
-    optionD: "Joe Biden",
-    answer: "King Charlse"
+        question: "'Sample Question': Who is the current monarch of the United Kingdom?",
+        optionA: "Peter Obi",
+        optionB: "Donald Trump",
+        optionC: "King Charlse",
+        optionD: "Joe Biden",
+        answer: "King Charlse"
     },  
-
-    {question: "A fundamental component of political culture is _ _ _ __ _ _ _-",
-    optionA: "social values",
-    optionB: "family values",
-    optionC: "economic values.",
-    optionD: "community structure",
-    answer: "family values"},
-
     {
-    question: "A form of oligarchy in which gifted people are at the helm of affairs is _ _ _ _-",
-    optionA: "aristocracy",
-    optionB: "theocracy",
-    optionC: "plutocracy",
-    optionD: "gerontocracy",
-    answer: "aristocracy"
+        question: "A fundamental component of political culture is _ _ _ __ _ _ _",
+        optionA: "social values",
+        optionB: "family values",
+        optionC: "economic values.",
+        optionD: "community structure",
+        answer: "family values"
     },
-
     {
-    question: "A state that is ruled by an elected citizen is _ _ _ _ _ _",
-    optionA: "a monarchy",
-    optionB: "a plutocracy",
-    optionC: "a republic",
-    optionD: "an empire",
-    answer: "an republic"
+        question: "A form of oligarchy in which gifted people are at the helm of affairs is _ _ _ _-",
+        optionA: "aristocracy",
+        optionB: "theocracy",
+        optionC: "plutocracy",
+        optionD: "gerontocracy",
+        answer: "aristocracy"
     },
-
     {
-    question: "A true democracy in the modern sense exists where the –",
-    optionA: "elected representatives rule",
-    optionB: "majority of the people rule",
-    optionC: "majority of the people vote",
-    optionD: "elite rules",
-    answer: "elected representatives rule"
+        question: "A state that is ruled by an elected citizen is _ _ _ _ _ _",
+        optionA: "a monarchy",
+        optionB: "a plutocracy",
+        optionC: "a republic",
+        optionD: "an empire",
+        answer: "an republic"
     },
-
     {
-    question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the _ _ _ _",
-    optionA: "executive is expected to go on suspension",
-    optionB: "legislature ceases to trust the executive",
-    optionC: "executive is required to resign",
-    optionD: "legislature commences legal proceeding against the executive",
-    answer: "executive is required to resign"
+        question: "A true democracy in the modern sense exists where the _ _ _ _ _ _",
+        optionA: "elected representatives rule",
+        optionB: "majority of the people rule",
+        optionC: "majority of the people vote",
+        optionD: "elite rules",
+        answer: "elected representatives rule"
     },
-
     {
-    question: "The legislative body of the United States of America is the _ _ _ _",
-    optionA: "Parliament",
-    optionB: "National Assembly",
-    optionC: "Congress",
-    optionD: "Council.",
-    answer: "Congress"
+        question: "In a parliamentary system, when the legislature passes a vote of no confidence on the executive, it means that the _ _ _ _",
+        optionA: "executive is expected to go on suspension",
+        optionB: "legislature ceases to trust the executive",
+        optionC: "executive is required to resign",
+        optionD: "legislature commences legal proceeding against the executive",
+        answer: "executive is required to resign"
     },
-
     {
-    question: "Unicameralism is a feature of the legislature in _ _ _ _",
-    optionA: "Israel",
-    optionB: "the United States",
-    optionC: "the United Kingdom",
-    optionD: "Ghana.",
-    answer: "Israel"
+        question: "The legislative body of the United States of America is the _ _ _ _",
+        optionA: "Parliament",
+        optionB: "National Assembly",
+        optionC: "Congress",
+        optionD: "Council.",
+        answer: "Congress"
     },
-
     {
-    question: "The upper house in most federalsystems is created to _ _ _ _",
-    optionA: "ensure equality of federating units",
-    optionB: "prevent excesses of the executive",
-    optionC: "oversee and check the lower house",
-    optionD: "enable experienced elders make inputs to governance.",
-    answer: "ensure equality of federating units"
+        question: "Unicameralism is a feature of the legislature in _ _ _ _",
+        optionA: "Israel",
+        optionB: "the United States",
+        optionC: "the United Kingdom",
+        optionD: "Ghana.",
+        answer: "Israel"
     },
-
     {
-    question: "In which of the following systems is the power of the component units more than that of the central government?",
-    optionA: "Monarchical",
-    optionB: "Federal",
-    optionC: "Unitary",
-    optionD: "Confederal",
-    answer: "Confederal"
+        question: "The upper house in most federalsystems is created to _ _ _ _",
+        optionA: "ensure equality of federating units",
+        optionB: "prevent excesses of the executive",
+        optionC: "oversee and check the lower house",
+        optionD: "enable experienced elders make inputs to governance.",
+        answer: "ensure equality of federating units"
     },
-
     {
-    question: "Nation-state is synonymous with _ _ _ _",
-    optionA: "self-actualization",
-    optionB: "sovereignty ",
-    optionC: "liberation",
-    optionD: "nationalism",
-    answer: "sovereignty"
+        question: "In which of the following systems is the power of the component units more than that of the central government?",
+        optionA: "Monarchical",
+        optionB: "Federal",
+        optionC: "Unitary",
+        optionD: "Confederal",
+        answer: "Confederal"
+    },
+    {
+        question: "Nation-state is synonymous with _ _ _ _",
+        optionA: "self-actualization",
+        optionB: "sovereignty ",
+        optionC: "liberation",
+        optionD: "nationalism",
+        answer: "sovereignty"
     },  
-
     {
-    question: "Maths Sample Question: 50 + 50 = ?",
-    optionA: "10",
-    optionB: "100",
-    optionC: "1000",
-    optionD: "10000",
-    answer: "No answer here"
+        question: "Maths Sample Question: 50 + 50 = ?",
+        optionA: "10",
+        optionB: "100",
+        optionC: "1000",
+        optionD: "10000",
+        answer: "No answer here"
     },
-
-    {question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
-    optionA: "60 Degrees",
-    optionB: "30 Degrees",
-    optionC: "120 Degrees",
-    optionD: "45 Degrees",
-    answer: "120 Degrees"},
-
-    {question: "A group of market women sell at least one of yam, plantain and maize. 12 of them sell maize, 10 sell yam and 14 sell plantain. 5 sell plantain and maize, 4 sell yam and maize, 2 sell yam and plantain only while 3 sell all the three items. How many women are in the group?",
-    optionA: "25",
-    optionB: "19",
-    optionC: "18",
-    optionD: "17",
-    answer: "25"},
-
     {
-    question: "A cone has a base radius of 4 cm and a height of 3 cm. The area of its curved surface is",
-    optionA: "12 pi cm^2",
-    optionB: "20 pi cm^2",
-    optionC: "24 pi cm^2",
-    optionD: "251 pi cm^2",
-    answer: "20 pi cm^2"
+        question: "Given a regular hexagon, calculate each interior angle of the hexagon.",
+        optionA: "60 Degrees",
+        optionB: "30 Degrees",
+        optionC: "120 Degrees",
+        optionD: "45 Degrees",
+        answer: "120 Degrees"
     },
-
     {
-    question: "Two fair dice are rolled. What is the probability that both show up the same number of point??",
-    optionA: "1/36",
-    optionB: "7/36",
-    optionC: "1/2",
-    optionD: "1/6",
-    answer: "1/6"
+        question: "A group of market women sell at least one of yam, plantain and maize. 12 of them sell maize, 10 sell yam and 14 sell plantain. 5 sell plantain and maize, 4 sell yam and maize, 2 sell yam and plantain only while 3 sell all the three items. How many women are in the group?",
+        optionA: "25",
+        optionB: "19",
+        optionC: "18",
+        optionD: "17",
+        answer: "25"
     },
-
     {
-    question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
-    optionA: "12000",
-    optionB: "1200",
-    optionC: "120000",
-    optionD: "1200000",
-    answer: "120000"
+        question: "A cone has a base radius of 4 cm and a height of 3 cm. The area of its curved surface is",
+        optionA: "12 pi cm^2",
+        optionB: "20 pi cm^2",
+        optionC: "24 pi cm^2",
+        optionD: "251 pi cm^2",
+        answer: "20 pi cm^2"
     },
-
     {
-    question: "Express, correct to three significant figures, 0.003597",
-    optionA: "0.359",
-    optionB: "0.004",
-    optionC: "0.00360",
-    optionD: "0.00359",
-    answer: "0.00360"
+        question: "Two fair dice are rolled. What is the probability that both show up the same number of point??",
+        optionA: "1/36",
+        optionB: "7/36",
+        optionC: "1/2",
+        optionD: "1/6",
+        answer: "1/6"
     },
-
     {
-    question: "Dickson borrows £10.00 at 2% per month interest and repays £8.00 after 4 months. However much does he still owe?",
-    optionA: "£10.80",
-    optionB: "£10.67",
-    optionC: "£2.82",
-    optionD: "£2.67",
-    answer: "£2.82"
+        question: "Two brothers, Peter and Paul owned a business in which the ratio of shares is 5:3 respectively. Paul later sold 1/3 of his shares to Peter 15, 000 Euros. Find the total value of the business.",
+        optionA: "12000",
+        optionB: "1200",
+        optionC: "120000",
+        optionD: "1200000",
+        answer: "120000"
     },
-
     {
-    question: "If the binary operation * is defined by m*n = mn + m + n for any real number m and n, find the identity element under this operation.",
-    optionA: "e = 1",
-    optionB: "e = -1",
-    optionC: "e = -2",
-    optionD: "e = 0",
-    answer: "e = -1"
+        question: "Express, correct to three significant figures, 0.003597",
+        optionA: "0.359",
+        optionB: "0.004",
+        optionC: "0.00360",
+        optionD: "0.00359",
+        answer: "0.00360"
     },
-
     {
-    question: "Find the mean deviation of 1, 2, 3 and 4",
-    optionA: "1.0",
-    optionB: "1.5",
-    optionC: "2.0",
-    optionD: "2.5",
-    answer: "1.0"
+        question: "Dickson borrows £10.00 at 2% per month interest and repays £8.00 after 4 months. However much does he still owe?",
+        optionA: "£10.80",
+        optionB: "£10.67",
+        optionC: "£2.82",
+        optionD: "£2.67",
+        answer: "£2.82"
     },
-
     {
-    question: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
-    optionA: "10 ways",
-    optionB: "15 ways",
-    optionC: "20 ways",
-    optionD: "25 ways",
-    answer: "10 ways"
+        question: "If the binary operation * is defined by m*n = mn + m + n for any real number m and n, find the identity element under this operation.",
+        optionA: "e = 1",
+        optionB: "e = -1",
+        optionC: "e = -2",
+        optionD: "e = 0",
+        answer: "e = -1"
+    },
+    {
+        question: "Find the mean deviation of 1, 2, 3 and 4",
+        optionA: "1.0",
+        optionB: "1.5",
+        optionC: "2.0",
+        optionD: "2.5",
+        answer: "1.0"
+    },
+    {
+        question: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
+        optionA: "10 ways",
+        optionB: "15 ways",
+        optionC: "20 ways",
+        optionD: "25 ways",
+        answer: "10 ways"
     },
 
     {
-    question: "English Sample Question: What is the opposite of Good'",
-    optionA: "Ugly",
-    optionB: "Bad",
-    optionC: "Fine",
-    optionD: "Poor",
-    answer: "No answer here"
+        question: "English Sample Question: What is the opposite of Good'",
+        optionA: "Ugly",
+        optionB: "Bad",
+        optionC: "Fine",
+        optionD: "Poor",
+        answer: "No answer here"
     },
-
     {
-    question: "For the questions, choose the options that best complete the gap(s): He was _ _ _ _ by the trickster",
-    optionA: "assisted",
-    optionB: "duped",
-    optionC: "enjoined",
-    optionD: "encouraged",
-    answer: "duped"
+        question: "For the questions, choose the options that best complete the gap(s): He was _ _ _ _ by the trickster",
+        optionA: "assisted",
+        optionB: "duped",
+        optionC: "enjoined",
+        optionD: "encouraged",
+        answer: "duped"
     },
-
     {
-    question: "When the soldiers saw that resistance was, _ _ _ _ they stopped fighting",
-    optionA: "inadequate",
-    optionB: "inefficient",
-    optionC: "futile",
-    optionD: "successful",
-    answer: "futile"
+        question: "When the soldiers saw that resistance was, _ _ _ _ they stopped fighting",
+        optionA: "inadequate",
+        optionB: "inefficient",
+        optionC: "futile",
+        optionD: "successful",
+        answer: "futile"
     },
-
     {
-    question: "You should read all the _ _ _ _ carefully before you decide where to go on holiday.",
-    optionA: "brochures",
-    optionB: "prospectus",
-    optionC: "tickets",
-    optionD: "handouts",
-    answer: "brochures"
+        question: "You should read all the _ _ _ _ carefully before you decide where to go on holiday.",
+        optionA: "brochures",
+        optionB: "prospectus",
+        optionC: "tickets",
+        optionD: "handouts",
+        answer: "brochures"
     },
-
     {
-    question: "We ought to have visited the Governor, _ _ _ _ ",
-    optionA: "isn't it",
-    optionB: "oughtn't we",
-    optionC: "shouldn't we",
-    optionD: "haven't",
-    answer: "oughtn't we"
+        question: "We ought to have visited the Governor, _ _ _ _ ",
+        optionA: "isn't it",
+        optionB: "oughtn't we",
+        optionC: "shouldn't we",
+        optionD: "haven't",
+        answer: "oughtn't we"
     },
-
     {
-    question: "Choose the options opposite in meaning to the word in bracket. I am happy to inform you that your boys are (conscientious)",
-    optionA: "corrupt",
-    optionB: "industrious",
-    optionC: "carefree",
-    optionD: "careful",
-    answer: "carefree"
+        question: "Choose the options opposite in meaning to the word in bracket. I am happy to inform you that your boys are (conscientious)",
+        optionA: "corrupt",
+        optionB: "industrious",
+        optionC: "carefree",
+        optionD: "careful",
+        answer: "carefree"
     },
-
     {
-    question: "Choose the options opposite in meaning to the word in bracket: My father is a very (prosperous) businessman.",
-    optionA: "ungrateful",
-    optionB: "unscrupulous",
-    optionC: "unskilled",
-    optionD: "unsuccessful",
-    answer: "unsuccessful"
+        question: "Choose the options opposite in meaning to the word in bracket: My father is a very (prosperous) businessman.",
+        optionA: "ungrateful",
+        optionB: "unscrupulous",
+        optionC: "unskilled",
+        optionD: "unsuccessful",
+        answer: "unsuccessful"
     },
-
     {
-    question: "Choose the options opposite in meaning to the word in bracket: My hostess greeted her guest in a very (relaxed) manner",
-    optionA: "energetic",
-    optionB: "athletic",
-    optionC: "stiff",
-    optionD: "perplexed",
-    answer: "stiff"
+        question: "Choose the options opposite in meaning to the word in bracket: My hostess greeted her guest in a very (relaxed) manner",
+        optionA: "energetic",
+        optionB: "athletic",
+        optionC: "stiff",
+        optionD: "perplexed",
+        answer: "stiff"
     },
-
     {
-    question: "Choose the options opposite in meaning to the word in bracket: Aoife takes his studies rather (lightly)",
-    optionA: "humorously",
-    optionB: "tediously",
-    optionC: "carefully",
-    optionD: "seriously",
-    answer: "carefully"
+        question: "Choose the options opposite in meaning to the word in bracket: Aoife takes his studies rather (lightly)",
+        optionA: "humorously",
+        optionB: "tediously",
+        optionC: "carefully",
+        optionD: "seriously",
+        answer: "carefully"
     },
-
     {
-    question: "Choose the options opposite in meaning to the word in bracket: The President took exception to the (ignoble) role the young man played in the matter",
-    optionA: "honourable",
-    optionB: "embarrassing",
-    optionC: "dishonourable",
-    optionD: "extraordinary",
-    answer: "honourable"
-    },
-
+        question: "Choose the options opposite in meaning to the word in bracket: The President took exception to the (ignoble) role the young man played in the matter",
+        optionA: "honourable",
+        optionB: "embarrassing",
+        optionC: "dishonourable",
+        optionD: "extraordinary",
+        answer: "honourable"
+        },
     {
-    question: "'...rock the boat' What figure of speech is this expression?",
-    optionA: "Simile",
-    optionB: "Metaphor",
-    optionC: "Personification",
-    optionD: "Hyperbole",
-    answer: "Metaphor"
-    },
-
-    {
-    question: "New Subject later",
-    optionA: "3333",
-    optionB: "3333",
-    optionC: "3333",
-    optionD: "3de34",
-    answer: "3de34"
+        question: "'...rock the boat' What figure of speech is this expression?",
+        optionA: "Simile",
+        optionB: "Metaphor",
+        optionC: "Personification",
+        optionD: "Hyperbole",
+        answer: "Metaphor"
     },
 ];
