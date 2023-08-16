@@ -1,9 +1,9 @@
 // Global Variables
 const question = document.getElementById('question');
-const optionA = document.getElementById('optionA');
-const optionB = document.getElementById('optionB');
-const optionC = document.getElementById('optionC');
-const optionD = document.getElementById('optionD');
+const optionA = document.getElementById('option-a');
+const optionB = document.getElementById('option-b');
+const optionC = document.getElementById('option-c');
+const optionD = document.getElementById('option-d');
 const answer = document.getElementById('answer');
 let subjectTitle = document.getElementById("subject-title");
 const resultDate = new Date();
@@ -157,10 +157,10 @@ function startPractice(subject) {
 function questionNumber(subject) {
     let previousQuestionNumber = parseInt(document.getElementById("question-number-display").textContent);
     document.getElementById("question-number-display").textContent = ++previousQuestionNumber;
-    document.getElementById("optionA").style.color ="black"
-    document.getElementById("optionB").style.color ="black"
-    document.getElementById("optionC").style.color ="black"
-    document.getElementById("optionD").style.color ="black"
+    document.getElementById("option-a").style.color ="black"
+    document.getElementById("option-b").style.color ="black"
+    document.getElementById("option-c").style.color ="black"
+    document.getElementById("option-d").style.color ="black"
     if ((subject === "government") && (previousQuestionNumber < 11)) {
         startPractice("government");        
     } 
@@ -181,10 +181,10 @@ function questionNumber(subject) {
  * need to be rest to black again for the user to select based on the next question
  */
 function optionsColorChange() {
-    document.getElementById('optionA').style.color = "black";
-    document.getElementById('optionB').style.color = "black";
-    document.getElementById('optionC').style.color = "black";
-    document.getElementById('optionD').style.color = "black";
+    document.getElementById('option-a').style.color = "black";
+    document.getElementById('option-b').style.color = "black";
+    document.getElementById('option-c').style.color = "black";
+    document.getElementById('option-d').style.color = "black";
     let selection = document.getElementsByClassName('options');
     for (let i = 0; i < selection.length; i++) {
         selection[i].addEventListener('click', selecChoose);
@@ -211,17 +211,17 @@ function checkAnswer (subject) {
     
     let correctAnswer = document.getElementById('answer').textContent;
     let userAnswer;
-    if (document.getElementById('optionA').style.color === "red") {
-        userAnswer = document.getElementById('optionA').textContent;
+    if (document.getElementById('-a').style.color === "red") {
+        userAnswer = document.getElementById('option-a').textContent;
 
-    } else if (document.getElementById('optionB').style.color === "red") {
-        userAnswer = document.getElementById('optionB').textContent;
+    } else if (document.getElementById('option-b').style.color === "red") {
+        userAnswer = document.getElementById('option-b').textContent;
 
-    } else if (document.getElementById('optionC').style.color === "red") {
-        userAnswer = document.getElementById('optionC').textContent;
+    } else if (document.getElementById('option-c').style.color === "red") {
+        userAnswer = document.getElementById('option-c').textContent;
 
-    } else if (document.getElementById('optionD').style.color === "red") {
-        userAnswer = document.getElementById('optionD').textContent;
+    } else if (document.getElementById('option-d').style.color === "red") {
+        userAnswer = document.getElementById('option-d').textContent;
 
     } else userAnswer = "black";
   
