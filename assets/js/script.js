@@ -247,8 +247,8 @@ function checkAnswer (subject) {
  * Adds one for each correct answer
  */
 function incrementRightAnswer() {
-    let rightAnswer = parseInt(document.getElementById('right-answer').textContent);
-    document.getElementById("right-answer").textContent = ++rightAnswer;
+    let rightAnswer = parseInt(document.getElementById('score').textContent);
+    document.getElementById("score").textContent = ++rightAnswer;
 }
 
 /**
@@ -256,7 +256,7 @@ function incrementRightAnswer() {
  */
 function incrementFailedAnswer() {
     let failedAnswer = parseInt(document.getElementById('failed-answer').textContent);
-    document.getElementById("failed-answer").textContent = ++failedAnswer;
+    document.getElementById("failed-answer").textContent = --failedAnswer;
 }
 
 /**
@@ -345,10 +345,13 @@ function timeUp() {
 function result() {
     alert("You have come to the end of this practice session!\nEnter OK to view your result!");    
     hideScreen.style.display = "none"; 
-    displayMainArea.style.display = "none"
+    displayMainArea.style.display = "none";
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
     document.getElementById('date').innerHTML = new Date();
+    document.getElementById("right-answer").textContent = 10 * document.getElementById("score").textContent;
+    document.getElementById("failed-answer").textContent = 10 - document.getElementById("score").textContent
+
 }
 
 /**
@@ -388,7 +391,7 @@ const questionBank = [
         optionB: "Donald Trump",
         optionC: "King Charlse",
         optionD: "Joe Biden",
-        answer: "King Charlse"
+        answer: "Sample Question"
     },  
     {
         question: "A fundamental component of political culture is _ _ _ __ _ _ _",
@@ -412,7 +415,7 @@ const questionBank = [
         optionB: "a plutocracy",
         optionC: "a republic",
         optionD: "an empire",
-        answer: "an republic"
+        answer: "a republic"
     },
     {
         question: "A true democracy in the modern sense exists where the _ _ _ _ _ _",
