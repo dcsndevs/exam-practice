@@ -318,10 +318,11 @@ function timer() {
             } else {
                 seconds;
             }
+            if ((minutes === '0' + 0) && (seconds === 59)) (timer.style.color = "red");
             if ((minutes === '0' + 0) && (seconds === '0' + 0)) (timeUp() && stop()); //Helps stop the time when secs and minutes hits zero
             timer.innerHTML = `${minutes}:${seconds}`; 
             totalSeconds--;
-            if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when use uses end button to end practice
+            if (document.getElementById('date').innerHTML!=="") stop(); //Helps stop the time when user uses end button to end practice or oonce result page has been loaded.
         }
     }
 }

@@ -177,7 +177,7 @@ footer {
 
 /*Hide Screen on clicking end*/
 #hide-screen {
-    margin-top: 50px;
+    margin-top: 35vh;
     z-index: 4;
     background-color: grey;
     position: fixed;
