@@ -31,47 +31,51 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (usernameInput.length >= 2 && usernameInput.length <= 15) {
                     optionsColorChange();
                     username();
-                } 
-                else { return invalidLogin()};
+
+                } else { 
+                    return invalidLogin()
+                };
                                 
             } else if (this.getAttribute("data-type") === "next") {
                 let subject = subjectTitle.textContent.toLowerCase();
-                checkAnswer(subject);                
+                checkAnswer(subject);      
+
             } else if (this.getAttribute("data-type") === "print") {
-                
-                print();                
-            } else if (this.getAttribute("data-type") === "exit") {
-                
-                location.reload();                
+                print();
+
+            } else if (this.getAttribute("data-type") === "exit") {                
+                location.reload();
+
             } else if (this.getAttribute("data-type") === "maths"){
-                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
-                    
-                    displayMainArea.style.display = "block";                    
-                    subjectTitle.textContent = "Maths";
-                    let subject = this.getAttribute("data-type");
-                    startPractice(subject);    
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");  
+                displayMainArea.style.display = "block";
+                subjectTitle.textContent = "Maths";
+                let subject = this.getAttribute("data-type");
+                startPractice(subject);    
+
             } else if (this.getAttribute("data-type") === "english"){
-                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
-                    
-                    displayMainArea.style.display = "block";                    
-                    subjectTitle.textContent = "English";
-                    let subject = this.getAttribute("data-type");
-                    startPractice(subject);                
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");            
+                displayMainArea.style.display = "block";
+                subjectTitle.textContent = "English";
+                let subject = this.getAttribute("data-type");
+                startPractice(subject);         
+                      
             } else if (this.getAttribute("data-type") === "government"){
-                    alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
-                    
-                    displayMainArea.style.display = "block";                    
-                    subjectTitle.textContent = "Government";
-                    let subject = this.getAttribute("data-type");
-                    startPractice(subject);            
-            } else if (this.getAttribute("data-type") === "end"){             
+                alert("You have 10 minutes to answer 10 questions.\nGoodluck!");
+                displayMainArea.style.display = "block";
+                subjectTitle.textContent = "Government";
+                let subject = this.getAttribute("data-type");
+                startPractice(subject);
+
+            } else if (this.getAttribute("data-type") === "end"){
                 block();          
 
-            } else if (this.getAttribute("data-type") === "yes"){             
+            } else if (this.getAttribute("data-type") === "yes"){
                 result();            
             } 
-            else if (this.getAttribute("data-type") === "no"){             
-                unBlock();            
+            else if (this.getAttribute("data-type") === "no"){
+                unBlock();
+
             } else {
                 alert(`Invalid Subject Selection!`);
                 throw `Invalid Subject Selection. Refresh`;
@@ -85,8 +89,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (usernameInput.length >= 2 && usernameInput.length <= 15) {
                 selectOptionColor();
                 username();
-            } 
-            else { return invalidLogin()};
+            } else { 
+                return invalidLogin()
+            };
         }
     });
 });
@@ -213,7 +218,6 @@ function selectOptionColor() {
  * if wrong, it calls and adds one to incrementFailedAnswer()
  */
 function checkAnswer (subject) {
-    let failedTopicList = document.getElementById('topic').textContent;
     let correctAnswer = document.getElementById('answer').textContent;
     let userAnswer;
     if (document.getElementById('option-a').style.backgroundColor === "orange") {
@@ -260,16 +264,6 @@ function incrementFailedAnswer() {
     let eachItem = document.getElementById("topic-failed").innerHTML;
     let failedList = `<li>${topic.textContent}</li>`
     document.getElementById("topic-failed").innerHTML = eachItem + failedList;
-
-    console.log("pushing");
-    
-    
-    
-    console.log(topic.textContent);
-    console.log(document.getElementById("topic").textContent );
-
-
-
 }
 
 /**
@@ -279,7 +273,6 @@ function incrementFailedAnswer() {
  */
 function block() {
     hideScreen.style.display = "block";
-
 }
 
 /**
@@ -364,7 +357,6 @@ function result() {
     document.getElementById('date').innerHTML = new Date();
     document.getElementById("right-answer").textContent = 10 * document.getElementById("score").textContent;
     document.getElementById("failed-answer").textContent = 10 - document.getElementById("score").textContent
-
 }
 
 /**
@@ -406,7 +398,7 @@ const questionBank = [
         optionC: "King Charlse",
         optionD: "Joe Biden",
         answer: "Sample Question",
-        topic: "List of failed topics:"
+        topic: "<ul>List of failed topics:</ul>"
     },  
     {
         question: "A fundamental component of political culture is _ _ _ __ _ _ _",
