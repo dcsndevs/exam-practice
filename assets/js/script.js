@@ -6,7 +6,6 @@ const optionC = document.getElementById('option-c');
 const optionD = document.getElementById('option-d');
 const answer = document.getElementById('answer');
 const subjectTitle = document.getElementById("subject-title");
-const resultDate = new Date();
 
 // Global Display Variables
 const displayWelcome = document.getElementById('welcome');
@@ -142,12 +141,12 @@ function startPractice(subject) {
     }
     document.getElementById('username-display').innerText = document.getElementById('usernames').innerText;
     //Gets questions and options from Question Bank
-    question.textContent = questionBank[j].question;
-    optionA.textContent = questionBank[j].optionA;
-    optionB.textContent = questionBank[j].optionB;
-    optionC.textContent = questionBank[j].optionC;
-    optionD.textContent = questionBank[j].optionD;
-    answer.textContent = questionBank[j].answer;
+    question.textContent = questionBank[questionBankArrayIndex].question;
+    optionA.textContent = questionBank[questionBankArrayIndex].optionA;
+    optionB.textContent = questionBank[questionBankArrayIndex].optionB;
+    optionC.textContent = questionBank[questionBankArrayIndex].optionC;
+    optionD.textContent = questionBank[questionBankArrayIndex].optionD;
+    answer.textContent = questionBank[questionBankArrayIndex].answer;
 }
 
 /**
@@ -345,7 +344,7 @@ function result() {
     displayMainArea.style.display = "none"
     displayResult.style.display = "block";
     document.getElementById('name-result').innerText = document.getElementById('usernames').innerText;
-    document.getElementById('date').innerHTML = resultDate;
+    document.getElementById('date').innerHTML = new Date();
 }
 
 /**
