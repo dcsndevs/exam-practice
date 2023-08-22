@@ -441,7 +441,7 @@ const questionBank = [
         optionA: "executive is expected to go on suspension",
         optionB: "legislature ceases to trust the executive",
         optionC: "executive is required to resign",
-        optionD: "legislature commences legal proceeding against the executive",
+        optionD: "legislature commences  proceeding",
         answer: "executive is required to resign",
         topic: "The executive arm of government"
     },
@@ -468,7 +468,7 @@ const questionBank = [
         optionA: "ensure equality of federating units",
         optionB: "prevent excesses of the executive",
         optionC: "oversee and check the lower house",
-        optionD: "enable experienced elders make inputs to governance.",
+        optionD: "make inputs to governance.",
         answer: "ensure equality of federating units",
         topic: "The federal system"
     },
@@ -488,7 +488,7 @@ const questionBank = [
         optionC: "liberation",
         optionD: "nationalism",
         answer: "sovereignty",
-        topic: "Soverignty"
+        topic: "Sovereignty"
     },  
     {
         question: "Maths Sample Question: 50 + 50 = ?",
