@@ -43,7 +43,9 @@ The footer section displays the name of the developer and also provides a Linked
 ![footer](documentation/footer.png)
 
 ### Result:
-The result page is active at the end of every practice session, showing the score, subject, date, time, and username. It also provides the user with an opportunity to print the result.
+The result page is active at the end of every practice session, showing the score, subject, date, time, username, and list of failed topics of attempted questions. It also provides the user with an opportunity to print the result.
+
+![result](documentation/result-failed-topics.png)
 
 ### Answers: 
 | No | Government | Maths | English |
@@ -60,9 +62,6 @@ The result page is active at the end of every practice session, showing the scor
 |9|D|A|A|
 |10|B|A|B|
 
-
-
-![result](documentation/result.png)
 
 ## Testing
 Various tools have been used in testing the overall performance of the website from beginning to end. I have listed them in no particular other below:
