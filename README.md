@@ -45,6 +45,23 @@ The footer section displays the name of the developer and also provides a Linked
 ### Result:
 The result page is active at the end of every practice session, showing the score, subject, date, time, and username. It also provides the user with an opportunity to print the result.
 
+### Answers: 
+| No | Government | Maths | English |
+|---|---|---|---|
+|0 |-|-|-|
+|1|B|C|B|
+|2|A|A|C|
+|3|C|B|A|
+|4|C|D|B|
+|5|A|C|C|
+|6|A|C|D|
+|7|C|C|C|
+|8|A|B|C|
+|9|D|A|A|
+|10|B|A|B|
+
+
+
 ![result](documentation/result.png)
 
 ## Testing
@@ -183,7 +200,12 @@ To clone this project, you can do so using VsCode or any code editor that has an
 
 ## Credits
 
-### Content:
+### Code Reference:
+W3schools was instrumental to the success of this project. It was often used to learn quick fetures or to compare and see where errors are.
+
+### Practice Questions: 
+The questions used in this project were gotten from past questions of the Unified Tertiary Matriculation Examination in Nigeria.
+### Timer Feature:
 - Inspiration for creating the countdown timer was gotten from Florin Pop's YouTube video. [Florin Pop](https://www.youtube.com/watch?v=x7WJEmxNlEs)
 
 ### Fonts & Icons:
