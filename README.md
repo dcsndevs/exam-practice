@@ -1,19 +1,18 @@
 # ![Exam Practice logo](documentation/exam-practice-logo.png)
 
 ## Welcome,
-
-Exam practice is a quiz website that helps users prepare for exams. It assists in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, there are three subjects: Mathematics, English, and Government. 
+Exam Practice is a quiz website that helps users prepare for exams. It assists in practicing probable exam questions by presenting them in a question-and-answer format with multiple-choice options. It operates as a time exam, simulating real exam conditions to enhance your mental preparedness. Currently, there are three subjects: Mathematics, English, and Government. 
 
 You can find The link to the deployed site [Here](https://dcsndevs.github.io/exam-practice)
 
-![Resposive views](documentation/responsive-exam-practice.png)
+![Responsive views](documentation/responsive-exam-practice.png)
 
 ## User Stories
 
-### First Time Visitor Goals: 
+### First-Time Visitor Goals: 
 As a first-time visitor, the primary goal is to be able to practice past and similar exam questions.
 I also want to be able to see areas of concentration regarding my weak points and areas where I need to study more. 
-I want to be able to practice on diffrent screen sizes and especially on my mobile phone.
+I want to be able to practice on different screen sizes and especially on my mobile phone.
 
 ## Returning Visitor Goals:
 As a returning visitor, the goal should be to practice more and get acquainted with the exam questions.
@@ -26,13 +25,13 @@ An input form is made available on start. The username gives the user a personal
 ![username input](documentation/user-input.png)
 
 ### Subjects:
-There are currently subjects on offering the website application, namely English, Mathematics and Government.
+There are currently subjects offering the website application, namely English, Mathematics and Government.
 
 ![subjects](documentation/subjects.png)
 
 
 ### Timer: 
-A timer is activated when an practice sessions starts. This helps the user to simulate real exam conditions.
+A timer is activated when a practice session starts. This helps the user to simulate real exam conditions.
 
 ![timer](documentation/timer.png)
 
@@ -121,18 +120,19 @@ Responsive Design Tester by Media Genesis was used to view the website on differ
 | The timer kept running even when a session had ended|I used the 'clearInterval' function to stop the timer |
 | The choice selection for an answer, retained the red color when the user goes to the next question|I set 'const' color for the options|
 | In Mozilla browser, the quit button was immediately taking users to result page, without alerting them to confirm their choice|I removed the alert function and instead added a confirmation button on the 'hide-screen' div |
+|Print button on result page not working| None yet|
 
 ### Browser Testing: 
 The final project was tested on four different browsers, namely:
--Microsoft Internet explorer
+-Microsoft Internet Explorer
 -Google Chrome
 -Brave
 -Mozilla Firefox
-The output was similar on all these browsers except on Mozilla Firefox, where the fonts appeared darker and were therefore better viewed in terms of clarity and contrast.
+The output was similar on all these browsers except on Mozilla Firefox, where the fonts appeared darker and were therefore, better viewed in terms of clarity and contrast.
 
 ### Google PageSpeed Insights:
-Google PageSpeed insights was used to test the speed of the website and various issues were highlighted which was followed by subsequent adjustments.
-Issues such as "aria-label" not being present were raised, absence of meta description which I later found out to be because of "Description" was spelt wrongly and issues surrounding image size not being stated.
+Google PageSpeed Insights was used to test the speed of the website and various issues were highlighted which was followed by subsequent adjustments.
+Issues such as "aria-label" not being present were raised, the absence of meta description which I later found out to be because "Description" was spelled wrongly and issues surrounding image size not being stated.
 
 - Desktop PageSpeed Result![Desktop PageSpeed Result](documentation/pagespeed-desktop.png)
 - Mobile PageSpeed Result![Mobile PageSpeed Result](documentation/pagespeed-mobile.png)
@@ -144,52 +144,52 @@ The JSHint code quality tool was used and 69 warnings were detected. There were 
 
 ### HTML Validator:
 1. The W3 validator (validator.w3.org) highlighted errors on the website's links. Arial-label instead of aria-label had been used, and 15 errors were found and corrected.
-2. An </a> was found without an opener on the footer.
+2. An "</a>" was found without an opener on the footer.
 
 ![HTML Validator](documentation/html-validator.png)
 
 
 ### CSS Validator:
 1. The W3 validator highlighted 1 error regarding the use of a wrongly written code for align-items. A value of "right " was used rather than centre or start. These codes were then rewritten correctly.
-2. The validator highlighted 3 warnings regarding using codes that is a vendor extended pseudo-element.
+2. The validator highlighted 3 warnings regarding using codes that are vendor-extended pseudo-element.
 
 ![CSS Validator](documentation/css-validator.png)
 ![CSS-warnings](documentation/css-validator-warnings.png)
 
 ### WAVE:
-WAVE is a web accessibility evaluation tool powered by [WebAIM](https://webaim.org/). WAVE helped identify an initial error were h3 was used without h2 element being in sequence. It also highlight an issue with the  te4xt alignment (Justify) used. These errors were then corrected. At the second test, no major accessibility error was found except for a minor contrast error concerning the orange color of a part of the logo that's against a white background.
+WAVE is a web accessibility evaluation tool powered by [WebAIM](https://webaim.org/). WAVE helped identify an initial error where h3 was used without "h2" element being in sequence. It also highlights an issue with the  te4xt alignment (Justify) used. These errors were then corrected. In the second test, no major accessibility error was found except for a minor contrast error concerning the orange color of a part of the logo that's against a white background.
 
 ### Color Contrast:
 
-[Deque's University Color Contrast Analyzer](https://dequeuniversity.com/rules/axe/4.7/color-contrast) was used to determine what colors go together This ensures that users of all kind can clearly view texts and image/button borders. Some users might be color blind or are people with low vision experience. This tool ensures that the best colours are used in other to guarantee their convenience. A brief understanding of this would be an instance where a white text is put on a yellow background. Both colors are too bright and would be difficult to read for most users.
+[Deque's University Color Contrast Analyzer](https://dequeuniversity.com/rules/axe/4.7/color-contrast) was used to determine what colors go together This ensures that users of all kinds can clearly view texts and image/button borders. Some users might be color blind or are people with low vision experience. This tool ensures that the best colours are used in other to guarantee their convenience. A brief understanding of this would be an instance where white text is put on a yellow background. Both colors are too bright and would be difficult to read for most users.
 
 ## Freeform:
-Freeform was used to draw mock-ups for the initial website design to guide in the development of this project.
+Freeform was used to draw mock-ups for the initial website design to guide the development of this project.
 
 ![Freeform Sketch](documentation/sketch-exam-practice.jpeg)
 
 ## Technologies used:
 - JavaScript was used as the main scripting language for the website
 - HTML was used to create the frame and for basic text.
-- CSS was used to add styles and layout to the website.
+- CSS was used to add styles and layouts to the website.
 - Freeform was used to create wireframes to pre-deign and guide the site's layout and designs
-- VScode was used to write and edit the codes and host the site my local computer
+- VScode was used to write and edit the codes and host the site on my local computer
 - Git was used for the version control of the website
 - GitHub was used to host the deployed website
-- Undraw opensource was used obtain SVG image for the hero image
-- Canva was used to create the site Logo
+- Undraw opensource was used to obtain SVG image for the hero image
+- Canva was used to create the site logo
 
 ## Deployment
 
 The site was deployed using Github and was pushed through via Vscode.
-The repository was created on Github and then cloned on Vscode. After creating the site on Vscode, it was pushed onto Github.
+The repository was created on GitHub and then cloned on Vscode. After creating the site on Vscode, it was pushed onto Github.
 The site was then deployed via Github pages by:
 
-    - Selecting the settings tab inside the repo on Github
+    - Selecting the settings tab inside the repo on GitHub
     - Selecting Deploy from a branch under 'Build and deployment'
     - Selecting Main under branch
     - Click save
-After these steps, the site would have been deployed and becomes live at <https://dcsndevs.github.io/exam-practice>
+After these steps, the site would have been deployed and become live at <https://dcsndevs.github.io/exam-practice>
 
 ### Local Deployment:
 To clone this project, you can do so using VsCode or any code editor that has an integrated development Environment (IDE), using this command: 
@@ -200,7 +200,7 @@ To clone this project, you can do so using VsCode or any code editor that has an
 ## Credits
 
 ### Code Reference:
-W3schools was instrumental to the success of this project. It was often used to learn quick fetures or to compare and see where errors are.
+W3schools was instrumental to the success of this project. It was often used to learn quick features or to compare and see where errors are.
 
 ### Practice Questions: 
 The questions used in this project were gotten from past questions of the Unified Tertiary Matriculation Examination in Nigeria.
@@ -208,21 +208,21 @@ The questions used in this project were gotten from past questions of the Unifie
 - Inspiration for creating the countdown timer was gotten from Florin Pop's YouTube video. [Florin Pop](https://www.youtube.com/watch?v=x7WJEmxNlEs)
 
 ### Fonts & Icons:
-The fonts used were imported from [Google Fonts]("https://fonts.google.com/) and the Icons were from [Font Awesome](https://fontawesome.com/) 
+The fonts used were imported from [Google Fonts]("https://fonts.google.com/) and the Icons from [Font Awesome](https://fontawesome.com/) 
 Regular 400 Font Borel (logo), Ubuntu (paragraphs), and Ruwudu(headings) were used. 
 
 ### Colors:
 Black, Orange and Teal were the main colors used for this site. 
 
 ### Images:
-- The main hero image of a character studying a book, was gotten from free open source site (Undraw.co) designed by [Aggelos Gesoulis](https://twitter.com/anges244) and created by [Katerina Limpitsouni](https://twitter.com/ninaLimpi).
+- The main hero image of a character studying a book was gotten from a free open-source site (Undraw.co) designed by [Aggelos Gesoulis](https://twitter.com/anges244) and created by [Katerina Limpitsouni](https://twitter.com/ninaLimpi).
 - The logo was created using Canva.com
 
  - [Image Resizer](https://imageresizer.com/) and [TinyPng](https://tinypng.com/) were used to respectively resize and compress all the images on this site.
- - [Screenshot & Screen Recorder](https://ezgif.com/) was used to record live tests and used to create videos therefore.
+ - [Screenshot & Screen Recorder](https://ezgif.com/) was used to record live tests and used to create videos
  - [Am I Responsive](https://ami.responsivedesign.is/) website was used to simultaneously display how the site looks on different screen sizes.
 
-### Acknowledgements:
-I like to thank [Juliia Konn](https://github.com/IuliiaKonovalova/), my mentor at Code Institute. She exemplifies her mentorship with a knack for high quality projects. Her desire for quality has always challenged me to do better in my work. I remain grateful to her.
+### Acknowledgments:
+I like to thank [Juliia Konn](https://github.com/IuliiaKonovalova/), my mentor at Code Institute. She exemplifies her mentorship with a knack for high-quality projects. Her desire for quality has always challenged me to do better in my work. I remain grateful to her.
 
 I also like to thank my loving wife for her continuous support. She's a source of strength as always.
