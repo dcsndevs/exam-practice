@@ -120,7 +120,7 @@ Responsive Design Tester by Media Genesis was used to view the website on differ
 | The timer kept running even when a session had ended|I used the 'clearInterval' function to stop the timer |
 | The choice selection for an answer, retained the red color when the user goes to the next question|I set 'const' color for the options|
 | In Mozilla browser, the quit button was immediately taking users to result page, without alerting them to confirm their choice|I removed the alert function and instead added a confirmation button on the 'hide-screen' div |
-|Print button on result page not working| None yet|
+|Print button on result page not working for Bing mobile browser| None yet|
 
 ### Browser Testing: 
 The final project was tested on four different browsers, namely:
@@ -129,6 +129,7 @@ The final project was tested on four different browsers, namely:
 -Brave
 -Mozilla Firefox
 The output was similar on all these browsers except on Mozilla Firefox, where the fonts appeared darker and were therefore, better viewed in terms of clarity and contrast.
+I had about 5 alert boxes pop out in the course of using the application, but I discovered that browsers like Mozilla Firefox reacted differently and sometimes cause errors. Therefore, reduced the alert instance to two and used display blocks instead.
 
 ### Google PageSpeed Insights:
 Google PageSpeed Insights was used to test the speed of the website and various issues were highlighted which was followed by subsequent adjustments.
